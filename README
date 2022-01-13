@@ -1,0 +1,42 @@
+COMMANDS FOR CONNECTING GIT TO GITHUB
+
+CHANGE DIRECTORY
+
+cd python/...
+
+git init
+git remote add origin "<link>"
+git remote -v
+git add .
+git commit -m "note"
+git status
+git push origin master
+git status
+
+CHECKING THE LOGS
+git status
+git log
+git log --prety=oneline
+
+COMMITING CHANGES
+git commit -am "comment/note"
+
+REVERTING A CHANGE BEFORE SAVED IN GIT
+git checkout .
+git log --pretty=oneline
+
+REVERTING COMMITED CHANGES
+git log --pretty=oneline
+git checkout 123456
+git checkout master
+git reset --hard 123456
+git status
+git log --prety=oneline
+
+DELETING REPOSITORY
+git status
+rm -rf .git
+git status
+
+HELP
+git help
