@@ -16,7 +16,7 @@ git status
 CHECKING THE LOGS
 git status
 git log
-git log --prety=oneline
+git log --pretty=oneline
 
 COMMITING CHANGES
 git commit -am "comment/note"
@@ -31,7 +31,7 @@ git checkout 123456
 git checkout master
 git reset --hard 123456
 git status
-git log --prety=oneline
+git log --pretty=oneline
 
 DELETING REPOSITORY
 git status
