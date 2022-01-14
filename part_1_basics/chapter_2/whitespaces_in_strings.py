@@ -12,7 +12,3 @@ print("Languages:\n\tPython\n\tC\n\tJavaScript")
 
 print("\n")
 
-favorite_language = 'Python '
-
-favorite_language.rstrip()
-
