@@ -1,4 +1,4 @@
-name = '  Josef Serinek  '
+name = '  Josef Serinko  '
 print(name)
 
 print("\n")
