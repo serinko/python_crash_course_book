@@ -6,7 +6,7 @@ Integers
 
 >>> exponents are done with two multiplications **
 
->>> Python supports the order of mathematical operations, to modify the order, use ()
+>>> Python automatically supports the order of mathematical operations, to modify the order, use ()
 
 >>> Spacing has no effect on the evaluations of the operation
 
