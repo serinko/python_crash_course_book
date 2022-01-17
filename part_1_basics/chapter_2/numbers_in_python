@@ -15,4 +15,4 @@ Floats
 
 >>> For the most part  you can use decials without worrying about how they behave
 
->>>
+>>> Sometimes Python get an arbtrary number of decimal - for now, ignore that - in Part II will learn how to deal with it.
