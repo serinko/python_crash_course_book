@@ -7,5 +7,4 @@ print(name.title() + message_validation + message_quote)
 print('\n')
 
 # Last variables giving print, wishing to meet the famouse person
-
 print("Hello " + name.title() + ", I wish I could ask you about your opinions")
