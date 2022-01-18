@@ -1,4 +1,4 @@
-# variables definition
+# Variables definition
 my_name = "serinko"
 famouse_person = "lucy parsons" 
 message_validation = "'s wise words are still very valid. Just think about them:"
