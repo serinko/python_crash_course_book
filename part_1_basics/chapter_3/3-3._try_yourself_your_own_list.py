@@ -2,7 +2,7 @@
 
 modes_of_transportation = ['bicycle', 'walk', 'horse', 'plane', 'car']
 index_1 = -1
-message_1 = "I use a " + modes_of_transportation[index_1] + "as a most prioritized mean of trnsportation.\n"
+message_1 = "I use a " + modes_of_transportation[index_1] + "a s a most prioritized mean of trnsportation.\n"
 
 index_2 = 2
 message_2 = "I wish to use a " + modes_of_transportation[index_2] + " more often to move around.\n"
