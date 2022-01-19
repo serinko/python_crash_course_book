@@ -16,3 +16,7 @@ print("\n")
 # Any [-x] can be used to return an index counted - from the end.
 print(bicycles[-3])
 print("\n")
+
+# Any value or concatenation can be used, just as a variable
+message = "My first bicycle was a " + bicycles[0].title() + "."
+print(message)
