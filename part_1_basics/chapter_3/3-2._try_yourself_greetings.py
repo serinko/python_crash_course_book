@@ -12,3 +12,17 @@ print(message)
 print("\n")
 
 # variating the index, I can just use to variables and print the message with a simple function
+index = 1
+message = "Dear " + names[index].title() + ", I think about you often. Thank you for your guidance in the times of doubts. Yours" 
+print(message)
+print("\n")
+
+index = 2
+message = "Dear " + names[index].title() + ", I think about you often. Thank you for your guidance in the times of doubts. Yours" 
+print(message)
+print("\n")
+
+index = 3
+message = "Dear " + names[index].title() + ", I think about you often. Thank you for your guidance in the times of doubts. Yours" 
+print(message)
+print("\n")
