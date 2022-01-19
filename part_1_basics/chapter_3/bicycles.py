@@ -7,4 +7,4 @@ print(bicycles[0])
 print("\n")
 
 # Methods learnt in chapter_2 can be used. ie .title() to keep the grammar
-print(bicycles[3]title())
+print(bicycles[3].title())
