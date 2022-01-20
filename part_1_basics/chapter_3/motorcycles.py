@@ -30,4 +30,4 @@ del motorcycles[1]
 	# you can use this with any item as long as you know it's index
 	# [1] will remove the second one in the list, which is now 'suzuki'
 print(motorcycles)
-
+	# That means that you can no longer access the value in the list
