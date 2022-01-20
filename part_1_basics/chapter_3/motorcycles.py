@@ -31,3 +31,7 @@ del motorcycles[1]
 	# [1] will remove the second one in the list, which is now 'suzuki'
 print(motorcycles)
 	# That means that you can no longer access the value in the list
+	
+motorcycles =  ['honda', 'yamaha', 'suzuki',]
+	# Defyning new list of motorcycles
+
