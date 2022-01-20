@@ -25,3 +25,9 @@ del motorcycles[0]
 	# del statement removes an item from the list if you know it's position
 	# meaning the del motorcycles[0] takes away the first one = 'honda'
 print(motorcycles)
+
+del motorcycles[1]
+	# you can use this with any item as long as you know it's index
+	# [1] will remove the second one in the list, which is now 'suzuki'
+print(motorcycles)
+
