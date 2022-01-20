@@ -20,3 +20,8 @@ print(motorcycles)
 	# This is a usual way to do it - start with am epty list
 	# you do not know what value users will entry later when using the program
 	# But you cannot wait to program it after you have all the value
+	
+del motorcycles[0]
+	# del statement removes an item from the list if you know it's position
+	# meaning the del motorcycles[0] takes away the first one = 'honda'
+print(motorcycles)
