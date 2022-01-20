@@ -9,3 +9,11 @@ print(motorcycles)
 motorcycles.append('hurley')
 	# .append adds 'hurley' to the end of the list without any impact on the order of the list
 print(motorcycles)
+
+motorcycles = []
+	# Creates an empty list motorcycles
+motorcycles.append('honda')
+motorcycles.append('ducati')
+motorcycles.append('suzuki')
+	# adds items to the empty list
+print(motorcycles)
