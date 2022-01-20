@@ -17,3 +17,6 @@ motorcycles.append('ducati')
 motorcycles.append('suzuki')
 	# adds items to the empty list
 print(motorcycles)
+	# This is a usual way to do it - start with am epty list
+	# you do not know what value users will entry later when using the program
+	# But you cannot wait to program it after you have all the value
