@@ -1,9 +1,11 @@
-# excercise: make a message and print it personalised to each of the friend.
+# excercise: make a message and print it personalised 
+# to each of the friend. a
 
 # list of the names
 names = ['ara', 'helin', 'orso', 'ceren']
 
-# Changing index, prints the same message with different name. The simpliest way to do it.
+# Changing index, prints the same message with different name. 
+# The simpliest way to do it.
 index = 1
 
 # The message to be printed
