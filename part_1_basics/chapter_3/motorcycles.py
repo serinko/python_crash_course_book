@@ -3,11 +3,13 @@ motorcycles = ['honda', 'yamaha', 'suzuki',]
 print(motorcycles)
 
 motorcycles[0] = 'ducati'
-	# it changes the value of the first item to ducati, the resto of the list remains
+	# it changes the value of the first item to ducati
+	# the rest of the list remains
 print(motorcycles)
 
 motorcycles.append('hurley')
-	# .append adds 'hurley' to the end of the list without any impact on the order of the list
+	# .append adds 'hurley' to the end of the list 
+	# without any impact on the order of the list
 print(motorcycles)
 
 motorcycles = []
@@ -18,11 +20,12 @@ motorcycles.append('suzuki')
 	# adds items to the empty list
 print(motorcycles)
 	# This is a usual way to do it - start with am epty list
-	# you do not know what value users will entry later when using the program
+	# you do not know what value users will entry later 
 	# But you cannot wait to program it after you have all the value
+	# Values will be constantly changing
 	
 del motorcycles[0]
-	# del statement removes an item from the list if you know it's position
+	# del statement removes an item from the list based on it's position
 	# meaning the del motorcycles[0] takes away the first one = 'honda'
 print(motorcycles)
 
