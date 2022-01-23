@@ -42,4 +42,6 @@ print(motorcycles[0])
 	# prints 1st item from the list
 print(motorcycles[-2])
 	# prints second one fromt the end
+	# BEWARE the diffrence 1st is [0] but last is [-1]!
+	
 
