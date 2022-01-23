@@ -40,3 +40,5 @@ motorcycles =  ['honda', 'yamaha', 'suzuki',]
 	
 print(motorcycles[0])
 
+print(motorcycles[-2])
+
