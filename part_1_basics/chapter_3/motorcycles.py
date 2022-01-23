@@ -39,6 +39,7 @@ motorcycles =  ['honda', 'yamaha', 'suzuki',]
 	# Defyning new list of motorcycles
 	
 print(motorcycles[0])
-
+	# prints 1st item from the list
 print(motorcycles[-2])
+	# prints second one fromt the end
 
