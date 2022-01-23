@@ -37,3 +37,6 @@ print(motorcycles)
 	
 motorcycles =  ['honda', 'yamaha', 'suzuki',]
 	# Defyning new list of motorcycles
+	
+print(motorcycles[0])
+
