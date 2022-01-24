@@ -12,5 +12,7 @@ message_2 = "My favourite colors are:"
 favorite_colors.append('black')
 favorite_colors.append('green')
 favorite_colors.append('turcois')
-	
+	# favorite_colors added by user with a function to add to the list
 
+print(favourite_colors[0] + favourite_colors[1] + favourite_colors[2])
+	# Picked the colors from the list to print them for the user
