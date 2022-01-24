@@ -14,5 +14,5 @@ favorite_colors.append('green')
 favorite_colors.append('turcois')
 	# favorite_colors added by user with a function to add to the list
 
-print(favorite_colors[0] + favorite_colors[1] + favorite_colors[2])
+print(favorite_colors[0] + ', ' + favorite_colors[1] + ', ' + favorite_colors[2])
 	# Picked the colors from the list to print them for the user
