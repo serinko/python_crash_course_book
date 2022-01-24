@@ -1,4 +1,4 @@
-message_introduction = "Please write down your favourite colors."
+message_introduction = "Please write down your favourite colors.\n"
 	# This is an intdoctudion message
 print(message_introduction)
 	# This will print it for the reader
