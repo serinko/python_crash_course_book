@@ -16,3 +16,4 @@ favorite_colors.append('turcois')
 
 print(favorite_colors[0] + ', ' + favorite_colors[1] + ', ' + favorite_colors[2])
 	# Picked the colors from the list to print them for the user
+	# Be aware of spelling favourite doesn't = favorite
