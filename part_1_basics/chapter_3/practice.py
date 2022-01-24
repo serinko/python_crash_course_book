@@ -6,8 +6,11 @@ print(message_introduction)
 favorite_colors = []
 	# Start with empty list, whih will be filled by the user
 	
-	message_2 = "My favourite colors are:"
+message_2 = "My favourite colors are:"
 	print(message_2)
 	# Marks the input by the user
+favorite_colors.append('black')
+favorite_colors.append('green')
+favorite_colors.append('turcois')
 	
 
