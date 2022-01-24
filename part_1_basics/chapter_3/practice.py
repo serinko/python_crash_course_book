@@ -7,12 +7,12 @@ favorite_colors = []
 	# Start with empty list, whih will be filled by the user
 	
 message_2 = "My favourite colors are:"
-	print(message_2)
+print(message_2)
 	# Marks the input by the user
 favorite_colors.append('black')
 favorite_colors.append('green')
 favorite_colors.append('turcois')
 	# favorite_colors added by user with a function to add to the list
 
-print(favourite_colors[0] + favourite_colors[1] + favourite_colors[2])
+print(favorite_colors[0] + favorite_colors[1] + favorite_colors[2])
 	# Picked the colors from the list to print them for the user
