@@ -20,6 +20,10 @@ print(favorite_colors[0] + ', ' + favorite_colors[1] + ', ' + favorite_colors[2]
 
 message_describe_colors = 'Please describe why each of those are your favorite colors in a sentence.\n'
 	# ask to write one sentence to descibe the colors in the list
+	
+print(message_describe_colors)
+	# print the message
+	
 message_1 = 'When it comes to my style, I would chose ' + favorite_colors[0] + ' as my number one choice.\n'
 	# Makes a color chosen from the list to be chosen for clothes
 
@@ -31,3 +35,6 @@ message_3 = favorite_colors[2].tittle() + ' is more generally nice, just like a 
 	
 print(message_1)
 print(message_2)
+print(message_3)
+	# Prints the messages
+	
