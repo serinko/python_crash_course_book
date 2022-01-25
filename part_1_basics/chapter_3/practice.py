@@ -27,7 +27,7 @@ message_describe_colors = 'Please describe why each of those are your favorite c
 print(message_describe_colors)
 	# print the message
 	
-message_1 = 'When it comes to my style, I would chose ' + favorite_colors[0] + ' as my number one choice.\n'
+message_1 = 'When it comes to my style, I would chose ' + favorite_colors[0] + ' as my number one to wear.\n'
 	# Makes a color chosen from the list to be chosen for clothes
 
 message_2 = favorite_colors[1].title() + ' is my favorite one, when it comes to every day surounding.\n'
