@@ -30,7 +30,7 @@ message_1 = 'When it comes to my style, I would chose ' + favorite_colors[0] + '
 message_2 = favorite_colors[1].title() + ' is my favorite one, when it comes to every day surounding.\n'
 	# .title() function added to make the color starting with a capitol letter
 
-message_3 = favorite_colors[2].tittle() + ' is more generally nice, just like a color I like a lot.\n'
+message_3 = favorite_colors[2].title() + ' is more generally nice, just like a color I like a lot.\n'
 	# same .title() using 3rd item - [2]
 	
 print(message_1)
