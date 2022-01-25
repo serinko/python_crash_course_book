@@ -18,7 +18,12 @@ print(favorite_colors[0] + ', ' + favorite_colors[1] + ', ' + favorite_colors[2]
 	# Picked the colors from the list to print them for the user
 	# Be aware of spelling - favourite doesn't = favorite
 
-message_1 = 'When it comes to my style, I would chose' + favorite_colors[0] + ' as my number one choice.'
+message_1 = 'When it comes to my style, I would chose' + favorite_colors[0] + ' as my number one choice.\n'
 	# Makes a color chosen from the list to be chosen for clothes
 
-message_2 = favorite_colors[1].title + ' is my favorite one, when it comes 
+message_2 = favorite_colors[1].title() + ' is my favorite one, when it comes to every day surounding.\n'
+	# .title function added to make the color starting with a capitol letter
+	
+	
+print(message_1)
+print(message_2)
