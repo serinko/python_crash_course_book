@@ -15,7 +15,10 @@ favorite_colors.append('green')
 favorite_colors.append('purple')
 	# favorite_colors added by user with a function to add to the list
 
-print(favorite_colors[0] + ', ' + favorite_colors[1] + ', ' + favorite_colors[2])
+index_1 = 0
+	# To change index instead of a variable in each sentence
+
+print(favorite_colors[index_1] + ', ' + favorite_colors[1] + ', ' + favorite_colors[2])
 	# Picked the colors from the list to print them for the user
 	# Be aware of spelling - favourite doesn't = favorite
 
