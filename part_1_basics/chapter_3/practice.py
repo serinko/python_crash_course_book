@@ -36,7 +36,10 @@ index_1 = 0
 message_1 = 'When it comes to my style, I would chose ' + favorite_colors[index_1] + ' as my number one to wear.\n'
 	# Makes a color chosen from the list to be chosen for clothes
 
-message_2 = favorite_colors[1].title() + ' is my favorite one, when it comes to every day surounding.\n'
+index_2 = 1
+	# index used in message 2 as a variable for the list item
+	
+message_2 = favorite_colors[index_2].title() + ' is my favorite one, when it comes to every day surounding.\n'
 	# .title() function added to make the color starting with a capitol letter
 
 message_3 = favorite_colors[2].title() + ' is more generally nice, just like a color I like a lot.\n'
