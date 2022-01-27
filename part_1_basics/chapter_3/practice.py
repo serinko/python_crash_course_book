@@ -42,6 +42,7 @@ index_2 = 1
 message_2 = favorite_colors[index_2].title() + ' is my favorite one, when it comes to every day surounding.\n'
 	# .title() function added to make the color starting with a capitol letter
 
+index_3 = 2
 message_3 = favorite_colors[2].title() + ' is more generally nice, just like a color I like a lot.\n'
 	# same .title() using 3rd item - [2]
 	
