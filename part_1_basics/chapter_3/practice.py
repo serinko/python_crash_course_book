@@ -1,5 +1,6 @@
 message_introduction = "Please write down your favourite colors.\n"
 	# This is an intdoctudion message
+	# \n in the end makes a spacing under the sentence - free line
 print(message_introduction)
 	# This will print it for the reader
 	
