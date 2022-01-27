@@ -24,8 +24,8 @@ print(favorite_colors[0] + ', ' + favorite_colors[1] + ', ' + favorite_colors[2]
 print("\n")
 	# adds a space
 	
-	index_1 = 0
-	# To change index instead of a variable in each sentence
+index_1 = 0
+		# To change index instead of a variable in each sentence
 	
 message_describe_colors = 'Please describe why each of those are your favorite colors in a sentence.\n'
 	# ask to write one sentence to descibe the colors in the list
