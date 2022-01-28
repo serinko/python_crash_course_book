@@ -33,7 +33,7 @@ print(message_describe_colors)
 index_1 = 0
 	# To change index instead of a variable in each sentence
 	
-message_1 = 'When it comes to my style, I would chose ' + favorite_colors[index_1] + ' as my number one to wear.\n'
+message_1 = "When it comes to my style, I would chose ' + favorite_colors[index_1] + ' as my number one to wear.\n"
 	# Makes a color chosen from the list to be chosen for clothes
 
 index_2 = 1
