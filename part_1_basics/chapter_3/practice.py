@@ -39,7 +39,7 @@ message_1 = "When it comes to my style, I would chose ' + favorite_colors[index_
 index_2 = 1
 	# index used in message 2 as a variable for the list item
 	
-message_2 = favorite_colors[index_2].title() + ' is my favorite one, when it comes to every day surounding.\n'
+message_2 = favorite_colors[index_2].title() + " is my favorite one, when it comes to every day surounding.\n"
 	# .title() function added to make the color starting with a capitol letter
 
 index_3 = 2
