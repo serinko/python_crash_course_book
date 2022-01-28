@@ -51,5 +51,5 @@ message_3 = favorite_colors[index_3].title() + ' is more generally nice, just li
 print(message_1)
 print(message_2)
 print(message_3)
-	# Prints the messages with the variables
+	# Prints the messages with the variables from the list
 	
