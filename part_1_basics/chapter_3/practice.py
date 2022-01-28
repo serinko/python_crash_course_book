@@ -22,7 +22,7 @@ print(favorite_colors[0] + ', ' + favorite_colors[1] + ', ' + favorite_colors[2]
 	# Be aware of spelling - favourite doesn't = favorite
 
 print("\n")
-	# adds a space
+	# adds a space in between the sentences
 	
 message_describe_colors = 'Please describe why each of those are your favorite colors in a sentence.\n'
 	# ask to write one sentence to descibe the colors in the list
