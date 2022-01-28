@@ -28,7 +28,7 @@ message_describe_colors = 'Please describe why each of those are your favorite c
 	# ask to write one sentence to descibe the colors in the list
 	
 print(message_describe_colors)
-	# print the message
+	# print the message describing colors
 
 index_1 = 0
 	# To change index instead of a variable in each sentence
