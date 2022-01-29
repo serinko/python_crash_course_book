@@ -12,7 +12,7 @@ print(message_2)
 	# Marks the input by the user
 favorite_colors.append('"grey")
 favorite_colors.append("green")
-favorite_colors.append('purple")
+favorite_colors.append("purple")
 	# favorite_colors added by user with a function to add to the list
 
 
