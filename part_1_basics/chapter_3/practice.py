@@ -45,7 +45,7 @@ message_2 = favorite_colors[index_2].title() + " is my favorite one, when it com
 index_3 = 2
 	# same like index 1 and 2
 	
-message_3 = favorite_colors[index_3].title() + ' is more generally nice, just like a color I like a lot.\n'
+message_3 = favorite_colors[index_3].title() + " is more generally nice, just like a color I like a lot.\n"
 	# same .title() using 3rd item - [2] through index_3
 	
 print(message_1)
