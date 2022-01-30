@@ -44,4 +44,6 @@ print(motorcycles[-2])
 	# prints second one fromt the end
 	# BEWARE the diffrence 1st is [0] but last is [-1]!
 	
+print(motorcycles)
+	
 
