@@ -55,6 +55,8 @@ print(motorcycles)
 motorcycles.append('scooter')
 print(motorcycles)
 
+motorcycles[-1] = 'vespa'
+print(motorcycles)
 
 
 	
