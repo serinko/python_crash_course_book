@@ -52,6 +52,10 @@ print(motorcycles)
 motorcycles.append('honda')
 print(motorcycles)
 
+motorcycles.append('scooter')
+print(motorcycles)
+
+
 
 	
 
