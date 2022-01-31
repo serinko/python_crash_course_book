@@ -60,6 +60,6 @@ print(motorcycles)
 
 del motorcycles [-1]
 print(motorcycles)
-del motorycles[]
+del motorcycles[0,1]
 print(motorcycles)
 
