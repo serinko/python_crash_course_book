@@ -58,6 +58,7 @@ print(motorcycles)
 motorcycles[-1] = 'vespa'
 print(motorcycles)
 
+del motorcycles [-1]
 
 	
 
