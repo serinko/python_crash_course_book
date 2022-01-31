@@ -59,6 +59,6 @@ motorcycles[-1] = 'vespa'
 print(motorcycles)
 
 del motorcycles [-1]
-prnt(motorcycles)
+print(motorcycles)
 	
 
