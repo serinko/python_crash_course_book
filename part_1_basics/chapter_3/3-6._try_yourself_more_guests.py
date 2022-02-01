@@ -78,4 +78,13 @@ message_more_seats = "\nDear guests, I found a bigger table, so more people will
 print(message_more_seats)
 	# Printing that message
 	
+print("\n")
 	
+guest_list.insert(0, 'moses')
+guest_list.insert(2, 'andrei')	
+	# Added gues moses on index 0 and andrei on index 2
+	
+guest_list.append('nikola')
+	# Added nikola to the end of the list
+print(guest_list)
+
