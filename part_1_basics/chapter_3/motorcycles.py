@@ -69,7 +69,9 @@ popped_motorcycles = motorcycles.pop()
 print(motorcycles)
 	# Shows a list without the popped last item
 print(popped_motorcycles)
-
+	# print the value of the removed item from the list
+	
+print(popped_motorcycles.title())
 
 
 
