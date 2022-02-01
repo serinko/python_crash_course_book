@@ -72,6 +72,7 @@ print(popped_motorcycles)
 	# print the value of the removed item from the list
 	
 print(popped_motorcycles.title())
+	# prints the popped item with the title() method
 
 
 
