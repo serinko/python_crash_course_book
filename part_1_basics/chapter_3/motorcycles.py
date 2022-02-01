@@ -63,3 +63,17 @@ print(motorcycles)
 del motorcycles[1]
 print(motorcycles)
 
+popped_motorcycles = motorcycles.pop()
+	#introducing the new method pop()
+	# pop() takes an item from the end of the list but keeps it's value
+print(motorcycles)
+	# Shows a list without the popped last item
+print(popped_motorcycles)
+
+
+
+
+
+
+
+
