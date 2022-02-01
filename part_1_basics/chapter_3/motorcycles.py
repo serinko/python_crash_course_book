@@ -105,9 +105,22 @@ print(motorcycles)
 
 	# Any item in the list can be removed by pop()
 	# Just use pop(index), like in this example:
+motorcycles = ['honda', 'yamaha', 'suzuki']	
 first_owned = motorcycles.pop(0)
 	# Defyning the variable wirh pop(frst item in the list index) 
-print("The frst owned motorcycles of me was a " + first_owned.title() + ".")
+print("The first owned motorcycles of me was a " + first_owned.title() + ".")
 	# printing a sentence with the defined variable 
+print(motorcycles)
+	# the first item was popped - removed from the list
+	
+	# Again, in this case I would chose not popping the item:
+motorcycles = ['honda', 'yamaha', 'suzuki']	
+first_owned = motorcycles[0]	
+	# This unlike pop would keep my list intact
+
+print("The first owned motorcycles of me was a " + first_owned.title() + ".")
+	# printing a sentence with the defined variable 
+print(motorcycles)
+	# We can see that the list stayed intact
 
 
