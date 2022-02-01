@@ -76,6 +76,8 @@ print(popped_motorcycles)
 print(popped_motorcycles.title())
 	# prints the popped item with the title() method
 	
+print("\n")	
+	
 	
 	# This method can be used to restore something from chronological order:
 motorcycles = ['honda', 'yamaha', 'suzuki']
@@ -102,6 +104,8 @@ print("The last owned motorcycles of me was a " + last_owned.title() + ".")
 	
 print(motorcycles)
 	# We can see that the list stayed intact
+	
+print("\n")	
 
 	# Any item in the list can be removed by pop()
 	# Just use pop(index), like in this example:
@@ -124,6 +128,7 @@ print("The first owned motorcycles of me was a " + first_owned.title() + ".")
 print(motorcycles)
 	# We can see that the list stayed intact
 
+print("\n")	
 	
 	#INTRODUCING remove() METHOD TO REVOVE ITEMS
 motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
@@ -131,5 +136,22 @@ motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
 print(motorcycles)
 motorcycles.remove('ducati')
 	# Defines the vale we wnt to be removed in ()
+	# in reality it tells Python to find where is ducati in the list
 print(motorcycles)
 	# Printed list without removed 'ducati'
+	
+print("\n")	
+	
+	# METHOD remove() CAN ?BE USED FOR ALREADY REMOVED ITEMS:
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+	# New list of motorcycles defined
+print(motorcycles)
+	# just to check how the list looks like
+too_expensive = 'ducati'
+	# variable defined by a value from the list
+motorcycles.remove(too_expensive)
+	# method remove with the defyned variable in ()
+print("\nA " + too_expensive.title() + " is too expensive for me.")
+	# Will use the variable of a removed item for printing sentence
+print(motorcycles)
+	# ducati is no longer in the listed as it was remove()
