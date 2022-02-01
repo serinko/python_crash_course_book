@@ -82,10 +82,26 @@ motorcycles = ['honda', 'yamaha', 'suzuki']
 	# Defining new list of motorcycles - 3 I have owned
 last_owned = motorcycles.pop()
 	# Defining a variable of ast owned from the end of the chronologicla list
+	# and POPping it out of the list
 print("The last owned motorcycles of me was a " + last_owned.title() + ".")
+	# Popped the last item from the list and used it in the sentence.
 	
 print(motorcycles)
-
+	# we can see that the list is missing the last item
+	# I would myself use motorcycles[-1] function for this print
+	# Bcs I woul not like to modify the list just to get a value from the end
+	
+	# In this case I would simply do:
+	
+motorcycles = ['honda', 'yamaha', 'suzuki']
+	# Defining new list of motorcycles - 3 I have owned
+last_owned = motorcycles[-1]
+	# Defining a variable of the last owned from the end of the chronologicla list
+print("The last owned motorcycles of me was a " + last_owned.title() + ".")
+	# Popped the last item from the list and used it in the sentence.
+	
+print(motorcycles)
+	# We can see that the list stayed intact
 
 
 
