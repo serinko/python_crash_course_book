@@ -124,4 +124,12 @@ print("The first owned motorcycles of me was a " + first_owned.title() + ".")
 print(motorcycles)
 	# We can see that the list stayed intact
 
-
+	
+	#INTRODUCING remove() METHOD TO REVOVE ITEMS
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+		# new list of motorcycles
+print(motorcycles)
+motorcycles.remove('ducati')
+	# Defines the vale we wnt to be removed in ()
+print(motorcycles)
+	# Printed list without removed 'ducati'
