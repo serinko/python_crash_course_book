@@ -106,6 +106,7 @@ print(motorcycles)
 	# Any item in the list can be removed by pop()
 	# Just use pop(index), like in this example:
 motorcycles = ['honda', 'yamaha', 'suzuki']	
+	# Defyning the list
 first_owned = motorcycles.pop(0)
 	# Defyning the variable wirh pop(frst item in the list index) 
 print("The first owned motorcycles of me was a " + first_owned.title() + ".")
