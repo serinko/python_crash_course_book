@@ -214,6 +214,8 @@ del guest_list[0]
 
 print(guest_list)
 	# print myself the list to control that it is empty
+	
+	# EXCERCISE DONE!
 
 
 	
