@@ -125,5 +125,14 @@ print(message_invitation)
 
 
 
-
+	# TABLE WILL ARRIVE LATE, ONLY TWO PPL CAN COME
+	# Start with 3-6.
+	# Print a messgae about table not arriving, only 2 ppl
+	# Use pop() to remove one at a time and 
+	# use the variable to print message for each of them
+	# Print a message to the each of the person on he list (2ppl) that they are invited
+	# When done, use del to delete the remaining names and empty the list
+	# print the list to make sure it's empty
+	
+	
 
