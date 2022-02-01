@@ -155,3 +155,5 @@ print("\nA " + too_expensive.title() + " is too expensive for me.")
 	# Will use the variable of a removed item for printing sentence
 print(motorcycles)
 	# ducati is no longer in the listed as it was remove()
+	
+	# NOTE: remove() method deletes only first occurence of the value
