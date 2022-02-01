@@ -87,4 +87,42 @@ guest_list.insert(2, 'andrei')
 guest_list.append('nikola')
 	# Added nikola to the end of the list
 print(guest_list)
+	# To check the current state of the list
+	
+	# PRINT INVITATION FOR EVERY CURRENT GUEST!
+	
+guest_index = guest_list[0]
+message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+print(message_invitation)
+
+guest_index = guest_list[1]
+message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+print(message_invitation)
+
+
+guest_index = guest_list[2]
+message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+print(message_invitation)
+
+
+guest_index = guest_list[3]
+message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+print(message_invitation)
+
+guest_index = guest_list[4]
+message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+print(message_invitation)
+
+guest_index = guest_list[5]
+message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+print(message_invitation)
+
+
+guest_index = guest_list[6]
+message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+print(message_invitation)
+
+
+
+
 
