@@ -123,16 +123,23 @@ guest_index = guest_list[6]
 message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
 print(message_invitation)
 
+print("\n")
 
 
 	# TABLE WILL ARRIVE LATE, ONLY TWO PPL CAN COME
 	# Start with 3-6.
-	# Print a messgae about table not arriving, only 2 ppl
+	# Print a messagae about table not arriving, only 2 ppl
 	# Use pop() to remove one at a time and 
 	# use the variable to print message for each of them
 	# Print a message to the each of the person on he list (2ppl) that they are invited
 	# When done, use del to delete the remaining names and empty the list
 	# print the list to make sure it's empty
 	
+message_table_delayed = "\nDear guests, I have a bad news. Just got informed that the table delivery is delayed and therefore I only have capacity for two guests, I am very sorry for this."
+	# Defining variable with the message about delayed table
+print(message_table_delayed)
+	# Printing that message for the guests
 	
+	
+
 
