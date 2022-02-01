@@ -103,8 +103,11 @@ print("The last owned motorcycles of me was a " + last_owned.title() + ".")
 print(motorcycles)
 	# We can see that the list stayed intact
 
-
-
-
+	# Any item in the list can be removed by pop()
+	# Just use pop(index), like in this example:
+first_owned = motorcycles.pop(0)
+	# Defyning the variable wirh pop(frst item in the list index) 
+print("The frst owned motorcycles of me was a " + first_owned.title() + ".")
+	# printing a sentence with the defined variable 
 
 
