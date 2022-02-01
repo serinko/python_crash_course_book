@@ -83,7 +83,8 @@ motorcycles = ['honda', 'yamaha', 'suzuki']
 last_owned = motorcycles.pop()
 	# Defining a variable of ast owned from the end of the chronologicla list
 print("The last owned motorcycles of me was a " + last_owned.title() + ".")
-
+	
+print(motorcycles)
 
 
 
