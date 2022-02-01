@@ -140,6 +140,50 @@ message_table_delayed = "\nDear guests, I have a bad news. Just got informed tha
 print(message_table_delayed)
 	# Printing that message for the guests
 	
+	# I will take off the lst added guests.
+	# That is 0,2, and then from the end
 	
+cannot_come = guest_list.pop(0)
+	# Defyning that index 0 is no longer invited
+	# using pop(function)
+message_cannot_come = "\nDear " + cannot_come.title() + ", I am very sorry to inform you, that due to the problems with the delayed table, I must cancell your invitation for today's dinner. I hope to make up for this inconvenience very soon."
+	# message is defined including the variable cannt_come
+print(message_cannot_come)
+	# printing message to the guest's informing that one cannot_come
 
+cannot_come = guest_list.pop(1)
+	# Defyning that index 1 cannot come and save t as a variable
+	# (2 when 0 was deleted becomes 1)
+	# using pop(function)
+message_cannot_come = "\nDear " + cannot_come.title() + ", I am very sorry to inform you, that due to the problems with the delayed table, I must cancell your invitation for today's dinner. I hope to make up for this inconvenience very soon."
+	# message is defined including the variable cannt_come
+print(message_cannot_come)
+	# printing message to the guest's informing that one cannot_come
 
+cannot_come = guest_list.pop()
+	# Defyning variable when the last guest is deleted/ not invited
+	# pop with empty () takes off the last item
+	# using pop(function)
+message_cannot_come = "\nDear " + cannot_come.title() + ", I am very sorry to inform you, that due to the problems with the delayed table, I must cancell your invitation for today's dinner. I hope to make up for this inconvenience very soon."
+	# message is defined including the variable cannt_come
+print(message_cannot_come)
+	# printing message to the guest's informing that one cannot_come
+	
+cannot_come = guest_list.pop()
+	# Defyning variable when the last guest is deleted/ not invited
+	# pop with empty () takes off the last item
+	# using pop(function)
+message_cannot_come = "\nDear " + cannot_come.title() + ", I am very sorry to inform you, that due to the problems with the delayed table, I must cancell your invitation for today's dinner. I hope to make up for this inconvenience very soon."
+	# message is defined including the variable cannt_come
+print(message_cannot_come)
+	# printing message to the guest's informing that one cannot_come
+	
+cannot_come = guest_list.pop()
+	# Defyning variable when the last guest is deleted/ not invited
+	# pop with empty () takes off the last item
+	# using pop(function)
+message_cannot_come = "\nDear " + cannot_come.title() + ", I am very sorry to inform you, that due to the problems with the delayed table, I must cancell your invitation for today's dinner. I hope to make up for this inconvenience very soon."
+	# message is defined including the variable cannt_come
+print(message_cannot_come)
+	# printing message to the guest's informing that one cannot_come
+	
