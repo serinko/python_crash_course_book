@@ -187,3 +187,33 @@ message_cannot_come = "\nDear " + cannot_come.title() + ", I am very sorry to in
 print(message_cannot_come)
 	# printing message to the guest's informing that one cannot_come
 	
+print("\n")	
+	
+print(guest_list)
+	# print for myself to control the state of the list
+	
+	# Everything is correct, only two guest remained
+	# Invite them, by printing an invitation for each of them
+
+guest_index = guest_list[0]
+message_invitation = "\nDear " + guest_index.title() + ", despite the changes, I still would like to invite you for a dinner at my place, tonight. Hope to see you there."
+print(message_invitation)
+
+guest_index = guest_list[1]
+message_invitation = "\nDear " + guest_index.title() + ", despite the changes, I still would like to invite you for a dinner at my place, tonight. Hope to see you there."
+print(message_invitation)
+
+print("\n")
+	
+	# Delete everyone fromt he list to clean up
+
+del guest_list[0]	
+	# deletes the first indexed guest of the list
+del guest_list[0]
+	# since only one guest/item was left in the list, its again the 1st [0]
+
+print(guest_list)
+	# print myself the list to control that it is empty
+
+
+	
