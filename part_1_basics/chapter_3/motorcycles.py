@@ -66,13 +66,24 @@ print(motorcycles)
 popped_motorcycles = motorcycles.pop()
 	#introducing the new method pop()
 	# pop() takes an item from the end of the list but keeps it's value
+	# by this we stored the value of pop() item in a variable popped_motorcycles
 print(motorcycles)
-	# Shows a list without the popped last item
+	# Shows a list without the popped - last item
 print(popped_motorcycles)
 	# print the value of the removed item from the list
+	# popped_motorcycles was defined by me as a variable
 	
 print(popped_motorcycles.title())
 	# prints the popped item with the title() method
+	
+	
+	# This method can be used to restore something from chronological order:
+motorcycles = ['honda', 'yamaha', 'suzuki']
+	# Defining new list of motorcycles - 3 I have owned
+last_owned = motorcycles.pop()
+	# Defining a variable of ast owned from the end of the chronologicla list
+print("The last owned motorcycles of me was a " + last_owned.title() + ".")
+
 
 
 
