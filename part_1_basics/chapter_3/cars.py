@@ -31,3 +31,10 @@ print(cars)
 print(sorted(cars, reverse=True))
 	# This displays reverse order
 	# It is temporarily - the list still stays
+
+print("\n")
+
+cars.reverse()
+	# Reverse the order of the list
+	# Does not sort, but REVERSE
+print(cars)
