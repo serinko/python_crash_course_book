@@ -29,7 +29,7 @@ trees.remove('rowan')
 print(trees)
 
 not_around = trees.pop(1)
-message_not_around = "There is no " + not_around.title() + " around here."
+message_not_around = "\n\nThere is no " + not_around.title() + " around here.\n\n"
 print(message_not_around)
 
 print(trees)
