@@ -15,7 +15,26 @@
 locations_to_see = ['chiapas', 'bajkal', 'sarek', 'sumava', 'bakur']
 print("These are some of the locations I would like to visit")
 print(locations_to_see)
-print("\n"
+
+print(sorted(locations_to_see))
+
+print(locations_to_see)
+
+print(sorted(locations_to_see, reverse=True))
+
+print(locations_to_see)
+
+locations_to_see.reverse()
+print(locations_to_see)
+
+locations_to_see.reverse()
+print(locations_to_see)
+
+locations_to_see.sort()
+print(locations_to_see)
+
+locations_to_see.sort(reverse=True)
+print(locations_to_see)
 
 
 
