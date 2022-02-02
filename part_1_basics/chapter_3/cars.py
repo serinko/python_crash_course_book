@@ -13,7 +13,7 @@ print(cars)
 
 print("\n")
 
-cars = ['bmw','audi','toyota','subaru']
+
 print("Here is the original list:")
 print(cars)
 
@@ -37,4 +37,4 @@ print("\n")
 cars.reverse()
 	# Reverse the order of the list
 	# Does not sort, but REVERSE
-print(cars)
+print(cars)	
