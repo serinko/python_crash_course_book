@@ -33,7 +33,7 @@ print("\n")
 for poop in avocado_list_name:
 	print(str(poop) + " avocado")
 	# if we print simple range numbers str() not needed
-	# if we use ITEM + quote which is not a number, str() also not needed
+	# if we use ITEM which is not a number +  quote, str() also not needed
 	# if ITEM (poop) translates into a digit and adding a quote, str() is a must
 
 print("\n")
