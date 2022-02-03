@@ -11,7 +11,8 @@ for magician in sorted(magicians):
 	print(magician.title())
 	# This prints each item in sorted() order
 	# with the tittle() function
-
+	# I want to make a note which has several informations such as
+	
 print("\n")	
 for magician in magicians:
 	print(magician.title() + ", that was a great trick.")
@@ -25,5 +26,4 @@ print("Thank you everyone, this was an amazing show")
 	# INDENTING IS IMPORTANT
 	# Make sure you indent correctly
 	# and opposie that you do not indent what is not suppose to be
-	
 
