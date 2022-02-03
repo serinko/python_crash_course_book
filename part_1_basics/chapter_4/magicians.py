@@ -18,4 +18,12 @@ for magician in magicians:
 	# prints a message to each of the item (magician) in the list (magicians)
 	print("I cannot wait to see your performance, " + magician.title() + ".\n")
 	# prints a message to each with a space in between ech message
+
+print("Thank you everyone, this was an amazing show")
+	# Prints one message only, it is not part of the for loop
 	
+	# INDENTING IS IMPORTANT
+	# Make sure you indent correctly
+	# and opposie that you do not indent what is not suppose to be
+	
+
