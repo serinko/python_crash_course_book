@@ -23,3 +23,15 @@ print(squares)
 	# in range(1,11) we have numbers 1,2,3...10
 	# its exponential (**2) value is then the number in the list of "squares"
 	
+print("\n")
+
+	
+	# MORE CONCISELY
+	# omit the temporary variale "square"
+	# append each new value directly to the list
+	
+squares = []
+for value in range(1,11):
+	squares.append(value**2)
+	
+print(squares)
