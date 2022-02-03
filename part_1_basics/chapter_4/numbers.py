@@ -35,3 +35,15 @@ for poop in avocado_list_name:
 	# if we print simple range numbers str() not needed
 	# if we use ITEM + quote which is not a number, str() also not needed
 	# if ITEM (poop) translates into a digit and adding a quote, str() is a must
+
+print("\n")
+
+list_1_0 = list(range(1,0))
+print(list_1_0)
+	# Prints an empty list as there is no range between 1 and 0
+
+print("\n")
+	
+list_7_0 = list(range(7,0))
+print(list_7_0)
+	# Range only works upwards - list comes empty if printed in range 7 - 0
