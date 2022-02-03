@@ -22,4 +22,14 @@ print(avocado_list_name)
 print("\n")
 
 for avocado in avocado_list_name:
-	print(avocado + " avocado")
+	print(avocado)
+	# the variable can have whatever name
+	# as long as we refer to the for NAME 
+	
+print("\n")
+
+for poop in avocado_list_name:
+	print(str(poop) + " avocado")
+	# if we print simple range numbers str() not needed
+	# if we use ITEM + quote which is not a number, str() also not needed
+	# if ITEM (poop) translates into a digit and adding a quote, str() is a must
