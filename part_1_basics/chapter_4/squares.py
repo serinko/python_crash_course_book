@@ -15,6 +15,7 @@ for value in range(1,11):
 	# item in append(square) is defined as "square"
 	# "square" as a variable was defined above
 	# LOOP = all this is happening in the loop due to "if" and "in" functions
+	# this adds (append) a value of "square" until the loop runs till the end (number 11)
 
 print(squares)
 	# print the list "squares" after the loop
