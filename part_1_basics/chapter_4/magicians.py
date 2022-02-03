@@ -9,3 +9,11 @@ for magician in magicians:
 
 for magician in sorted(magicians):
 	print(magician.title())
+	# This prints each item in sorted() order
+	# with the tittle() function
+
+print("\n")	
+for magician in magicians:
+	print(magician.title() + ", that was a great trick.")
+	# prints a message to each of the item (magician) in the list (magicians)
+	
