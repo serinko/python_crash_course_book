@@ -16,10 +16,10 @@ print(numbers)
 
 print("\n")
 
-avocado_list_name = list(range(1,101))
+avocado_list_name = list(range(1,11))
 	# IMPORTANT - This is how to create a list
 print(avocado_list_name)
-	# comes ut as a list
+	# comes out as a list
 
 print("\n")
 
