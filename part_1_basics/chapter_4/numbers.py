@@ -17,7 +17,9 @@ print(numbers)
 print("\n")
 
 avocado_list_name = list(range(1,101))
+	# IMPORTANT - This is how to create a list
 print(avocado_list_name)
+	# comes ut as a list
 
 print("\n")
 
