@@ -37,3 +37,10 @@ for value in range(1,11):
 	# and directly append to the list
 	
 print(squares)
+
+	# Both versions are good
+	# Sometimes adding a temporary variable makes it easier to understand the code
+	# sometimes it is better to be as concise
+	# aprroah this question according the priority of 
+	# 1) Make sure you understand your code well
+	# 2) Look for simplification and efficiency when you review the code
