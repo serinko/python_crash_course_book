@@ -15,7 +15,7 @@ for magician in sorted(magicians):
 	
 print("\n")	
 for magician in magicians:
-	print(magician.title() + ", that was a great trick.")
+print(magician.title() + ", that was a great trick.")
 	# prints a message to each of the item (magician) in the list (magicians)
 	print("I cannot wait to see your performance, " + magician.title() + ".\n")
 	# prints a message to each with a space in between ech message
@@ -27,3 +27,4 @@ print("Thank you everyone, this was an amazing show")
 	# Make sure you indent correctly
 	# and opposie that you do not indent what is not suppose to be
 
+prnt(magicians)
