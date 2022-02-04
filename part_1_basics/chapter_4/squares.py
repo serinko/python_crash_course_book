@@ -32,11 +32,12 @@ print("\n")
 	
 squares = []
 for value in range(1,11):
-	squares.append(value**3)
+	squares.append(value**)
 	# Each value in the range is immediatelly raised to the second power
 	# and directly append to the list
 	
 print(squares)
+print("\n")
 
 	# Both versions are good
 	# Sometimes adding a temporary variable makes it easier to understand the code
@@ -44,3 +45,10 @@ print(squares)
 	# aprroah this question according the priority of 
 	# 1) Make sure you understand your code well
 	# 2) Look for simplification and efficiency when you review the code
+
+	# LIST COMPREHENSIONS
+squares = [value**2 for value in range (1,11)]
+	# this is the shortest way the previous list can be witten like
+	# this way is often presented by other programmers
+print(squares)
+	
