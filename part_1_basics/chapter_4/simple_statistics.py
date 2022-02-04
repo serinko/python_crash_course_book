@@ -1,3 +1,8 @@
 digits = list(range(0,41,2))
 print (digits)
-
+print("\n")
+print(min(digits))
+print("\n")
+print(max(digits))
+print("\n")
+print(sum(digits))
