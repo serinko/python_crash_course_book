@@ -32,7 +32,7 @@ print("\n")
 	
 squares = []
 for value in range(1,11):
-	squares.append(value**)
+	squares.append(value**2)
 	# Each value in the range is immediatelly raised to the second power
 	# and directly append to the list
 	
