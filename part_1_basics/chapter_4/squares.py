@@ -47,8 +47,16 @@ print("\n")
 	# 2) Look for simplification and efficiency when you review the code
 
 	# LIST COMPREHENSIONS
-squares = [value**2 for value in range (1,11)]
 	# this is the shortest way the previous list can be witten like
 	# this way is often presented by other programmers
+squares = [value**2 for value in range (1,11)]
+	# begin with descriptive name of the list "squares"
+	# define the expression of he value = "value**2"
+	# a for loopto generate the numbers into the expression
+	#the for loop is for value in the given range
+	# which feeds the value through the expression value**2
+	# No colon is used in the end
 print(squares)
 	
+	# It takes practie to make your own comprehensions
+	# when the lines become repetative - consider writing your own comprehensions
