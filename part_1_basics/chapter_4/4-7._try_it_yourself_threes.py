@@ -8,7 +8,7 @@ for value in threes:
 
 print("\n")
  
- # or concicesly
+ # or "conciceslly"
 
 threes = [ value for value in range(3,31,3)]
 for three in threes:
