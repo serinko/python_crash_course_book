@@ -8,7 +8,7 @@ cubes = [value**3 for value in range(1,11)]
 	# defining the list cubes
 	# using the variable value**3 loping for each step in the range
 	
-for cubes in cubes:
+for cube in cubes:
 	# for loop with a variable cube and list of cubes
-	print(cubes)
+	print(cube)
 	# finally printing
