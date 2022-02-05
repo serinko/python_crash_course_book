@@ -20,3 +20,15 @@ print(players[-3:])
 	# the negative ndex counts from the end
 	# this will outtput a slie 3 items from the end
 	# we didnt define the second index, it prints till the end
+	
+	
+	# for LOOP AND SLICE
+print("Here are the frst three players of my team:")
+	# prints a sentence for all
+for player in players[:3]:
+	# defines a variable player and = an item in the list of players
+	# at the same time defines the slice of the list to loop in
+	# by using the [] method
+	print(player.title())
+	# prints each item in the given slice
+	# with .title() method
