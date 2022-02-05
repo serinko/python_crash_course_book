@@ -24,4 +24,10 @@ print(my_foods)
 print("\nMy friends favorite foods are:")
 print(friends_food)
 	# prints the friends lis
-	# WITHOUT the my_list modifications
+	# WITHOUT any my_list modifications
+
+	# if we did nt use the [:] slice
+	# only made friends_food = my_foods
+	# this would bring a result of  two list equaling
+	# meaning any changes of each would be expressed in both
+	# the slice tells Python to copy the value from one to other 
