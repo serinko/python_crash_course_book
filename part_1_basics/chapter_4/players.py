@@ -16,4 +16,7 @@ print(players[:2])
 print(players[2:])
 	# similar syntax - Python slices from "2" till the end
 	
-	
+print(players[-3:])
+	# the negative ndex counts from the end
+	# this will outtput a slie 3 items from the end
+	# we didnt define the second index, it prints till the end
