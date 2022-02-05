@@ -8,3 +8,8 @@ print(players[1:-1])
 print("\nThese are the last three players from the list:")
 print(players[-3:])
 
+print("\n")
+
+	# We can also print them not in the list form but as items
+	
+
