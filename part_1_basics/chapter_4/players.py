@@ -7,3 +7,4 @@ print(players[0:3])
 	# as in range the frs tindex is where the range starts
 	# the last marks the border, so the slice prints -1 from it
 	# because list counts from 0, do nt forget off-by-one rule
+print(players[1:4])
