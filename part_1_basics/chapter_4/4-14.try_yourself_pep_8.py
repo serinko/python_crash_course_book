@@ -5,6 +5,11 @@ my_list = [
     # Ways how to write in pep8 standarts
 print(my_list)
 
+
+print("\n")
 # ~ ctrl+E makes this type of comment, which is god to use for code archive
 # ~ Python will ignore this code
 
+for number in my_list:
+    print(number)
+    

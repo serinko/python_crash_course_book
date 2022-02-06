@@ -6,7 +6,9 @@ my_foods = ['pizza', 'falafel', 'carrot cake']
 friends_food = my_foods[:]
 
 print("My favorite foods are:")
+
 print(my_foods)
+
 
 print("\n My friends favorite foods are:")
 print(friends_food)
@@ -17,11 +19,14 @@ my_foods.append('cannoli')
 friends_food.append('ice cream')
 
 print("\nMy favorite foods are:")
+
 print(my_foods)
 	# prints the modified list
 	# WITHOUT the 1st list modifications
 
+
 print("\nMy friends favorite foods are:")
+
 print(friends_food)
 	# prints the friends lis
 	# WITHOUT any my_list modifications
