@@ -12,3 +12,8 @@ dimensions = (220,75)
 print("\nHere are the re-defined dimensions:")
 for dimension in dimensions:
 	print(dimension)
+
+	# compared t a list 
+	# tuples are simple data structure
+	# use them if you want to have values which will not hange through
+	# the life of the program
