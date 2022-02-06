@@ -12,11 +12,10 @@ buffet_menu = ('hummus', 'cheese spread', 'guacamole', \
 print("The buffet menu:")
 for food in buffet_menu:
 	print(food.title())
-	
-buffet_menu[2] = 'bacon toast'
-buffet_menu[-1] = 'hash browns'
 
+buffet_menu = ('hummus', 'cheese spread', 'bacon toast', \
+'pita bread', 'hash browns')
 
-print("The buffet menu:")
+print("\nThe new buffet menu:")
 for food in buffet_menu:
 	print(food.title())
