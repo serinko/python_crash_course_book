@@ -12,3 +12,7 @@ dimensions[0] = 250
 	# unles the whole tuple is not re-defined
 print(dimensions[0])
 	# we get an error message
+	# This is beneficil - we want Python to raise an error
+	# if there is an attempt to change values in a tuple
+	# if we want a list where we can change values - just make a list
+	# not a tuple
