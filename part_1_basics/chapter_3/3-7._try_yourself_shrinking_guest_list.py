@@ -16,23 +16,39 @@ message_invitation = \
 print(message_invitation)
 	# printing the invitation message, index 0 + title() = Vesna
 	
+	
 	# REPEAT FOR OTHER GUESTS
+	
 
 guest_index = guest_list[1]
-message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+
+message_invitation = \
+	"\nDear " + guest_index.title() + \
+	", I would like to invite you for a dinner at my place, tonight. \
+	Hope to see you there."
+
 print(message_invitation)
 
 
 guest_index = guest_list[2]
-message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+message_invitation = \
+	"\nDear " + guest_index.title() + \
+	", I would like to invite you for a dinner at my place, tonight. \
+	Hope to see you there."
+	
 print(message_invitation)
 
 
 guest_index = guest_list[3]
-message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+message_invitation = \
+	"\nDear " + guest_index.title() + \
+	", I would like to invite you for a dinner at my place, tonight. \
+	Hope to see you there."
+
 print(message_invitation)
 
 print("\n")
+
 
 	# ODIN CANNOT COME!
 	# print that statement
@@ -44,32 +60,58 @@ print("\n")
 cannot_come = guest_list.pop(1)
 	# Defyning that index 1 = odin, cannot come as a variable
 	# using pop(function)
-message_cannot_come = "Dear guests, I would like to inform you, that " + cannot_come.title() + " will not be able to join us today."
+
+message_cannot_come = \
+	"Dear guests, I would like to inform you, that " \
+	+ cannot_come.title() + " will not be able to join us today."
 	# message is defined including the variable cannt_come
+	
 print(message_cannot_come)
 	# printing message to the guest's informing that one cannot_come
+	
 	
 guest_list.append ('diana')
 	 # adds a new guest diana in the end of the guest list
 	 
+	
 	 # PRINT AN VITATION MESSAGE TO EVERYONE IN THE LIST
+	
 	 
 guest_index = guest_list[0]
-message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+
+message_invitation = \
+	"\nDear " + guest_index.title() + \
+	", I would like to invite you for a dinner at my place, tonight. \
+	Hope to see you there."
+
 print(message_invitation)
 
+
 guest_index = guest_list[1]
-message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+message_invitation = \
+	"\nDear " + guest_index.title() + \
+	", I would like to invite you for a dinner at my place, tonight. \
+	Hope to see you there."
+
 print(message_invitation)
 
 
 guest_index = guest_list[2]
-message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+
+message_invitation = \
+	"\nDear " + guest_index.title() + \
+	", I would like to invite you for a dinner at my place, tonight. \
+	Hope to see you there."
+
 print(message_invitation)
 
 
 guest_index = guest_list[3]
-message_invitation = "\nDear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+message_invitation = \
+	"\nDear " + guest_index.title() + \
+	", I would like to invite you for a dinner at my place, tonight. \
+	Hope to see you there."
+
 print(message_invitation)
 
 	
@@ -79,6 +121,7 @@ print(message_invitation)
 	# use append to add more ppl to the list
 	# print a new invitation message to everyone in the list
 	
+
 message_more_seats = "\nDear guests, I found a bigger table, so more people will be invited to today's dinner. The invitations will be printed for everyone in few minutes."
 	# Defining variable with the message about more seats
 print(message_more_seats)
