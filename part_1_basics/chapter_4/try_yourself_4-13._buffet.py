@@ -13,4 +13,10 @@ print("The buffet menu:")
 for food in buffet_menu:
 	print(food.title())
 	
+buffet_menu[2] = 'bacon toast'
+buffet_menu[-1] = 'hash browns'
 
+
+print("The buffet menu:")
+for food in buffet_menu:
+	print(food.title())
