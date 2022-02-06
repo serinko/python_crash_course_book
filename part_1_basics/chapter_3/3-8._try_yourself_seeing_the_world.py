@@ -13,7 +13,9 @@
 
 
 locations_to_see = ['chiapas', 'bajkal', 'sarek', 'sumava', 'bakur']
-print("These are some of the locations I would like to visit")
+
+print("These are some of the locations I would like to visit:")
+
 print(locations_to_see)
 
 print(sorted(locations_to_see))

@@ -1,13 +1,18 @@
 
-
 guest_list = ['vesna', 'odin', 'hecate', 'maria']
 	# Defyning a list of invited people
+
 guest_index = guest_list[0]
 	# Defyning the guet from the list according their index
 	# Making a variable esy to eaxchange further on
-message_invitation = "Dear " + guest_index.title() + ", I would like to invite you for a dinner at my place, tonight. Hope to see you there."
+
+message_invitation = \
+	"Dear " + guest_index.title() + \
+	", I would like to invite you for a dinner at my place, tonight. \
+	Hope to see you there."
 	# invitation message as a variable with the index variable
 	# Adding title() method for a correct grammar of the name.
+
 print(message_invitation)
 	# printing the invitation message, index 0 + title() = Vesna
 	

@@ -2,9 +2,10 @@ magicians = ['alice','david','carolina']
 for magician in magicians:
 	print(magician)
 	# for is a loop function
-	# firt time I can see that I used a function print in moved under another function 
+	# firt time I can see that I used a function print in -
+	#moved under another function 
 	# for ITEM in LIST_OF_ITEMS
-	# singular and plural helps to navigate if we talk about the list or variable
+	# singular and plural helps to navigate in the list or variable
 	print("\n")
 
 for magician in sorted(magicians):
@@ -15,7 +16,7 @@ for magician in sorted(magicians):
 	
 print("\n")	
 for magician in magicians:
-print(magician.title() + ", that was a great trick.")
+	print(magician.title() + ", that was a great trick.")
 	# prints a message to each of the item (magician) in the list (magicians)
 	print("I cannot wait to see your performance, " + magician.title() + ".\n")
 	# prints a message to each with a space in between ech message

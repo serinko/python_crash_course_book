@@ -15,7 +15,8 @@ for value in range(1,11):
 	# item in append(square) is defined as "square"
 	# "square" as a variable was defined above
 	# LOOP = all this is happening in the loop due to "if" and "in" functions
-	# this adds (append) a value of "square" until the loop runs till the end (number 11)
+	# this adds (append) a value of "square" 
+	#until the loop runs till the end (number 11)
 
 print(squares)
 	# print the list "squares" after the loop
@@ -40,7 +41,8 @@ print(squares)
 print("\n")
 
 	# Both versions are good
-	# Sometimes adding a temporary variable makes it easier to understand the code
+	# Sometimes adding a temporary variable 
+	#makes it easier to understand the code
 	# sometimes it is better to be as concise
 	# aprroah this question according the priority of 
 	# 1) Make sure you understand your code well
@@ -59,4 +61,5 @@ squares = [value**2 for value in range (1,11)]
 print(squares)
 	
 	# It takes practie to make your own comprehensions
-	# when the lines become repetative - consider writing your own comprehensions
+	# when the lines become repetative - 
+	#consider writing your own comprehensions
