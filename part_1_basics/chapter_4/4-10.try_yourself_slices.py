@@ -16,7 +16,7 @@ print(players[-3:])
 
 print("\n")
 
-	# We can also print them not in the list form but as items
+# We can also print them not in the list form but as items
 	
 
 print("These are the first three players from the list:")

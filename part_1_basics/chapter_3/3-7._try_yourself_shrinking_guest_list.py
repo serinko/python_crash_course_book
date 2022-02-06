@@ -187,7 +187,6 @@ message_invitation = \
 
 print(message_invitation)
 
-
 guest_index = guest_list[4]
 
 message_invitation = \
@@ -229,7 +228,7 @@ print("\n")
 	# print the list to make sure it's empty
 	
 	
-message_table_delayed = 
+message_table_delayed = \
 	"\nDear guests, I have a bad news. Just got informed that the table \
 	delivery is delayed and therefore I only have capacity for two guests, \
 	I am very sorry for this."
