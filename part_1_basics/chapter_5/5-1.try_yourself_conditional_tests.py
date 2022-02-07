@@ -37,3 +37,8 @@ print("The I believe the number == " + str(user_1_number) + ".")
 print(user_1_number == number)
 # user_1 guessed the number 5. Prints False.
 print("\n")
+
+user_2_number = range(1, 100)
+user_3_number = range(4, 100)
+print("If user 1 and user 2 are right, print True")
+print(user_2_number and user_3_number == number)
