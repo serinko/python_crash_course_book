@@ -16,3 +16,5 @@ else:
 # This would be the more common way to solve this numerical comparison
 # the former was to show how != works
 # But == is more common
+
+# statement cn also include < or > or <= or >=
