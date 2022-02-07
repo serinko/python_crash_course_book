@@ -33,5 +33,7 @@ print(number == user_0_number)
 print("\n")
 
 user_1_number = 5
-print("The number I beleve the number == " + str(user_1_number) + ".")
+print("The I believe the number == " + str(user_1_number) + ".")
 print(user_1_number == number)
+# user_1 guessed the number 5. Prints False.
+print("\n")
