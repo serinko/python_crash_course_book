@@ -50,6 +50,16 @@ print("\n")
 
 print("If either user 1 or user 2 are right, print True")
 print(user_2_number or user_3_number == number)
+print("\n")
+
+print("If either user 1 or user 2 are right, print True")
+if user_2_number or user_3_number == number:
+    print(True)
+print("\n")
+
+print("If either user 1 or user 2 are right, print True")
+if user_2_number or user_3_number == number:
+    print('True')
 # Keeping the same users (2 and 3) but the function is OR so either is enough
 # for the return True
 print("\n")
