@@ -23,11 +23,15 @@ print(number >= 0)
 # We get True
 print("\n")
 
-user_number = 1
-print("I believe the number is " + str(user_number) + ".")
-print(number == user_number)
+user_0_number = 1
+print("I believe the number is " + str(user_0_number) + ".")
+print(number == user_0_number)
 # here we have a comparison, where the user number is 1 as ell as number is 1
 # We added user numer to the first sentence
 # print is a == comparison in between te number and user_number
 # So the print is True
 print("\n")
+
+user_1_number = 5
+print("The number I beleve the number == " + str(user_1_number) + ".")
+print(user_1_number == number)
