@@ -40,5 +40,16 @@ print("\n")
 
 user_2_number = range(1, 100)
 user_3_number = range(4, 100)
+# We added ranges as a solution to the problem when:
+# comparing < > signs cannot be use for definition.
+
 print("If user 1 and user 2 are right, print True")
 print(user_2_number and user_3_number == number)
+# Here we using and as a function - both must be True to == True
+print("\n")
+
+print("If either user 1 or user 2 are right, print True")
+print(user_2_number or user_3_number == number)
+# Keeping the same users (2 and 3) but the function is OR so either is enough
+# for the return True
+print("\n")
