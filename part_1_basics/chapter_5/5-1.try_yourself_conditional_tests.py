@@ -13,3 +13,12 @@ print(car == 'subaru')
 
 print("\nIs car == 'audi'? I predict False.")
 print(car == 'audi')
+print("\n")
+
+number = 1
+print("Is number >= 0? I predict True")
+print(number >= 0)
+print("\n")
+# Here we used a numeric comparisn, where value in the variable = 1
+# And the prediction is tha thte number is >= 0
+# We get True
