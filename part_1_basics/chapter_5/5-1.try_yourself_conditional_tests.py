@@ -18,7 +18,16 @@ print("\n")
 number = 1
 print("Is number >= 0? I predict True")
 print(number >= 0)
-print("\n")
 # Here we used a numeric comparisn, where value in the variable = 1
 # And the prediction is tha thte number is >= 0
 # We get True
+print("\n")
+
+user_number = 1
+print("I believe the number is " + str(user_number) + ".")
+print(number == user_number)
+# here we have a comparison, where the user number is 1 as ell as number is 1
+# We added user numer to the first sentence
+# print is a == comparison in between te number and user_number
+# So the print is True
+print("\n")
