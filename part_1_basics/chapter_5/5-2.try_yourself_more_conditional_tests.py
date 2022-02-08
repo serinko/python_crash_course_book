@@ -149,7 +149,8 @@ comrade_xweser_1 = 'bbb1'
 comrade_xweser_2 = 'bbb2'
 comrade_xweser_3 = 'bbb3'
 
-# ~list_comrades.append(comrade)
+# WHY IS THIS NOT WORKING? :
+# ~list_comrades.append(comrade*)
 list_comrades.extend(
     value for name, value in locals().items() if name.startswith('comrade'))
 
@@ -160,14 +161,5 @@ list_xweser_comrades.extend(
 # BASICALLY THE GOAL IS - IN HERE - find a function where every comrade_
 # and every comrade_xweser_ will be added to the list above
 
-# DID NOT WORK:
-# ~for comrade in [comrade_(str(range(1, 100)))]:
-# ~    list_comrades.append(comrade)
-
-# ~comrade_x = list(str("comrade_" + str(range(1, 100))))
-# ~for comrade in comrade_x:
-# ~    list_comrades.append(comrade)
-
 print(list_comrades)
 print(list_xweser_comrades)
-# print(list_xweser_comrades)
