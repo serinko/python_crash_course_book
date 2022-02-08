@@ -95,7 +95,7 @@ if log_in.lower() == admin and log_in_password == admin_password:
     print( \
         "Here is the list of registered travelers for the upcoming trip:" \
         )
-    for traveler in list_of_travelers:
+    for traveler in sorted(traveler_list):
         print(traveler.title())
 else:
     print( \
