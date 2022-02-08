@@ -46,11 +46,13 @@ print("\n\n")
 # PROGRAM 2 - Make a database of travelers
 # add registered clients to the list of travelers
 # when a client logs in to the application, give a return
-# a) for the program to compare if client is registered for travel or not
-# b) print a message for the client if registered
+# a) print a "successfully logged in" message
+# b) for the program to compare if client is registered for travel or not
+# c) print a message for the client if registered
 # If admin logs in with a correct password:
 # a) print them a welcome admin message
 # b) print a list of travelers, alphabetically sorted
+
 traveler_list = []
 traveler_list.append('martin')
 traveler_list.append('john')
@@ -60,8 +62,44 @@ traveler_list.append('emily')
 traveler_list.append('leo')
 
 client = 'ian'
+message_logged_in = \
+    "Hello " + client.title() + \
+    " you are logged in to the travel application."
+print(message_logged_in)
+
+print("\n")
+
+print(client in traveler_list)
+
+print("\n")
+
 if client in traveler_list:
     print("Dear " + client.title() + " we are glad you travel with us.")
 else:
     print(client.title() + \
           ", we are sorry, but you are not registered for this travel.")
+
+print("\n")
+
+admin = 'admin'
+admin_password = 'admin2022'
+
+log_in = 'Admin'
+log_in_password = 'admin2022'
+
+if log_in.lower() == admin and log_in_password == admin_password:
+    print( \
+        "Hello, you are logged as admin. Welcome." \
+        )
+    print("\n")
+    print( \
+        "Here is the list of registered travelers for the upcoming trip:" \
+        )
+    for traveler in list_of_travelers:
+        print(traveler.title())
+else:
+    print( \
+        "Sorry, but your username and password does not match. Try again." \
+        )
+
+print("\n")
