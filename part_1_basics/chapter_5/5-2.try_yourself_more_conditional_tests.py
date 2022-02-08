@@ -164,5 +164,12 @@ list_xweser_comrades.extend(
     value for name, value in locals().items() if
     name.startswith('comrade_xweser'))
 
+# Check up print of the lists
 print(list_comrades)
 print(list_xweser_comrades)
+
+# USER INPUT
+user_logi_in =
+user_password =
+
+if comrade in list_of_comrades
