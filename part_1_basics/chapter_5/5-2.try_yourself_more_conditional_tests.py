@@ -164,8 +164,5 @@ list_xweser_comrades.extend(
     value for name, value in locals().items() if
     name.startswith('comrade_xweser'))
 
-# BASICALLY THE GOAL IS - IN HERE - find a function where every comrade_
-# and every comrade_xweser_ will be added to the list above
-
 print(list_comrades)
 print(list_xweser_comrades)
