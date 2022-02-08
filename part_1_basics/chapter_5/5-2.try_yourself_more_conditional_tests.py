@@ -142,15 +142,21 @@ print("\n\n\n")
 list_comrades = []
 list_xweser_comrades = []
 
-comrade_1 = 'aaa1'
-comrade_2 = 'aaa2'
-comrade_3 = 'aaa3'
-comrade_xweser_1 = 'bbb1'
-comrade_xweser_2 = 'bbb2'
-comrade_xweser_3 = 'bbb3'
+comrade_1 = 'martin'
+comrade_2 = 'mohamed'
+comrade_3 = 'zu'
+comrade_xweser_1 = 'sara'
+comrade_xweser_2 = 'barbara'
+comrade_xweser_3 = 'diana'
+
+# BASICALLY THE GOAL IS - IN HERE - find a function where every comrade_
+# and every comrade_xweser_ will be added to the list above
 
 # WHY IS THIS NOT WORKING? :
 # ~list_comrades.append(comrade*)
+
+# Found online - do not understand the complexity of it
+# Need to learn it myself
 list_comrades.extend(
     value for name, value in locals().items() if name.startswith('comrade'))
 
