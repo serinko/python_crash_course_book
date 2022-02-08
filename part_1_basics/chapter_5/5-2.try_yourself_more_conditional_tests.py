@@ -149,6 +149,14 @@ comrade_xweser_1 = 'bbb1'
 comrade_xweser_2 = 'bbb2'
 comrade_xweser_3 = 'bbb3'
 
+# ~list_comrades.append(comrade)
+list_comrades.extend(
+    value for name, value in locals().items() if name.startswith('comrade'))
+
+list_xweser_comrades.extend(
+    value for name, value in locals().items() if
+    name.startswith('comrade_xweser'))
+
 # BASICALLY THE GOAL IS - IN HERE - find a function where every comrade_
 # and every comrade_xweser_ will be added to the list above
 
@@ -161,4 +169,5 @@ comrade_xweser_3 = 'bbb3'
 # ~    list_comrades.append(comrade)
 
 print(list_comrades)
+print(list_xweser_comrades)
 # print(list_xweser_comrades)
