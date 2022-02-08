@@ -54,25 +54,32 @@ print("\n\n")
 # b) print a list of travelers, alphabetically sorted
 
 traveler_list = []
+# Database for travelers
 traveler_list.append('martin')
 traveler_list.append('john')
 traveler_list.append('barbara')
 traveler_list.append('emily')
 traveler_list.append('emily')
 traveler_list.append('leo')
+# adding registered users
 
 client = 'ian'
+# new client logged in to the application
 message_logged_in = \
     "Hello " + client.title() + \
     " you are logged in to the travel application."
 print(message_logged_in)
+# Print welcome message to a client
 
 print("\n")
 
 print(client in traveler_list)
+# Gives return to the system if the client is registered for the travel or not
 
 print("\n")
 
+# Function to compare client with the database
+# Print a message for the client based on the status
 if client in traveler_list:
     print("Dear " + client.title() + " we are glad you travel with us.")
 else:
@@ -81,12 +88,17 @@ else:
 
 print("\n")
 
+# Define admin and admin password for the application admin access
 admin = 'admin'
 admin_password = 'admin2022'
 
+# Logg in input by user/admin
 log_in = 'Admin'
 log_in_password = 'admin2022'
 
+# Function comparing/checking for user/admin input to match with the app system
+# Printing the outcome
+# In case of == admin, prints the sorted list of travelers
 if log_in.lower() == admin and log_in_password == admin_password:
     print( \
         "Hello, you are logged as admin. Welcome." \
@@ -101,5 +113,3 @@ else:
     print( \
         "Sorry, but your username and password does not match. Try again." \
         )
-
-print("\n")
