@@ -93,7 +93,7 @@ admin = 'admin'
 admin_password = 'admin2022'
 
 # Logg in input by user/admin
-log_in = 'Admin'
+log_in = 'admin'
 log_in_password = 'admin2022'
 
 # Function comparing/checking for user/admin input to match with the app system
@@ -114,7 +114,9 @@ else:
         "Sorry, but your username and password does not match. Try again." \
         )
 
-# EXCERCISE PROGRAM 3 - for @saliveja:
+print("\n\n\n")
+
+# EXCERCISE PROGRAM 3 - layers of log in:
 # application for log in layers
 # Define a list of comrades - with 8 comrades
 # make another database mirroring the xweser comrades in the contact list
@@ -129,3 +131,31 @@ else:
 # Print a message for the system - to quickly categorize the user like:
 # user comrade == True/False
 # user xweser comrade == True/False
+
+# The important point is to focus ont the first step where:
+# the list_comrades and list_xweser_comrades are empty
+# over time we have new users registering
+# those are getting index as comrade_x or comrade_xweser_x
+# the MAIN FOCUS - how do we add them to the list in the simpliest way
+# withot .append() every single one of them manually
+
+list_comrades = []
+list_xweser_comrades = []
+
+comrade_1 = 'aaa1'
+comrade_2 = 'aaa2'
+comrade_3 = 'aaa3'
+comrade_xweser_1 = 'bbb1'
+comrade_xweser_2 = 'bbb2'
+comrade_xweser_3 = 'bbb3'
+
+# DID NOT WORK:
+# ~for comrade in [comrade_(str(range(1, 100)))]:
+# ~    list_comrades.append(comrade)
+
+# ~comrade_x = list(str("comrade_" + str(range(1, 100))))
+# ~for comrade in comrade_x:
+# ~    list_comrades.append(comrade)
+
+print(list_comrades)
+# print(list_xweser_comrades)
