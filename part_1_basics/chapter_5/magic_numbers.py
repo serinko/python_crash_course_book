@@ -17,4 +17,5 @@ else:
 # the former was to show how != works
 # But == is more common
 
-# statement cn also include < or > or <= or >=
+# if statement cn also include < or > or <= or >=
+# those cannot be used for definition of a variable/string
