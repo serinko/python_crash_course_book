@@ -113,3 +113,19 @@ else:
     print( \
         "Sorry, but your username and password does not match. Try again." \
         )
+
+# EXCERCISE PROGRAM 3 - for @saliveja:
+# application for log in layers
+# Define a list of comrades - with 8 comrades
+# make another database mirroring the xweser comrades in the contact list
+# make a variable which defines loggin of comrades
+# make a variable which defines password for comrades
+# make a variable for xweser comrades and a password for xweser comrades
+# make a variable user - a field which anyone can fill and
+# user password
+# Print a message to the user if their name and password do not match the list
+# print a message for the user if they loged in as a comrade
+# Print a message if they log in as a xweser comrade
+# Print a message for the system - to quickly categorize the user like:
+# user comrade == True/False
+# user xweser comrade == True/False
