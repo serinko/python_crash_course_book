@@ -169,7 +169,7 @@ print(list_comrades)
 print(list_xweser_comrades)
 
 # USER INPUT
-user_logi_in =
+user_name =
 user_password =
 
 if comrade in list_of_comrades
