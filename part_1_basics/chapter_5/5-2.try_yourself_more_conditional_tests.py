@@ -175,7 +175,7 @@ comrade_password = 'ruwsak@#ks!@'
 xweser_password = 'hgcyt.,:L1W!xxrt677'
 
 # USER INPUT
-user_name = 'diana'
+user_name = 'mohamed'
 user_password = 'hgcyt.,:L1W!xxrt677'
 
 if user_name in list_comrades and user_password == comrade_password or \
@@ -219,7 +219,9 @@ if user_name in list_xweser_comrades and user_password == xweser_password:
           "You are registered as xweser comrade."
           )
 
-if return_comrade:
+if return_comrade or xweser_comrade:
+    0
+else:
     print(
         "We are sorry, but your user name and password "
         "does not match, please try again."
