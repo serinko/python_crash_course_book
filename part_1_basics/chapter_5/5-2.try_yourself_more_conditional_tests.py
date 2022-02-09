@@ -173,21 +173,20 @@ comrade_password = 'ruwsak@#ks!@'
 xweser_password = 'hgcyt.,:L1W!xxrt677'
 
 # USER INPUT
-user_name = 'diana'
+user1_name = 'diana'
 user_password = 'hgcyt.,:L1W!xxrt677'
 
-for user in list_comrades:
-    if user_name in list_comrades and \
-            user_password == comrade_password:
-        print(" This user is registered as a comrade with a username" + \
-              user + ".  ==  " \
-              + user_name in list_comrades and \
-              user_password == comrade_password)
+if user1_name in list_comrades and user_password == comrade_password:
+    print(" This user is registered as a comrade with a username" +
+          user1_name.title() + ".  ==  ")
 
-for user_xweser in list_comrades:
-    if user_name in list_comrades and \
-            user_password == xweser_password:
-        print(" This user is registered as xweser comrades with a username " \
-              + xweser_user + ".  ==  " \
-              + user_name in list_comrades and \
-              user_password == xweser_password)
+    print(user1_name in list_comrades and \
+          user_password == comrade_password)
+
+if user1_name in list_comrades and \
+        user_password == xweser_password:
+    print(
+        " This user is registered as xweser comrades with a username " +
+        user1_name + ".  ==  " \
+        + user1_name in list_comrades and \
+        user_password == xweser_password)
