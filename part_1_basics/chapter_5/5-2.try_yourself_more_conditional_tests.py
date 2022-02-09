@@ -219,7 +219,7 @@ if user_name in list_xweser_comrades and user_password == xweser_password:
           "You are registered as xweser comrade."
           )
 
-if return_comrade or return_xweser != True:
+if return_comrade or return_xweser != str('True'):
     print(
         "We are sorry, but your user name and password "
         "does not match, please try again."
