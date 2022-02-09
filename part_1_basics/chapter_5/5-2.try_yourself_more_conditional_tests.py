@@ -184,9 +184,12 @@ if user_name in list_comrades and user_password == comrade_password or \
           user_name.title() + ".")
 
     print(">>> ")
-    print(user_name in list_comrades and
-          user_password == comrade_password or
-          user_password == xweser_password)
+
+    return_comrade = (user_name in list_comrades and
+                      user_password == comrade_password or
+                      user_password == xweser_password)
+
+    print(return_comrade)
 
 if user_name in list_xweser_comrades and xweser_password == user_password:
     print("\nThis user is registered as xweser comrades with a username: " +
@@ -194,8 +197,12 @@ if user_name in list_xweser_comrades and xweser_password == user_password:
 
     print(">>> ")
 
-    print(user_name in list_xweser_comrades and
-          user_password == xweser_password)
+    return_xweser = (user_name in list_xweser_comrades and
+                     user_password == xweser_password)
+
+    print(return_xweser)
+
+print("\n")
 
 # Message for the users application
 if user_name in list_comrades and user_password == comrade_password:
@@ -212,4 +219,8 @@ if user_name in list_xweser_comrades and user_password == xweser_password:
           "You are registered as xweser comrade."
           )
 
-if user_name in list_xweser_comrades and user_password == xweser_password:
+if return_comrade or return_xweser != True:
+    print(
+        "We are sorry, but your user name and password "
+        "does not match, please try again."
+    )
