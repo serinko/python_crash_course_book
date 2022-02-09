@@ -168,7 +168,7 @@ list_xweser_comrades.extend(
 print(list_comrades)
 print(list_xweser_comrades)
 
-print(\"n"
+print("\n")
 
 # DEFINED PASSWORDS
 comrade_password = 'ruwsak@#ks!@'
