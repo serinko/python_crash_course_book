@@ -178,7 +178,7 @@ xweser_password = 'hgcyt.,:L1W!xxrt677'
 user_name = 'mohamed'
 user_password = 'hgcyt.,:L1W!xxrt677'
 
-if user_name in list_comrades or list_xweser_comrades and user_password == comrade_password or xweser_password:
+if user_name in list_comrades or list_xweser_comrades and user_password == comrade_password or user_password == xweser_password:
     print("This user is registered as a comrade with a username " +
           user_name.title() + ".  ==  ")
 
