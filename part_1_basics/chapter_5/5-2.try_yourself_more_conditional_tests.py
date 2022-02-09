@@ -176,8 +176,18 @@ xweser_password = 'hgcyt.,:L1W!xxrt677'
 user_name = 'diana'
 user_password = 'hgcyt.,:L1W!xxrt677'
 
-print(
-    user_name in list_comrades and
-    user_password == comrade_password or
-    user_password == xweser_password
-)
+for user in list_comrades:
+    if user_name in list_comrades and \
+            user_password == comrade_password:
+        print(" This user is registered as a comrade with a username" + \
+              user + ".  ==  " \
+              + user_name in list_comrades and \
+              user_password == comrade_password)
+
+for user_xweser in list_comrades:
+    if user_name in list_comrades and \
+            user_password == xweser_password:
+        print(" This user is registered as xweser comrades with a username " \
+              + xweser_user + ".  ==  " \
+              + user_name in list_comrades and \
+              user_password == xweser_password)
