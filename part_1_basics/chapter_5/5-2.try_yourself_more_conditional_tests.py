@@ -193,6 +193,23 @@ if user_name in list_xweser_comrades and xweser_password == user_password:
           user_name.title() + ".")
 
     print(">>> ")
-    
+
     print(user_name in list_xweser_comrades and
           user_password == xweser_password)
+
+# Message for the users application
+if user_name in list_comrades and user_password == comrade_password:
+    print("Hello " +
+          user_name.title() +
+          ", welcome to the application. "
+          "You are registered as comrade."
+          )
+
+if user_name in list_xweser_comrades and user_password == xweser_password:
+    print("Hello " +
+          user_name.title() +
+          ", welcome to the application. "
+          "You are registered as xweser comrade."
+          )
+
+if user_name in list_xweser_comrades and user_password == xweser_password:
