@@ -176,7 +176,7 @@ xweser_password = 'hgcyt.,:L1W!xxrt677'
 
 # USER INPUT
 user_name = 'mohamed'
-user_password = 'hgcyt.,:L1W!xxrt677'
+user_password = 'ruwsak@#ks!@'
 
 if user_name in list_comrades and user_password == comrade_password or \
         user_name in list_xweser_comrades and user_password == xweser_password:
@@ -220,7 +220,7 @@ if user_name in list_xweser_comrades and user_password == xweser_password:
           )
 
 if return_comrade or xweser_comrade:
-    0
+    print()
 else:
     print(
         "We are sorry, but your user name and password "
