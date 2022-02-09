@@ -168,25 +168,27 @@ list_xweser_comrades.extend(
 print(list_comrades)
 print(list_xweser_comrades)
 
+print(\"n"
+
 # DEFINED PASSWORDS
 comrade_password = 'ruwsak@#ks!@'
 xweser_password = 'hgcyt.,:L1W!xxrt677'
 
 # USER INPUT
-user1_name = 'diana'
+user_name = 'diana'
 user_password = 'hgcyt.,:L1W!xxrt677'
 
-if user1_name in list_comrades and user_password == comrade_password:
+if user_name in list_comrades and user_password == comrade_password:
     print(" This user is registered as a comrade with a username" +
-          user1_name.title() + ".  ==  ")
+          user_name.title() + ".  ==  ")
 
-    print(user1_name in list_comrades and \
+    print(user_name in list_comrades and \
           user_password == comrade_password)
 
-if user1_name in list_comrades and \
+if user_name in list_comrades and \
         user_password == xweser_password:
     print(
         " This user is registered as xweser comrades with a username " +
-        user1_name + ".  ==  " \
-        + user1_name in list_comrades and \
+        user_name + ".  ==  " \
+        + user_name in list_comrades and \
         user_password == xweser_password)
