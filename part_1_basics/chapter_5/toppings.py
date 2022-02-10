@@ -39,3 +39,31 @@ for requested_topping in requested_toppings:
         print("Adding " + requested_topping + ".")
 
 print("\nFinished your pizza.")
+
+print("\n")
+
+# Making a check if the list is empty
+requested_toppings = []  # empty list
+
+if requested_toppings:  # checks if list == True/False
+    # if True:
+    for requested_topping in requested_toppings:
+        print("Adding " + requested_topping + ".")
+
+    print("\nFinished your pizza.")
+# if list is False (empty):
+else:
+    print("Are you sure you want a plain pizza?")
+# Prints message to make sure
+
+print("\n")
+
+# using multiple lists
+available_topings = ['mushrooms', 'olives', 'green peppers',
+                     'pepperoni', 'pineapple', 'extra cheese']
+
+requested_toppings = ['mushrooms', 'french fries', 'extra cheese']
+
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print("Adding " + requested_topping)
