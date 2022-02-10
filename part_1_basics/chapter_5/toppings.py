@@ -17,7 +17,6 @@ if 'pepperoni' in requested_topping:
 
 if 'extra cheese' in requested_topping:
     print("Add extra cheese.")
-
 # endless if statements can be added and as list gets modified, message changes
-
+# They get evaluated regardless of the previous if result
 print("\nFinished your pizza.")
