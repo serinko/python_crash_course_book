@@ -175,21 +175,27 @@ comrade_password = 'ruwsak@#ks!@'
 xweser_password = 'hgcyt.,:L1W!xxrt677'
 
 # USER INPUT
-user_name = 'mohamed'
-user_password = 'ruwsak@#ks!@'
+user_name = 'sara'
+user_password = 'hgcyt.,:L1W!xxrt677'
 
-if user_name in list_comrades and user_password == comrade_password or \
-        user_name in list_xweser_comrades and user_password == xweser_password:
+return_comrade = (user_name in list_comrades
+                  and user_password == comrade_password
+                  or user_name in list_xweser_comrades
+                  and user_password == xweser_password)
+
+if user_name in list_comrades \
+        and user_password == comrade_password \
+        or user_name in list_xweser_comrades \
+        and user_password == xweser_password:
     print("This user is registered as a comrade with a username " +
           user_name.title() + ".")
 
     print(">>> ")
 
-    return_comrade = (user_name in list_comrades and
-                      user_password == comrade_password or
-                      user_password == xweser_password)
-
     print(return_comrade)
+
+return_xweser = (user_name in list_xweser_comrades and
+                 user_password == xweser_password)
 
 if user_name in list_xweser_comrades and xweser_password == user_password:
     print("\nThis user is registered as xweser comrades with a username: " +
@@ -197,10 +203,7 @@ if user_name in list_xweser_comrades and xweser_password == user_password:
 
     print(">>> ")
 
-    return_xweser = (user_name in list_xweser_comrades and
-                     user_password == xweser_password)
-
-    print(return_xweser)
+    print(return_comrade)
 
 print("\n")
 
@@ -219,9 +222,7 @@ if user_name in list_xweser_comrades and user_password == xweser_password:
           "You are registered as xweser comrade."
           )
 
-if return_comrade or xweser_comrade:
-    print()
-else:
+if not return_comrade:
     print(
         "We are sorry, but your user name and password "
         "does not match, please try again."
