@@ -65,5 +65,9 @@ available_topings = ['mushrooms', 'olives', 'green peppers',
 requested_toppings = ['mushrooms', 'french fries', 'extra cheese']
 
 for requested_topping in requested_toppings:
-    if requested_topping in available_toppings:
-        print("Adding " + requested_topping)
+    if requested_topping in available_topings:
+        print("Adding " + requested_topping + ".")
+    else:
+        print("Sorry, we dont have " + requested_topping + ".")
+
+print("\nFinished your pizza.")
