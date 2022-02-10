@@ -230,11 +230,11 @@ if user_name in list_xweser_comrades and user_password == xweser_password:
 
 if not return_comrade:
     # the variable return_comrade is used
-    # if not means that the viable is not True
+    # statement: if variable: means it needs value True as a return for action
+    # if not variable: means that the variable value is not True (is False)
     # that the conditions were not met.
-    # If varable: seeks for True
     # in this case if False (if not True)
-    # the not a correct loggin message prints
+    # the "not a correct login" message prints
     print(
         "We are sorry, but your user name and password "
         "does not match, please try again."
