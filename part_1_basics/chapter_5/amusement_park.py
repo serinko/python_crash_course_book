@@ -46,3 +46,19 @@ else:
     price = 3
 # in this way the code is easier to modify.
 print("Your admission cost is $" + str(price) + ".")
+
+print("\n")
+
+# you can ommit the else: block and use only elif: statements
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 5
+elif age < 65:
+    price = 10
+elif age >= 65:
+    price = 3
+# in this way the code is more clear to read, more confidence
+print("Your admission cost is $" + str(price) + ".")
+
+print("\n")
