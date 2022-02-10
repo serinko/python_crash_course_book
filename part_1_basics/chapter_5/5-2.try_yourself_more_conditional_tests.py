@@ -155,6 +155,10 @@ comrade_xweser_3 = 'diana'
 
 # WHY IS THIS NOT WORKING? :
 # ~list_comrades.append(comrade*)
+# ANSWER: '*' is known to PYTHON for multiplication
+# a sighn, function cannot be known for two different things
+# thats why = only means equal and for pull if equal we use ==
+# and why < ; > ; <= ; >= cant define a range bcs they are for comparisons
 
 # Found online - do not understand the complexity of it
 # Need to learn it myself
