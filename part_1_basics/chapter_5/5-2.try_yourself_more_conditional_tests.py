@@ -142,6 +142,7 @@ print("\n\n\n")
 list_comrades = []
 list_xweser_comrades = []
 
+# People registering as corade or xweser_comrade get a unique variable
 comrade_1 = 'martin'
 comrade_2 = 'mohamed'
 comrade_3 = 'zu'
@@ -178,6 +179,7 @@ xweser_password = 'hgcyt.,:L1W!xxrt677'
 user_name = 'sara'
 user_password = 'hgcyt.,:L1W!xxrt677'
 
+# variable return_comrade = True/False if the criteria are met
 return_comrade = (user_name in list_comrades
                   and user_password == comrade_password
                   or user_name in list_xweser_comrades
@@ -187,15 +189,15 @@ if user_name in list_comrades \
         and user_password == comrade_password \
         or user_name in list_xweser_comrades \
         and user_password == xweser_password:
+    # important to efine the whole comparison after 'or" function
+    # not to think about it as spoken language, but define every step again
+    # otherwise the finction missbehave
     print("This user is registered as a comrade with a username " +
           user_name.title() + ".")
 
     print(">>> ")
 
     print(return_comrade)
-
-return_xweser = (user_name in list_xweser_comrades and
-                 user_password == xweser_password)
 
 if user_name in list_xweser_comrades and xweser_password == user_password:
     print("\nThis user is registered as xweser comrades with a username: " +
@@ -223,6 +225,12 @@ if user_name in list_xweser_comrades and user_password == xweser_password:
           )
 
 if not return_comrade:
+    # the variable return_comrade is used
+    # if not means that the viable is not True
+    # that the conditions were not met.
+    # If varable: seeks for True
+    # in this case if False (if not True)
+    # the not a correct loggin message prints
     print(
         "We are sorry, but your user name and password "
         "does not match, please try again."
