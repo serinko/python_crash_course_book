@@ -193,9 +193,9 @@ if user_name in list_comrades \
         and user_password == comrade_password \
         or user_name in list_xweser_comrades \
         and user_password == xweser_password:
-    # important to efine the whole comparison after 'or" function
+    # important to define the whole comparison after 'or" function
     # not to think about it as spoken language, but define every step again
-    # otherwise the finction missbehave
+    # otherwise the function missbehave
     print("This user is registered as a comrade with a username " +
           user_name.title() + ".")
 
