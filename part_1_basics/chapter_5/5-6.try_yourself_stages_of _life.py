@@ -1,4 +1,4 @@
-age = 43
+age = 2
 
 print("The age of this person is " + str(age) + ".")
 
