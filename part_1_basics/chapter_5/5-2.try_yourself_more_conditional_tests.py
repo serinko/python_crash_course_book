@@ -120,13 +120,13 @@ print("\n\n\n")
 # application for log in layers
 # Define a list of comrades - with 8 comrades
 # make another database mirroring the xweser comrades in the contact list
-# make a variable which defines loggin of comrades
+# make a variable which defines login of comrades
 # make a variable which defines password for comrades
 # make a variable for xweser comrades and a password for xweser comrades
 # make a variable user - a field which anyone can fill and
 # user password
 # Print a message to the user if their name and password do not match the list
-# print a message for the user if they loged in as a comrade
+# print a message for the user if they logged in as a comrade
 # Print a message if they log in as a xweser comrade
 # Print a message for the system - to quickly categorize the user like:
 # user comrade == True/False
@@ -137,7 +137,7 @@ print("\n\n\n")
 # over time we have new users registering
 # those are getting index as comrade_x or comrade_xweser_x
 # the MAIN FOCUS - how do we add them to the list in the simpliest way
-# withot .append() every single one of them manually
+# without .append() every single one of them manually
 
 list_comrades = []
 list_xweser_comrades = []
@@ -156,7 +156,7 @@ comrade_xweser_3 = 'diana'
 # WHY IS THIS NOT WORKING? :
 # ~list_comrades.append(comrade*)
 # ANSWER: '*' is known to PYTHON for multiplication
-# a sighn, function cannot be known for two different things
+# a sign, function cannot be known for two different things
 # thats why = only means equal and for pull if equal we use ==
 # and why < ; > ; <= ; >= cant define a range bcs they are for comparisons
 
