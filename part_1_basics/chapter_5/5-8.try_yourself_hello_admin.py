@@ -1,4 +1,5 @@
-list_users = ['admin', 'francesca', 'eva', 'ivan']
+# ~ list_users = ['admin', 'francesca', 'eva', 'ivan']
+list_users = []
 
 if list_users:
     for user in list_users:
@@ -12,3 +13,5 @@ if list_users:
                 'Hello ' + user.title() +
                 ', you are successfully logged in. Welcome.'
             )
+else:
+    print("We need to find users for this application")
