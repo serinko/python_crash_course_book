@@ -21,11 +21,16 @@ users_number = 23
 # A function compares users_number with the number of the day
 # and prints an answer
 if users_number == number:
-    print("Dear " + user.title() + ", you are a winner of our lottery. \
-    Congratulation!")
+    print(
+        "Dear " + user.title() + ", you are a winner of our lottery."
+                                 "Congratulation!"
+    )
 else:
-    print("Dear " + user.title() + ", we are sorry, but this is not " \
-                                   "the number. Do you want to try again?")
+    print(
+        "Dear " + user.title() +
+        ", we are sorry, but this is not "
+        "the number. Do you want to try again?"
+    )
 # users guess was wrong
 print("\n")
 
@@ -34,11 +39,17 @@ user = 'lilly'
 users_number = 38
 # Guess number was redefined accoring to a new users guess
 if users_number == number:
-    print("Dear " + user.title() + ", you are a winner of our lottery. " \
-                                   "Congratulation!")
+    print(
+        "Dear " + user.title() +
+        ", you are a winner of our lottery. "
+        "Congratulation!"
+    )
 else:
-    print("Dear " + user.title() + ", we are sorry, but this is not " \
-                                   "the number. Do you want to try again?")
+    print(
+        "Dear " + user.title() +
+        ", we are sorry, but this is not "
+        "the number. Do you want to try again?"
+    )
 # This player won
 
 print("\n\n")
@@ -81,10 +92,15 @@ print("\n")
 # Function to compare client with the database
 # Print a message for the client based on the status
 if client in traveler_list:
-    print("Dear " + client.title() + " we are glad you travel with us.")
+    print(
+        "Dear " + client.title() +
+        " we are glad you travel with us."
+    )
 else:
-    print(client.title() + \
-          ", we are sorry, but you are not registered for this travel.")
+    print(
+        client.title() +
+        ", we are sorry, but you are not registered for this travel."
+    )
 
 print("\n")
 
@@ -100,13 +116,13 @@ log_in_password = 'admin2022'
 # Printing the outcome
 # In case of == admin, prints the sorted list of travelers
 if log_in.lower() == admin and log_in_password == admin_password:
-    print( \
-        "Hello, you are logged as admin. Welcome." \
-        )
+    print(
+        "Hello, you are logged as admin. Welcome."
+    )
     print("\n")
-    print( \
-        "Here is the list of registered travelers for the upcoming trip:" \
-        )
+    print(
+        "Here is the list of registered travelers for the upcoming trip:"
+    )
     for traveler in sorted(traveler_list):
         print(traveler.title())
 else:
