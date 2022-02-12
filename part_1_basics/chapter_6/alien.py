@@ -23,3 +23,15 @@ alien_0['x_position'] = 0
 alien_0['y_position'] = 25
 # adding to the database alien_0[key] = value
 print(alien_0)
+
+print("\n")
+
+# MODIFYING THE VALUES
+print("The alien is " + alien_0['color'] + ".")
+
+alien_0['color'] = 'yellow'
+
+print("The alien is now " + alien_0['color'] + ".")
+
+# LET'S BE DYNAMIC
+# We can move the alien
