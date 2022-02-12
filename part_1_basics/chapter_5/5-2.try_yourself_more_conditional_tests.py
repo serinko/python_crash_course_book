@@ -126,9 +126,9 @@ if log_in.lower() == admin and log_in_password == admin_password:
     for traveler in sorted(traveler_list):
         print(traveler.title())
 else:
-    print( \
-        "Sorry, but your username and password does not match. Try again." \
-        )
+    print(
+        "Sorry, but your username and password does not match. Try again."
+    )
 
 print("\n\n\n")
 
@@ -186,10 +186,9 @@ list_xweser_comrades.extend(
     name.startswith('comrade_xweser'))
 
 # Check up print of the lists
-print(list_comrades)
-print(list_xweser_comrades)
-
-print("\n")
+# ~ print(list_comrades)
+# ~ print(list_xweser_comrades)
+# ~ print("\n")
 
 # DEFINED PASSWORDS
 comrade_password = 'ruwsak@#ks!@'
@@ -205,10 +204,7 @@ return_comrade = (user_name in list_comrades
                   or user_name in list_xweser_comrades
                   and user_password == xweser_password)
 
-if user_name in list_comrades \
-        and user_password == comrade_password \
-        or user_name in list_xweser_comrades \
-        and user_password == xweser_password:
+if return_comrade:
     # important to define the whole comparison after 'or" function
     # not to think about it as spoken language, but define every step again
     # otherwise the function missbehave
