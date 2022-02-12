@@ -16,3 +16,10 @@ new_points = alien_0['points']
 # associates value of the key point of dictionary alien_0 to a variable
 
 print("You just earned " + str(new_points) + " points!")
+
+print("\n")
+
+alien_0['x_position'] = 0
+alien_0['y_position'] = 25
+# adding to the database alien_0[key] = value
+print(alien_0)
