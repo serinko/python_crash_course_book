@@ -10,3 +10,9 @@ print(alien_0['points'])
 # key value can be: a number, string, list, another dictionary - any object
 # dictionary = {key:value} or multiple {key_0:value_0, key_1:value_1}
 # "function/call(dictionary[key])" returns: "value"
+
+# using the values in the dictionary to store in new variables, strings etc
+new_points = alien_0['points']
+# associates value of the key point of dictionary alien_0 to a variable
+
+print("You just earned " + str(new_points) + " points!")
