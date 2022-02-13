@@ -95,5 +95,6 @@ print("\n")
 print(alien_0)
 
 del alien_0['points']
+# Be aware that del statement deletes permanently
 
 print(alien_0)
