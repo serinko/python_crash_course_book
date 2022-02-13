@@ -5,3 +5,10 @@ programming_glossary = {
     'for loop': 'For each item - do action.',
     'iif-else': 'Statement choosing of two possibilities.'
 }
+
+print('Glossary of programming words:\n')
+
+for word in programming_glossary:
+    print(f"{word}:")
+    print(f"{str(programming_glossary[word])}")
+    print("\n")
