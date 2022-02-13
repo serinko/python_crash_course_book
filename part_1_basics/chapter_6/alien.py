@@ -66,3 +66,22 @@ print(
     "New x-position: " +
     str(alien_0['x_position'])
 )
+
+# New move - this time fast
+# Chane the speed in the dictionary and run again the sequnce
+alien_0['speed'] = 'fast'
+
+if alien_0['speed'] == 'slow':
+    x_increment = 1
+elif alien_0['speed'] == 'medium':
+    x_increment = 2
+else:
+    # This is a fast moving alien
+    x_increment = 3
+
+alien_0['x_position'] = alien_0['x_position'] + x_increment
+
+print(
+    "New x-position: " +
+    str(alien_0['x_position'])
+)
