@@ -11,6 +11,6 @@ favorite_languages = {
 }
 language = favorite_languages['sarah'].title()
 # new variable = dictionary[key], this pulls the value and styles with title()
-print(f"Sarah's favorite language is {language}")
+print(f"Sarah's favorite language is {language}.")
 # It is easier and nicer to rrad to print with a variable.
 # For the first time we can see that we use {} in print instead of +
