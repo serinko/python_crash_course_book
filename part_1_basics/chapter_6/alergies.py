@@ -2,7 +2,7 @@ alergies_diets = {
     'ben': ['soya', 'gluten', 'cucumber'],
     'lena': ['gluten', 'vegetarian diet'],
     'percival': ['vegan diet', 'nuts'],
-    'clara': ['keti diet', 'no carbs', 'no starch', 'alergy beans', ],
+    'clara': ['keto diet', 'no carbs', 'no starch', 'alergy beans', ],
 }
 
 for name, diet in alergies_diets.items():
