@@ -7,5 +7,5 @@ favorite_languages = {
     'jen': 'pythonn',
     'sarah': 'c',
     'edward': 'ruby',
-    'pjil': 'python',
+    'phil': 'python',
 }
