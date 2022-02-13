@@ -14,3 +14,9 @@ language = favorite_languages['sarah'].title()
 print(f"Sarah's favorite language is {language}.")
 # It is easier and nicer to rrad to print with a variable.
 # For the first time we can see that we use {} in print instead of +
+
+print("\n")
+
+# one can print a sentence using the key-value pair
+for name, language in favorite_languages.items():
+    print(f"{name.title()}'s favorite language is {language.title()}.")
