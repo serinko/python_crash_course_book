@@ -17,3 +17,9 @@ print("\n")
 for key, value in user_0.items():
     print(key)
     print(value)
+
+print("\n")
+
+# Nice form could be:
+for key, value in user_0.items():
+    print(key + ": " + value)
