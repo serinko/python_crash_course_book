@@ -19,7 +19,8 @@ variable_2 = "TWO"
 message_two = f"{variable_0} {variable_2}"
 # the "" are quite confusing in this new format.
 # the "quotations "  mark the f-string beginning and end
-# no + sign used, just space, for easier reading (styling the code)
+# no + sign used
+# space will print as a space in the string (Its in between "")
 print(message_two)
 
 # This can be done with longer strings as well, for example
