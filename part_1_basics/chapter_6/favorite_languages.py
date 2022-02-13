@@ -18,5 +18,15 @@ print(f"Sarah's favorite language is {language}.")
 print("\n")
 
 # one can print a sentence using the key-value pair
+# items() function can be used for this for loop
 for name, language in favorite_languages.items():
     print(f"{name.title()}'s favorite language is {language.title()}.")
+
+print("\n")
+
+# Looping through keys in dictionary
+# Using keys() method
+for name in favorite_languages.keys():
+    print(name.title())
+    # prints keys only, no value
+print("\n")
