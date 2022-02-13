@@ -85,3 +85,15 @@ print(
     "New x-position: " +
     str(alien_0['x_position'])
 )
+
+print("\n")
+
+# DELETING key from a dictionary
+# using del statement
+# del dictionary['key']
+
+print(alien_0)
+
+del alien_0['points']
+
+print(alien_0)
