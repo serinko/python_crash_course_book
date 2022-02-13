@@ -30,3 +30,16 @@ for name in favorite_languages.keys():
     print(name.title())
     # prints keys only, no value
 print("\n")
+# this is a defaulf behaviour as if it was just
+# ~ for name in favorite_languages:
+# so that is an easier one, though the key() method may be easier to read
+
+friends = ['phil', 'sarah']
+for name in favorite_languages.keys():
+    print(f"Hi {name.title()}.")
+    # prints a message to every name (key)
+
+    if name in friends:
+        language = favorite_languages[name].title()
+        print(f"\t{name.title()}, I see you love {language}!")
+        # Prints a message if name is in friends using language
