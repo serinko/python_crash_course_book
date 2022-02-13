@@ -44,7 +44,6 @@ print(
 )
 # ~ print(alien_0)
 
-print("\n")
 
 # Let's move the  alien to the right
 if alien_0['speed'] == 'slow':
