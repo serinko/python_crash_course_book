@@ -41,5 +41,6 @@ for name in favorite_languages.keys():
 
     if name in friends:
         language = favorite_languages[name].title()
+        # making a variable for the value in the dictionary
         print(f"\t{name.title()}, I see you love {language}!")
         # Prints a message if name is in friends using language
