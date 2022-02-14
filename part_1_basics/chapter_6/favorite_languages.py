@@ -12,7 +12,7 @@ favorite_languages = {
 language = favorite_languages['sarah'].title()
 # new variable = dictionary[key], this pulls the value and styles with title()
 print(f"Sarah's favorite language is {language}.")
-# It is easier and nicer to rrad to print with a variable.
+# It is easier and nicer to re  ad to print with a variable.
 # For the first time we can see that we use {} in print instead of +
 
 print("\n")
@@ -44,3 +44,6 @@ for name in favorite_languages.keys():
         # making a variable for the value in the dictionary
         print(f"\t{name.title()}, I see you love {language}!")
         # Prints a message if name is in friends using language
+
+if 'erin' not in favorite_languages.keys():
+    print("Erin, please take our poll!")
