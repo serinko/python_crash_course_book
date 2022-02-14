@@ -47,3 +47,9 @@ for name in favorite_languages.keys():
 
 if 'erin' not in favorite_languages.keys():
     print("Erin, please take our poll!")
+
+print("\n")
+
+# sorted() function to return names in alphabetical order
+for name in sorted(favorite_languages.keys()):
+    print(f"{name.title()}, thank you for taking the poll.")
