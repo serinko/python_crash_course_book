@@ -24,7 +24,7 @@ aliens = []
 # startinf with an empty list
 
 # generate 30 green aliens
-for alien in range(30):
+for alien_number in range(30):
     new_alien = {
         'color': 'green',
         'points': 5,
