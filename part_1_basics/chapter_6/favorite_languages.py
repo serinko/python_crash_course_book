@@ -4,7 +4,7 @@
 # This is a dictionary of similar objects, one information
 
 favorite_languages = {
-    'jen': 'pythonn',
+    'jen': 'python',
     'sarah': 'c',
     'edward': 'ruby',
     'phil': 'python',
@@ -59,5 +59,18 @@ print("\n")
 # VALUES - looping thorugh all values using values() function
 print("The following languages have been mentioned:")
 for language in favorite_languages.values():
+    # this method does not check for repeats
     print(language.title())
-   
+
+print("\n")
+
+# set() function makes sure to return every value in unique fashion
+for language in set(favorite_languages.values()):
+    print(language.title())
+print("\n")
+
+# set can be build with {} braces.
+# can be easily mistaken with a list. Sets have no key-value pairs!
+# ~ set = {'value_0', 'value_1', 'value_2'}
+languages = {'python', 'ruby', 'python', 'c'}
+print(languages)
