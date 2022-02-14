@@ -53,3 +53,11 @@ print("\n")
 # sorted() function to return names in alphabetical order
 for name in sorted(favorite_languages.keys()):
     print(f"{name.title()}, thank you for taking the poll.")
+
+print("\n")
+
+# VALUES - looping thorugh all values using values() function
+print("The following languages have been mentioned:")
+for language in favorite_languages.values():
+    print(language.title())
+   
