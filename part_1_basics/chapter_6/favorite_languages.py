@@ -86,6 +86,17 @@ for name, languages in favorite_languages.items():
     print(f"\n{name.title()}'s favourite languages are:")
     for language in languages:
         print(f"\t{language.title()}")
-
+print("\n")
 # Do NOT nest deeper than this level - if you must nest deeper
 # Slow down and think about SIMPLER SOLUTION!
+
+# We can use if and len() function to pritn different message for:
+# ppl with one or with  multiple languages.
+# Only multiple will be printed as a for loop list:
+for name, languages in favorite_languages.items():
+    if len(languages) == 1:
+        print(f"\n{name.title()}'s favorite language is {language.title()}.")
+    else:
+        print(f"\n{name.title()}'s favourite languages are:")
+        for language in languages:
+            print(f"\t{language.title()}")
