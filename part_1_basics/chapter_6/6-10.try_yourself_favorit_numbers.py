@@ -15,6 +15,9 @@ for character, numbers in favorite_numbers.items():
     else:
         print(f"\nThese are the {character.title()} favorite numbers:")
         print(*numbers, sep=', ')
-        #
+
         # for number in numbers:
-        #     print(f"\t{number}")
+        #     print(number, end=', ')
+
+# end or sep are parameters keeping the items in the same line
+# either SEParating them or ENDing them with the given parameter
