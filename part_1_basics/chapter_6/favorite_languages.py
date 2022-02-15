@@ -74,3 +74,18 @@ print("\n")
 # ~ set = {'value_0', 'value_1', 'value_2'}
 languages = {'python', 'ruby', 'python', 'c'}
 print(languages)
+print("\n")
+
+# Adding new languages to these people by modifying the value
+# changing it into a list
+favorite_languages['jen'] = ['python', 'ruby']
+favorite_languages['edward'] = ['ruby', 'go']
+favorite_languages['phil'] = ['python', 'haskell']
+
+for name, languages in favorite_languages.items():
+    print(f"\n{name.title()}'s favourite languages are:")
+    for language in languages:
+        print(f"\t{language.title()}")
+
+# Do NOT nest deeper than this level - if you must nest deeper
+# Slow down and think about SIMPLER SOLUTION!
