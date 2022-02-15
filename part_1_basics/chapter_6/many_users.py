@@ -24,7 +24,9 @@ for username, user_info in users.items():
 # in a for loop we have key, value in the dictionary
 # we print the key as a username
 # The value we know is another dictionary
-# define full name as a value_2nd dictionary[key] ('first') and
-# value_2n_dictionary[key] ('last)
+# define full name as a value=inner_dictionary[key] ('first') and
+# value_is_inner_dictionary[key] ('last)
 # the same with the location
 # then we simply print these
+# Note that these were identicaly structured dictionaries
+# In case they were different - the code in for loop d be more complicated
