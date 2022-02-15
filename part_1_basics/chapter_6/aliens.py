@@ -53,6 +53,7 @@ for alien in aliens[:3]:
         alien['points'] = '10'
 print('\n')
 
+# print a slice of first five dictionaries in the list
 for alien in aliens[:5]:
     print(alien)
 print("...")
