@@ -12,16 +12,23 @@ for character, numbers in favorite_numbers.items():
         print(
             f"This is {character.title()}'s favorite number: "
             f"{numbers[0]}")
-        print("\n")
+
     else:
         # print(f"\nThese are the {character.title()} favorite numbers:")
         # print(*numbers, sep=', ')
 
-        message = f"\nThese are the {character.title()}'s favorite numbers: "
-        print(message, end='')
+        numbers = [str(n) for n in numbers]
+        numbers_formatted = ", ".join(numbers)
+        message = f"These are the {character.title()}'s favorite numbers: "
+        print(f"{message}{numbers_formatted}")
+        # print(numbers_formatted)
 
-        for number in numbers:
-            print(number, end=', ')
-        print("\n")
+        # ANOTHER ALTERNATIVE COULD BE:
+
+        # print(message, end='')
+
+        # for number in numbers:
+        #     print(number, end=', ')
+
 # end or sep are parameters keeping the items in the same line
 # either SEParating them or ENDing them with the given parameter
