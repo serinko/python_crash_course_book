@@ -50,10 +50,20 @@ for alien in aliens[:3]:
         # change these keys to these values
         alien['color'] = 'yellow'
         alien['speed'] = 'medium'
-        alien['points'] = '10'
+        alien['points'] = 10
+
+    # We can expand the loop by elif function
+    # ie to turn the yellow aliens to the red ones.
+    elif alien['color'] == 'yellow':
+        alien['color'] = 'red'
+        alien['speed'] = 'fast'
+        alien['points'] = 15
 print('\n')
 
 # print a slice of first five dictionaries in the list
 for alien in aliens[:5]:
     print(alien)
 print("...")
+#
+# for alien in aliens:
+#     print(alien)
