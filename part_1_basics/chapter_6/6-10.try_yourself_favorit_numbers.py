@@ -10,9 +10,11 @@ favorite_numbers = {
 for character, numbers in favorite_numbers.items():
     if len(numbers) == 1:
         print(
-            f" This is {character.title()}'s favorite number: {str(numbers)} ")
-
+            f"\nThis is {character.title()}'s favorite number: "
+            f"{numbers[0]}")
     else:
-        print(f"These are the {character.title()}'s favorite numbers:")
-        for number in numbers:
-            print(f"\t{number}")
+        print(f"\nThese are the {character.title()} favorite numbers:")
+        print(*numbers, sep=', ')
+        #
+        # for number in numbers:
+        #     print(f"\t{number}")
