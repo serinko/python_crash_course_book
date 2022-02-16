@@ -62,6 +62,9 @@ print(*list_strings, sep=", ..sep_method.. ")
 # if we did not use * sign, it would sep the entire list
 print("\n\n")
 
+#
+#
+#
 # b) LIST OF NUMBERS
 list_of_numbers = list(range(1, 10))
 print(list_of_numbers)
