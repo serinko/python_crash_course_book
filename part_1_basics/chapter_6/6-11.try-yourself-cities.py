@@ -4,7 +4,7 @@ cities = {
         'population': 1783431,
         'interesting_fact': 'Amed is the biggest city in northern Kurdistan'
                             'region called Bakur. Amed has been a foundation '
-                            'for peoples struggle for freedom. Main liberatory '
+                            'for peoples struggling for freedom. Main liberatory '
                             'events in recent history are:'
                             '\n\tEarly 1980s prison uprising'
                             '\n\tUprising in the district Sur (in the old town),'
