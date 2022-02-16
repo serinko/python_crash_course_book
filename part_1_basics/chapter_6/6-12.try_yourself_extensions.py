@@ -38,7 +38,8 @@ if favorite_languages_programming:
                   f"programming language to the poll.")
         elif len(languages) == 1:
             print(
-                f"\t{person.title()}'s favorite language is {languages[0].title()}")
+                f"\t{person.title()}'s favorite language is "
+                f"{languages[0].title()}.")
         elif len(languages) > 1:
             languages_formatted = ", ".join(languages)
             message = (f"{person.title()}'s "
@@ -59,7 +60,8 @@ if favorite_languages_speaking:
                   f"language to the poll.")
         elif len(languages) == 1:
             print(
-                f"\t{person.title()}'s favorite language is {languages[0].title()}")
+                f"\t{person.title()}'s favorite language is "
+                f"{languages[0].title()}.")
         elif len(languages) > 1:
             languages_formatted = ", ".join(languages)
             message = (f"{person.title()}'s "
