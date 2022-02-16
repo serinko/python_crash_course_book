@@ -37,6 +37,7 @@ cities = {
 }
 
 print(f"Here are {str(len(cities))} cities, and some info about them: ")
+
 for city, information in cities.items():
     print(f"\nCity: {city.title()}")
     country = information['country']
@@ -46,3 +47,14 @@ for city, information in cities.items():
     print(f"\tCountry: {country.title()}")
     print(f"\tPopulation: {str(population)}")
     print(f"\tInteresting fact: {fact}")
+
+# THIS WAS A WRONG SOLUTION
+# for city, information in cities.items():
+#     print(f"\nCity: {city.title()}")
+#     for category in city:
+#         country = information['country']
+#         population = information['population']
+#         fact = information['interesting_fact']
+#         print(f"\tCountry: {country.title()}")
+#         print(f"\tPopulation: {str(population)}")
+#         print(f"\tInteresting fact: {fact}")
