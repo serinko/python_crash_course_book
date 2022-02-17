@@ -8,6 +8,6 @@ while True:
         break
         # break will just stop the programm once its met in the loop
         # regardless of while - it breaks the condition
-        
+
     else:
-        print(f"I'd love to go to"f' "{city.title()}"!')
+        print(f"I'd love to go to" f' "{city.title()}"!')
