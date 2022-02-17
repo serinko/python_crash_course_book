@@ -8,7 +8,7 @@ message = ""
 active = True
 
 while active:
-    message == input(prompt)
+    message = input(prompt)
 
     if message == 'quit':
         active = False
