@@ -28,3 +28,9 @@ while current_number < 10:
 # meaning - returns to the beginning
 # If its not divisible by 2, Pyton continues and prints the number
 # = Odd number.
+
+x = 1
+while x <= 5:
+    print(x)
+    x += 1
+# If we ommit the last x+=1 increment, the loop will tun infinte
