@@ -20,3 +20,6 @@ while unconfirmed_users:
 print(f"\nThe following users have been confirmed:")
 for user in confirmed_users:
     print(f"\t{user.title()}")
+
+# We can see that the loop prints them backwards
+# as the pop() function takes items from the end of the list
