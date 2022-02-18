@@ -6,7 +6,7 @@ while True:
 
     if city.lower() == 'q':
         break
-        # break will just stop the programm once its met in the loop
+        # break will just stop the program once it's met in the loop
         # regardless of while - it breaks the condition
 
     else:
