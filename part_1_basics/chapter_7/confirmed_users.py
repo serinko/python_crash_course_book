@@ -11,6 +11,7 @@ confirmed_users = []
 while unconfirmed_users:
     # Means the loop is True as long as the list has items in it
     current_user = unconfirmed_users.pop()
-
+    # variable used to pop, append and print each user
+    
     print(f"Verifying user: {current_user.title()}")
     confirmed_users.append(current_user)
