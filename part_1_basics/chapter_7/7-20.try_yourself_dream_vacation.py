@@ -6,18 +6,19 @@ dream_vacation = {}
 passwords = []
 active = True
 
-print("\nHello and welcome to the poll of favorite vacation.\n")
+print("\nHello and welcome to the poll of favorite vacation.")
 while active:
     name = input("\nWhat is your name? ")
-    vacation = input("\nWrite a place you really like to visit: ")
+    vacation = input("Write a place you really like to visit: ")
     password = input("Enter your password: ")
+    passwords.append(password)
 
     dream_vacation[name] = vacation
 
-    print("\nThank you for your input, your answer was submited.")
-    print("\nWe will release the poll once everyone submits.")
+    print("\nThank you for your input, your answer was submitted.")
+    print("We will release the poll once everyone submits.")
 
-    more_users = input("\nAnother person would like to join the poll?"
+    more_users = input("\n\nAnother person would like to join the poll?"
                        "(yes/ no)")
 
     if more_users.lower() == 'no':
@@ -25,13 +26,14 @@ while active:
 
 print("\nAll the users submited, the poll is closed")
 
-name_check = input("\nTo see the results, you must log in. Please, enter your "
-                   "name: ")
-password_check = ("\nPlease enter your password: ")
+name_check = input(
+    "\n\nTo see the results, you must log in. Please, enter your "
+    "name: ")
+password_check = input("Please enter your password: ")
 
 if name_check in dream_vacation.keys() and password_check in passwords:
-    print(f"\nHey {name_check.title()}, welcome to the vacation poll. "
-          f"\nHere are the results: ")
+    print(f"\n\nHey {name_check.title()}, welcome to the vacation poll. "
+          f"Here are the results: ")
     print("\n\n\n   ----------- POLL RESULTS -----------   \n")
 
     for name, vacation in dream_vacation.items():
