@@ -13,14 +13,3 @@ sandwich_orders = [
     'salami',
 ]
 finished_sandwiches = []
-
-while sandwich_orders:
-    current_sandwich = sandwich_orders.pop()
-    print(f"\nWe are preparing the {current_sandwich.title()} "
-          "sandwich at the moment.")
-    finished_sandwiches.append(current_sandwich)
-
-print("\nHere is the list of finished orders:")
-
-for sandwich in finished_sandwiches:
-    print(f"\t{sandwich.title()} sandwich is ready.")
