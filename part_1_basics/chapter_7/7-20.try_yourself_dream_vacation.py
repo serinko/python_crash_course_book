@@ -24,6 +24,11 @@ while active:
     if more_users.lower() == 'no':
         active = False
 
+    elif more_users.lower() != 'yes':
+        print("You were given yes/ no options. For trying to mess "
+              "with the poll, you have been kicked out")
+        break
+
 print("\nAll the users submited, the poll is closed")
 
 name_check = input(
