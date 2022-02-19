@@ -1,3 +1,4 @@
+# Starting with empty dictionary
 responses = {}
 
 # set a flag to indicate the polling is active
@@ -9,6 +10,7 @@ while polling_active:
     response = input("\nWhich mountain would you like to climb today? ")
 
     # Store response in a dictionary
+    # Using users input variables
     responses[name] = response
 
     # Find out if anyone else is going to take the poll
