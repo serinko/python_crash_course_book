@@ -1,7 +1,7 @@
 responses = {}
 
 # set a flag to indicate the polling is active
-poling_active = True
+polling_active = True
 
 while polling_active:
     # Prompt for the persons name and response
