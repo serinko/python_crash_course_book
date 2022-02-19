@@ -19,16 +19,19 @@ while active:
     print("We will release the poll once everyone submits.")
 
     more_users = input("\n\nAnother person would like to join the poll?"
-                       "(yes/ no)")
+                       "(yes/ no): ")
 
     if more_users.lower() == 'no':
         active = False
 
     elif more_users.lower() != 'yes':
-        print("You were given yes/ no options. For trying to mess "
-              "with the poll, you have been kicked out")
-        break
+        print("\n\nYou were given yes/ no options. For trying to mess "
+              "with the poll, you have been kicked out!")
 
+        print("\n !!! GAME OVER - NO HOLIDAY FOR YOU !!! ")
+        quit()
+        # NEW SYNTAX quit() - KILLS THE WHOLE PROGRAM!
+        
 print("\nAll the users submited, the poll is closed")
 
 name_check = input(
