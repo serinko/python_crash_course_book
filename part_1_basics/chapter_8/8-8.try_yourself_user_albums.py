@@ -14,9 +14,13 @@ def make_album(artist, title, year=None, label=''):
 
 albums = []
 
+print("\nWelcome to your music archive. Please enter a new album.")
+print("Note that 'artist' and 'album' are mandatory fields, "
+      "the rest is optional: ")
+
 while True:
-    print("\nHello, do you want to add an album, press a key and enter")
-    print("(enter 'q' at any time to quit)")
+
+    print("(enter 'q' at any time to quit)\n")
 
     artist_name = input("Artist name: ")
     if artist_name.lower() == 'q':
