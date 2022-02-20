@@ -31,3 +31,5 @@ def describe_pet(pet_name, animal_type='dog'):
 describe_pet(pet_name='willie')
 # Or the user can re-define the parameter's argument
 describe_pet(pet_name='willie', animal_type='cat')
+# if using the default value, only positrional arument can be given
+describe_pet('willie')
