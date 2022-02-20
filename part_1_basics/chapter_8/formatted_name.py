@@ -30,3 +30,5 @@ print(musician)
 
 # We got to make sure the middle name is the last parameter and argument
 # if - string given == True, if not (else)== False
+# Optional values allow to handle wide range of use cases
+# while function reman as simple as possible
