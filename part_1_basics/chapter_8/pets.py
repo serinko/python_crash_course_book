@@ -21,6 +21,7 @@ describe_pet(pet_name='harry', animal_type='hamster')
 
 # DEFAULT VALUE
 def describe_pet(pet_name, animal_type='dog'):
+    # note: any default value parameter are defined after the ones without
     """Display information about a pet."""
     print(f"\nI have a {animal_type}.")
     print(f"My {animal_type}'s name is {pet_name.title()}.")
