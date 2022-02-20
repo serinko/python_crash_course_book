@@ -5,7 +5,6 @@ def get_formatted_name(first_name, last_name):
     return full_name.title()
 
 
-# Infinite loop:
 while True:
     print("\nPlease tell me your name: ")
     print("(enter 'q' at any time to quit)")
