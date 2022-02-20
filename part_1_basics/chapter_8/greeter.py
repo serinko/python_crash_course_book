@@ -9,4 +9,17 @@ def greet_user():
 
 
 greet_user()
+
+
 # A call for the function - Python executes that
+
+
+# Adding a value into paranthesis
+# Python expects me to define the value later
+def greet_user(username):
+    """Display a simple greeting."""
+    print(f"Hello, {username.title()}!")
+    # Using the value further as a variable in f-string
+
+
+greet_user('maria')
