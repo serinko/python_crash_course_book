@@ -5,3 +5,7 @@ def describe_pet(animal_type, pet_name):
 
 
 describe_pet('hamster', 'harry')
+
+# Function can be called multiple times
+# Using new arguments for the same parameters:
+describe_pet('dog', 'psouk')
