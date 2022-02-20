@@ -25,3 +25,5 @@ def greet_user(username):  # username is a parameter
 greet_user('maria')
 # If we did not  define the value, the function would not work
 # in other words. The function does not work job without the parameter needed
+# THIS TYPE OF PARAMETER WE CALL ARGUMENT
+# AN ARGUMENT IS PASSED FROM FUNCTION CALL TO A FUNCTION
