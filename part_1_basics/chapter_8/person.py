@@ -17,6 +17,7 @@ print(musician)
 
 def build_person(first_name, last_name, age=None):
     # in case of numbers we dont define empty string but None as a default
+    # In conditional tests None == False, it is a placeholder
     """Return a dictionary of information about a person."""
     person = {
         'first': first_name,
