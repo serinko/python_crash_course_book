@@ -7,8 +7,7 @@ def make_album(artist, title, year=None, label=''):
     if year:
         album['year'] = year
     if label:
-        pass
-    album['label'] = label
+        album['label'] = label
 
     return album
 
@@ -19,16 +18,16 @@ while True:
     print("\nHello, do you want to add an album, press a key and enter")
     print("(enter 'q' at any time to quit)")
 
-    artist_name = input("Album name :")
+    artist_name = input("Artist name: ")
     if artist_name.lower() == 'q':
         break
-    album_title = input("Album title :")
+    album_title = input("Album title: ")
     if album_title.lower() == 'q':
         break
     year_release = input("Year of release: ")
     if year_release.lower() == 'q':
         break
-    label = input("Label : ")
+    label = input("Label: ")
     if label.lower() == 'q':
         break
 
@@ -47,7 +46,7 @@ while True:
         break
 
 print("\n\n\n ========================================================= ")
-print("Thank you for using our library, have a good listening time")
+print("\nThank you for using our library, have a good listening time")
 print("Your albums: ")
 for album in albums:
     print("\n")
