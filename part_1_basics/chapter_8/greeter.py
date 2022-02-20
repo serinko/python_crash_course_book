@@ -16,10 +16,12 @@ greet_user()
 
 # Adding a value into paranthesis
 # Python expects me to define the value later
-def greet_user(username):
+def greet_user(username):  # username is a parameter
     """Display a simple greeting."""
     print(f"Hello, {username.title()}!")
     # Using the value further as a variable in f-string
 
 
 greet_user('maria')
+# If we did not  define the value, the function would not work
+# in other words. The function does not work job without the parameter needed
