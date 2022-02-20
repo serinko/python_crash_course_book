@@ -26,4 +26,8 @@ def describe_pet(pet_name, animal_type='dog'):
     print(f"My {animal_type}'s name is {pet_name.title()}.")
 
 
+# The value in the definition is described.
+# User can omit that and it will be the default one
 describe_pet(pet_name='willie')
+# Or the user can re-define the parameter's argument
+describe_pet(pet_name='willie', animal_type='cat')
