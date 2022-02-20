@@ -1,13 +1,9 @@
 def city_country(city, country):
     """Dictionary of a formatted city and country"""
-    city_info = {
-        'city': city,
-        'country': country,
-    }
-    city
-    return city_info
+    formatted_city_country = f"{city}, {country}"
+    return formatted_city_country.title()
 
 
-my_city = city_country('santiago', 'chile')
-for parameter, argument in my_city.items():
-    print(f"{parameter.title()}, {argument.title()}")
+print(f"{city_country('santiago', 'chile')}")
+print(f"{city_country('ramalan', 'palestine')}")
+print(f"{city_country('bilbao', 'basq country')}")
