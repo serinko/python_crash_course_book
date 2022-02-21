@@ -45,3 +45,9 @@ completed_models = []
 # Using these lists as arguments when calling the function
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
+
+# Such program is easier to read and better organized
+# we can always recycle it with more models
+# those can be add to the list by users
+# Every function should have one specific job
+# It is more benefitial than pushing it all into one function
