@@ -3,7 +3,7 @@ def make_pizza(size, *toppings):
     print(f"\nWe are preparing you pizza size {size} "
           f"with the following toppings:")
     if toppings:
-        for topping in toppings:
-            print(f" - {topping}")
+        for t in toppings:
+            print(f" - {t}")
     else:
         print(" - no toppings")
