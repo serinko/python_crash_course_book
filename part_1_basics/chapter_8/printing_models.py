@@ -60,3 +60,4 @@ print_models(unprinted_designs[:], completed_models)
 # This will use a ful slice (copy) and keep the original
 # Do this only when you have a specific reason!
 # Otherwise pass the original
+# If lists are large, it takes time and memory for the function to make a copy
