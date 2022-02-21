@@ -20,7 +20,7 @@ def print_3_latest_sent_sms(sent_messages):
     """  Displays 3 top sent messages  """
     print("\n\nSENT MESSAGES:")
     for message in sent_messages[:3]:
-        print(f"\n{message}")
+        print(f"\t{message}")
     more = len(sent_messages) - len(sent_messages[:3])
     print(f"\n... ({str(more)} more messages)")
 
@@ -45,3 +45,7 @@ sent_messages = []
 print_saved_sms(saved_messages)
 send_sms(saved_messages, sent_messages)
 print_3_latest_sent_sms(sent_messages)
+
+print("\n\nControll list print: ")
+print(saved_messages)
+print(sent_messages)
