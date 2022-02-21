@@ -15,4 +15,5 @@ print(user_profile)
 # will be always mandatory
 # The rest is arbitrary, added as arguments in the variable user_profile
 # there can none or as many arbitrary arguments,
-# but they need to be defined as keywords so they make key-value pairs
+# but they need to be defined as keywords, so they make key-value pairs
+# USE THE SIMPLEST APPROACH POSSIBLE!
