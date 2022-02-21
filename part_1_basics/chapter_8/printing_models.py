@@ -58,3 +58,5 @@ show_completed_models(completed_models)
 
 print_models(unprinted_designs[:], completed_models)
 # This will use a ful slice (copy) and keep the original
+# Do this only when you have a specific reason!
+# Otherwise pass the original
