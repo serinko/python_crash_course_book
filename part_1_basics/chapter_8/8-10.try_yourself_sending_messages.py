@@ -1,6 +1,6 @@
 def print_saved_sms(saved_messages):
     """Displays messages saved in the list"""
-    print("\nSaved messages:")
+    print("\nSAVED MESSAGES:")
     for message in saved_messages:
         print(f"\n{message}")
 
@@ -12,17 +12,17 @@ def send_sms(saved_messages, sent_messages):
     while emptying th original folder."""
     while saved_messages:
         sending_message = saved_messages.pop()
-        print(f"\nSending message: {sending_message}")
+        print(f"\nSending message:\n\t{sending_message}")
         sent_messages.append(sending_message)
 
 
 def print_3_latest_sent_sms(sent_messages):
     """  Displays 3 top sent messages  """
-    print("\nSaved messages:")
+    print("\n\nSENT MESSAGES:")
     for message in sent_messages[:3]:
         print(f"\n{message}")
-
-    print("\n...\n")
+    more = len(sent_messages) - len(sent_messages[:3])
+    print(f"\n... ({str(more)} more messages)")
 
 
 saved_messages = [
@@ -32,5 +32,16 @@ saved_messages = [
     'hahaha, wtf, omg, did he also have socks',
     'wish my handy had a camera, would archive this exot',
     'it became so normal, crogs soks cult',
+    'gosh, life so hard man',
+    'i feel u dude',
 ]
 sent_messages = []
+
+#
+#
+#
+#
+
+print_saved_sms(saved_messages)
+send_sms(saved_messages, sent_messages)
+print_3_latest_sent_sms(sent_messages)
