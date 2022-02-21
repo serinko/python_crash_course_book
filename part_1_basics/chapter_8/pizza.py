@@ -40,4 +40,6 @@ def make_pizza(size, *toppings):
 
 make_pizza(33, 'pepperoni')
 make_pizza(46, 'mushrooms', 'cheese', 'tuna')
-make_pizza()
+make_pizza(33)
+
+# programmers often use generic *args
