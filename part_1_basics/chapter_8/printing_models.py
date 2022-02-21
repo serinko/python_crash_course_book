@@ -51,3 +51,9 @@ show_completed_models(completed_models)
 # those can be add to the list by users
 # Every function should have one specific job
 # It is more benefitial than pushing it all into one function
+
+# PREVENTING FUNCTION FROM MODIFYING THE LIST
+# When calling the function, we use a copy [:] of the list
+# Original then stays intact.
+
+print_models(unprinted_designs[:], completed_models)
