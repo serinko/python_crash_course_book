@@ -46,6 +46,7 @@ print_saved_sms(saved_messages)
 send_sms(saved_messages, sent_messages)
 print_3_latest_sent_sms(sent_messages)
 
+# As excercise said, print the lists to control their content
 print("\n\nControll list print: ")
 print(saved_messages)
 print(sent_messages)
