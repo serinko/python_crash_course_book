@@ -37,8 +37,10 @@ def show_completed_models(completed_models):
         print(completed_model)
 
 
+# Creating lists which have identical names with the parameter
 unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
 completed_models = []
 
+# Using these lists as arguments when calling the function
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
