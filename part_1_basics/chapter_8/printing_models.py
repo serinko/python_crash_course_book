@@ -38,6 +38,7 @@ def show_completed_models(completed_models):
 
 
 # Creating lists which have identical names with the parameter
+# This is how organized is the body of the program
 unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
 completed_models = []
 
