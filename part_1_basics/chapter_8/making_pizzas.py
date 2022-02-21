@@ -4,5 +4,17 @@ import pizza_module
 
 pizza_module.make_pizza(33, 'ham', 'pineapple', 'cheese')
 pizza_module.make_pizza(46)
-pizza_module.make_pizza(33, 'tuna', 'bacon', 'mozzarella')
+
 # call the module.function(arguments)
+
+# or a specific one with the call:
+# from module_name import function_name(arguments)
+
+from pizza_module import make_pizza
+
+make_pizza(33, 'tuna', 'bacon', 'mozzarella')
+# Then we call the function using only the function name
+
+# MULTIPLE FUNCTIONS:
+# If the module had multiple functions, we can import specific ones like this
+# from pizza_module import make_pizza_0, make_pizza_1, make_pizza_2
