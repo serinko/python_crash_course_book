@@ -12,4 +12,7 @@ print(user_profile)
 
 # **parameter tells Python to create a dictionary with such name
 # The two positional parameters, which we defined as keyword in the dictionary
+# will be always mandatory
 # The rest is arbitrary, added as arguments in the variable user_profile
+# there can none or as many arbitrary arguments,
+# but they need to be defined as keywords so they make key-value pairs
