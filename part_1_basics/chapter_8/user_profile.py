@@ -12,4 +12,4 @@ print(user_profile)
 
 # **parameter tells Python to create a dictionary with such name
 # The two positional parameters, which we defined as keyword in the dictionary
-# The rest is arbitraty, defined a arguments in the variable user_profile
+# The rest is arbitrary, added as arguments in the variable user_profile
