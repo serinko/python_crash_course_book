@@ -17,6 +17,8 @@
 
 # USING FUNCTIONS
 # We make two functions to allow flexibility
+# Following the same code structure as above
+# Storing that in functions
 def print_models(unprinted_designs, completed_models):
     """
     Simulare printing each design , until none are left.
