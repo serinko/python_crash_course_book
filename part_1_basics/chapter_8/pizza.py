@@ -20,4 +20,24 @@ def make_pizza(*toppings):
 
 make_pizza('pepperoni')
 make_pizza('mushrooms', 'cheese', 'tuna')
+
+
 # The outcome is not a tuple, but a nice structured summary
+
+# MIXING POSITIONAL AND ARBITRARY ARGUMENTS
+# Positional parameter must come first
+# *arbitrary argument always last
+def make_pizza(size, *toppings):
+    """Summarize the pizza we are about to make."""
+    print(f"\nWe are preparing you pizza size {size} "
+          f"with the following toppings:")
+    if toppings:
+        for topping in toppings:
+            print(f" - {topping}")
+    else:
+        print(" - no toppings")
+
+
+make_pizza(33, 'pepperoni')
+make_pizza(46, 'mushrooms', 'cheese', 'tuna')
+make_pizza()
