@@ -78,13 +78,17 @@ def make_pizza(size, toppings=None):
     """Displays a summary of clients pizza, size and toppings"""
     message = "\n\n\n   ========== ORDER FINISHED ========== "
     print(message)
-    print(f"\n\nThank you for your order. "
-          f"We are preparing you pizza size {size} "
-          f"with the following toppings:")
+    print(
+        f"\n\nThank you for your order. "
+        f"We are preparing you pizza size {size} "
+        f"with the following toppings:"
+    )
     if toppings:
         for t in toppings:
             print(f" - {t}")
     else:
         print(" - no toppings chosen")
 
-    print("\n\nEnjoy your pizza and see you soon!!!")
+    print(
+        "\n\nEnjoy your pizza and see you soon!!!"
+    )
