@@ -37,4 +37,6 @@ pm.make_pizza(33)
 # IMPORTING ALL FUNCTIONS
 from pizza_module import *
 
+# Syntax is from module_name import *
+# It is not preferable because of the mess and unclear reading
 make_pizza(44, 'cheese extra')
