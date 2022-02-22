@@ -43,7 +43,7 @@ def choose_pizza_toppings():
         "\t(Press enter after each topping.)"
     )
     print(
-        "\t(Enter 'q' when finished)"
+        "\t(Enter 'q' when finished.)"
     )
 
     active = True
@@ -53,8 +53,8 @@ def choose_pizza_toppings():
         prompt_toppings = "\nTOPPING: "
         topping = input(prompt_toppings)
 
-        if topping == 'q':
-            print("You have chosen a pizza without any topping")
+        if topping.lower() == 'q':
+            print("You have chosen a pizza without any topping.")
             break
         else:
             tpgs.append(topping)
@@ -66,10 +66,6 @@ def choose_pizza_toppings():
                 "or press 'q' to finish your order.\n"
 
             )
-
-            if topping.lower() == 'q':
-                print("You have chosen a pizza without any topping")
-                active = False
 
     return tpgs
 
