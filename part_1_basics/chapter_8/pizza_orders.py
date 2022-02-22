@@ -54,10 +54,10 @@ def choose_pizza_toppings():
         if tpgs:
             while active:
                 print(f"\nWe added {tpgs[-1]} on your pizza.")
-                prompt = "Enter another topping, " \
-                         "or press 'q' to finish your order.\n" \
-                         "\nTOPPING: "
-                more = input(prompt)
+                prompt_more = "Enter another topping, " \
+                              "or press 'q' to finish your order.\n" \
+                              "\nTOPPING: "
+                more = input(prompt_more)
 
                 if more.lower() == 'q':
                     active = False
