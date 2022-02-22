@@ -18,7 +18,7 @@ def choose_pizza_size():
         prompt_size = \
             "\nPlease choose the size of your pizza. 33 or 44. "
         prompt_size += \
-            "\n(to enter finish your order, enter  'q') \n\n" \
+            "\n(to finish your order, enter  'q') \n\n" \
             "SIZE: \t"
         size_user = input(prompt_size)
         if size_user.lower() == 'q':
@@ -36,36 +36,40 @@ def choose_pizza_size():
 
 def choose_pizza_toppings():
     """Returns a list of users chosen toppings"""
-    prompt_toppings = "\nPlease choose your toppings."
-    prompt_toppings += "\n(Press enter after ach topping."
-    prompt_toppings += "\nEnter 'q' when finished)\n"
-    prompt_toppings += "\nTOPPING: "
+    print(
+        "\nPlease choose your toppings."
+    )
+    print(
+        "\t(Press enter after each topping.)"
+    )
+    print(
+        "\t(Enter 'q' when finished)"
+    )
+
     active = True
     tpgs = []
+
     while active:
+        prompt_toppings = "\nTOPPING: "
         topping = input(prompt_toppings)
 
         if topping == 'q':
             print("You have chosen a pizza without any topping")
-            active = False
+            break
         else:
             tpgs.append(topping)
 
-        if tpgs:
-            while active:
-                print(f"\nWe added {tpgs[-1]} on your pizza.")
-                prompt_more = "Enter another topping, " \
-                              "or press 'q' to finish your order.\n" \
-                              "\nTOPPING: "
-                more = input(prompt_more)
+            print(f"\nWe added {topping} on your pizza.")
 
-                if more.lower() == 'q':
-                    active = False
-                else:
-                    tpgs.append(more)
+            print(
+                "Enter another topping, "
+                "or press 'q' to finish your order.\n"
 
-        else:
-            active = False
+            )
+
+            if topping.lower() == 'q':
+                print("You have chosen a pizza without any topping")
+                active = False
 
     return tpgs
 
