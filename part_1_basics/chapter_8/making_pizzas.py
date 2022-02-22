@@ -32,3 +32,9 @@ mp(46, 'anchovy', 'ham', 'cream')
 import pizza_module as pm
 
 pm.make_pizza(33)
+#
+
+# IMPORTING ALL FUNCTIONS
+from pizza_module import *
+
+make_pizza(44, 'cheese extra')
