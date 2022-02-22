@@ -16,9 +16,10 @@ def choose_pizza_size():
     active = True
     while active:
         prompt_size = \
-            "\nPlease choose if you want a size of 33 or 44cm pizza. "
+            "\nPlease choose the size of your pizza. 33 or 44. "
         prompt_size += \
-            "\nEnter 'q' to quickly finish your order: \n\n"
+            "\n(to enter finish your order, enter  'q') \n\n" \
+            "SIZE: \t"
         size_user = input(prompt_size)
         if size_user.lower() == 'q':
             print("No size, no pizza!!"
@@ -27,7 +28,7 @@ def choose_pizza_size():
 
         else:
             size_user = int(size_user)
-            print(f"You have chosen pizza size {str(size_user)}.")
+            print(f"\nYou have chosen pizza size {str(size_user)}.")
             active = False
 
     return size_user
@@ -52,8 +53,8 @@ def choose_pizza_toppings():
 
         if tpgs:
             while active:
-                print(f"\nWe added {topping} on your pizza.")
-                prompt = "For another topping press enter, " \
+                print(f"\nWe added {tpgs[-1]} on your pizza.")
+                prompt = "Enter another topping, " \
                          "or press 'q' to finish your order.\n" \
                          "\nTOPPING: "
                 more = input(prompt)
