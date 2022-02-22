@@ -18,3 +18,8 @@ make_pizza(33, 'tuna', 'bacon', 'mozzarella')
 # MULTIPLE FUNCTIONS:
 # If the module had multiple functions, we can import specific ones like this
 # from pizza_module import make_pizza_0, make_pizza_1, make_pizza_2
+
+# USINNG "as" TO GIVE A FUNCTION AN ALIAS
+from pizza_module import make_pizza as mp
+
+mp(46, 'anchovy', 'ham', 'cream')
