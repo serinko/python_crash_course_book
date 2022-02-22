@@ -8,7 +8,7 @@ pizza_module.make_pizza(46)
 # call the module.function(arguments)
 
 # or a specific one with the call:
-# from module_name import function_name(arguments)
+# from module_name import function_name
 
 from pizza_module import make_pizza
 
@@ -20,6 +20,9 @@ make_pizza(33, 'tuna', 'bacon', 'mozzarella')
 # from pizza_module import make_pizza_0, make_pizza_1, make_pizza_2
 
 # USINNG "as" TO GIVE A FUNCTION AN ALIAS
+#
 from pizza_module import make_pizza as mp
 
+# from module_name import function_name as fn
 mp(46, 'anchovy', 'ham', 'cream')
+
