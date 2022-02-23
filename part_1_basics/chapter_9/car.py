@@ -42,8 +42,11 @@ class Car:
     def read_odometer(self):
         """Print a statement showing the car's mileage."""
         print(f"This car has {self.odometer_reading} miles on it.")
+    # We added a default odometer value method
 
 
 my_new_car = Car('audi', 'a4', 2019)
 print(my_new_car.get_descriptive_name())
 my_new_car.read_odometer()
+
+# MODYFING ATTRIBUTE VALUES:
