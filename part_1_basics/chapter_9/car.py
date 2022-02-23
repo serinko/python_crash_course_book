@@ -42,11 +42,33 @@ class Car:
     def read_odometer(self):
         """Print a statement showing the car's mileage."""
         print(f"This car has {self.odometer_reading} miles on it.")
+
     # We added a default odometer value method
+
+    #
+    # 2) To be able to update a value of attribute through a method
+    def update_odometer(self, mileage):
+        """Set the odometer reading to the given value"""
+        self.odometer_reading = mileage
 
 
 my_new_car = Car('audi', 'a4', 2019)
 print(my_new_car.get_descriptive_name())
 my_new_car.read_odometer()
 
-# MODYFING ATTRIBUTE VALUES:
+# MODIFYING ATTRIBUTE VALUES:
+# Can be done in three ways:
+# 1) Directly through an instance
+# 2) Set the value through a method
+# 3) Increment the value (add a certain amount to it) through a method
+
+# 1) Directly:
+my_new_car.odometer_reading = 23
+my_new_car.read_odometer()
+# We use .notation to access the attribute and directly set a new value to it
+# Sometimes this fits, other times a method can update the value
+print("\n")
+
+# 2) Modifying an attributtes vale through a method
+my_new_car.update_odometer(23)
+my_new_car.read_odometer()
