@@ -30,6 +30,12 @@ class Dog:
 
 
 # SETTING AN INSTANCE
+
 my_dog = Dog('Willie', 6)
 print(f"My dog's name is a {my_dog.name}.")
 print(f"My dog is {my_dog.age} years old.")
+# When setting the variable my_dog, Dog class is used with new arguments
+# Python runs it through the __init()__ and creates an instance
+# Representing this particular dog with the values provided
+# Convention of capitalized Dog reffers to a class
+# lower case my_dog to an instance
