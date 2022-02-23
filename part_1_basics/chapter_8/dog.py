@@ -50,3 +50,21 @@ my_dog.roll_over()
 # Give the name of the instance and the method you want to call.
 # When variables and methods described well,
 # we can easily infer what the block of code is supposed to do.
+#
+print("\n")
+#
+# CREATING MULTIPLE INSTANCES
+# As many instances can be created
+your_dog = Dog('Lucy', 3)
+
+print(f"My dog's name is a {my_dog.name}.")
+print(f"My dog is {my_dog.age} years old.")
+
+my_dog.sit()
+my_dog.roll_over()
+
+print(f"\nYour dog's name is a {your_dog.name}.")
+print(f"Your dog is {your_dog.age} years old.")
+
+your_dog.sit()
+your_dog.roll_over()
