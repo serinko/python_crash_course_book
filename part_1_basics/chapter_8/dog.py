@@ -39,3 +39,14 @@ print(f"My dog is {my_dog.age} years old.")
 # Representing this particular dog with the values provided
 # Convention of capitalized Dog reffers to a class
 # lower case my_dog to an instance
+# To access attributes e use dot notation (my_dog.name)
+# This syntax tells Python how to find attributes value
+#
+# CALLING A METHOD (function)
+#
+# my_dog = Dog('Willie', 6)
+my_dog.sit()
+my_dog.roll_over()
+# Give the name of the instance and the method you want to call.
+# When variables and methods described well,
+# we can easily infer what the block of code is supposed to do.
