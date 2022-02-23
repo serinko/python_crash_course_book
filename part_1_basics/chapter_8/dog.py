@@ -14,6 +14,7 @@ class Dog:
         """Simulate rolling over in response to a command."""
         print(f"{self.name} rolled over!")
 
+
 # Dog is a class
 # Any instance (particular dog) can be used for this class
 # Fuctions in a class are called methods
@@ -27,4 +28,8 @@ class Dog:
 # They can be extended with given instance later and describe more complex
 # object or it's behaviour
 
- 
+
+# SETTING AN INSTANCE
+my_dog = Dog('Willie', 6)
+print(f"My dog's name is a {my_dog.name}.")
+print(f"My dog is {my_dog.age} years old.")
