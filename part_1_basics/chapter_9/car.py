@@ -48,8 +48,15 @@ class Car:
     #
     # 2) To be able to update a value of attribute through a method
     def update_odometer(self, mileage):
-        """Set the odometer reading to the given value"""
-        self.odometer_reading = mileage
+        """
+        Set the odometer reading to the given value.
+        Reject the change if it attempts to roll the odometer back.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You cannot roll the odometer back!")
+        # Extended the method/function by this if statement
 
 
 my_new_car = Car('audi', 'a4', 2019)
@@ -76,7 +83,10 @@ my_new_car.read_odometer()
 # The new method (function) takes in the variable mileage sat as a default
 # in the method read_odometer
 # Sets a new value to that variable and returns the method back
+#
+# We can also extend it by if statement..
 print("\n")
 
 #
-# 3)
+# 3) Incerementing an attribute's value through a method
+# 
