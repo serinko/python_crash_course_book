@@ -58,6 +58,11 @@ class Car:
             print("You cannot roll the odometer back!")
         # Extended the method/function by this if statement
 
+    # 3) Increment attributes value
+    def increment_odometer(self, miles):
+        """Add the given amount to the odometer reading."""
+        self.odometer_reading += miles
+
 
 my_new_car = Car('audi', 'a4', 2019)
 print(my_new_car.get_descriptive_name())
@@ -89,4 +94,21 @@ print("\n")
 
 #
 # 3) Incerementing an attribute's value through a method
-# 
+# Value can be incremented by a certain ammount.
+# We can set a method to increment the value
+my_used_car = Car('subaru', 'outback', 2015)
+print(my_used_car.get_descriptive_name())
+
+my_used_car.update_odometer(23_500)
+my_used_car.read_odometer()
+
+my_used_car.increment_odometer(100)
+my_used_car.read_odometer()
+# The new method takes the value form reading odometer
+# add an increment defined as a method argument
+# The same if method could be applied to this function.
+
+# EFFECTIVE SECURITY
+# The if statement can be seen as a concept, in a flexible way
+# Addictional security to make sure a program takes account
+# of all possible attempts of missuse.
