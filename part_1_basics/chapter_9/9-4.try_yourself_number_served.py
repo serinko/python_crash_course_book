@@ -36,6 +36,13 @@ class Restaurant:
             f"was visited by {self.number_served} guests."
         )
 
+    def increment_number_served(self, number):
+        """Adds a given amount tho the total of guests"""
+        if number > 0:
+            self.number_served += number
+        else:
+            print("Increment must have positive value")
+
 
 restaurant_0 = Restaurant('nagano', 'sushi')
 restaurant_0.read_description()
@@ -43,4 +50,8 @@ restaurant_0.describe_restauant()
 restaurant_0.open_restaurant()
 restaurant_0.read_number_served()
 restaurant_0.set_number_served(75)
+restaurant_0.read_number_served()
+restaurant_0.increment_number_served(0)
+restaurant_0.read_number_served()
+restaurant_0.increment_number_served(25)
 restaurant_0.read_number_served()
