@@ -9,7 +9,17 @@ class Restaurant:
 
     def describe_restauant(self):
         """Displays information about the restaurant cuisine"""
-        print(f"{self.name.title()} offers a good services.")
+        print(f"{self.name.title()} offers quality services.")
+
+    def read_description(self):
+        """Displays more info to attract the guests"""
+        print(
+            f"{self.name.title()} is a new restaurant."
+        )
+        print(
+            f"{self.name.title()} is specialized in "
+            f"{self.cuisine}."
+        )
 
     def open_restaurant(self):
         """Dislays that the restaurant is open"""
@@ -28,8 +38,7 @@ class Restaurant:
 
 
 restaurant_0 = Restaurant('nagano', 'sushi')
-print(f"{restaurant_0.name.title()} is a new restaurant.")
-print(f"{restaurant_0.name.title()} is specialized in {restaurant_0.cuisine}.")
+restaurant_0.read_description()
 restaurant_0.describe_restauant()
 restaurant_0.open_restaurant()
 restaurant_0.read_number_served()
