@@ -69,6 +69,14 @@ my_new_car.read_odometer()
 # Sometimes this fits, other times a method can update the value
 print("\n")
 
-# 2) Modifying an attributtes vale through a method
+# 2) Modifying an attribute's vale through a method
+# Created a new function update_odometer
 my_new_car.update_odometer(23)
 my_new_car.read_odometer()
+# The new method (function) takes in the variable mileage sat as a default
+# in the method read_odometer
+# Sets a new value to that variable and returns the method back
+print("\n")
+
+#
+# 3)
