@@ -44,6 +44,13 @@ class ElectricCar(Car):
     def __init__(self, make, model, year):
         """Initialize attributes of the parent class."""
         super().__init__(make, model, year)
+        # adding a new attribute with a default value
+        self.battery_size = 75
+
+    # And adding a new method, working with the new attribute
+    def describe_battery(self):
+        """Print a statementdescribing batery size"""
+        print(f"This car haze a {self.battery_size}-kWh battery.")
 
 
 my_tesla = ElectricCar('tesla', 'model s', 2019)
@@ -61,3 +68,8 @@ print(my_tesla.get_descriptive_name())
 # to use them in the child / subclass
 # Instance ElectricCar given the atributtes calling for parent class and
 # calling a method described in the parent class
+
+# Once we have a child class, we can define new attributes and methods
+# Those will differentiate from the parrent class
+
+my_tesla.describe_battery()
