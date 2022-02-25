@@ -38,6 +38,7 @@ class Car:
         self.odometer_reading += miles
 
 
+# Defining new class, which does not inherit from any other class
 class Battery:
     """A simple attempt to model a battery for an electric car"""
 
@@ -48,6 +49,16 @@ class Battery:
     def describe_battery(self):
         """Print a statement describing batery size"""
         print(f"This car has a {self.battery_size}-kWh battery.")
+
+    # Adding a new method to the Class
+    def get_range(self):
+        """Print a statement about the range this batter provides"""
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+
+        print(f"This car can go about {range} miles on a full charge.")
 
 
 class ElectricCar(Car):
@@ -60,7 +71,7 @@ class ElectricCar(Car):
         # self.battery_size = 75
         # Commenting on it as I made a new class for battery
 
-        # adding the same attribute, defined by a class
+        # adding the same attribute, defined as a class above
         self.battery = Battery()
 
     # # And adding a new method, working with the new attribute
@@ -112,5 +123,18 @@ print(my_tesla.get_descriptive_name())
 # Those can be used in another programs then.
 # here it can be for example the battery.
 # Important is that the class which we reffer to later must come above!
+# any electric_car instance will have a Battery instance created automatically
 
+# When we want to descibe the battery, we need to work through
+# the battery attribute.
 my_tesla.battery.describe_battery()
+# Python looks at the instance my_tesla
+# find its battery attribute and call the method describe_batter()
+# that's associated with the Battery instance stored in the attribute
+
+# This loks like a lot of work, but as usually, having indenpendendt code
+# means we can modify it separatelly
+# adding another method get_range
+my_tesla.battery.get_range()
+# method get_range() performs a simple analyses.
+# Then reports the value 
