@@ -49,4 +49,15 @@ class ElectricCar(Car):
 my_tesla = ElectricCar('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
 
-
+# How it works:
+# We start with the parent class Car
+# Must appear above in the program than the inheriting child class
+# Defining the child class, the name of the parent class
+# must be included in the paranthesis
+# The __init__() method takes takes info required to make a parent Class
+# instance.
+# super() function allows to call a method from the parent class.
+# Tells Python to call the attributes from the parent / suprclass
+# to use them in the child / subclass
+# Instance ElectricCar given the atributtes calling for parent class and
+# calling a method described in the parent class
