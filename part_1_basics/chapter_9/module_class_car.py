@@ -13,6 +13,8 @@ class Car:
 
     def get_descriptive_name(self):
         """Return a neatly formatted descriptive name"""
+        if self.make == 'bmw':
+            self.make = self.make.upper()
         long_name = f"{self.year} {self.make} {self.model}"
         return long_name.title()
 
