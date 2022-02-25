@@ -1,4 +1,4 @@
-from module_class_car import ElectricCar
+from module_class_car import Car, ElectricCar
 
 my_tesla = ElectricCar('tesla', 'model s', 2019)
 my_tesla.read_descriptive_name()
