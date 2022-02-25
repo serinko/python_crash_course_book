@@ -29,9 +29,9 @@ class User:
 class Privileges:
     """Stores privileges of a user"""
 
-    def __init__(self):
+    def __init__(self, privileges=[]):
         """Initialize attributes privileges."""
-        self.privileges = []
+        self.privileges = privileges
 
     def modify_privileges(self, modified_privileges):
         """Modify the list of privileges"""
@@ -70,6 +70,6 @@ prgs = [
     'can ban user',
 ]
 
-admin_0.battery.modify_privileges(prgs)
+admin_0.privileges.modify_privileges(prgs)
 
 admin_0.privileges.show_privileges()
