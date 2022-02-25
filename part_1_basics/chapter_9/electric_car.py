@@ -137,4 +137,7 @@ my_tesla.battery.describe_battery()
 # adding another method get_range
 my_tesla.battery.get_range()
 # method get_range() performs a simple analyses.
-# Then reports the value 
+# Then reports the value
+# To use this method, we have to again call it through the battery attribute
+
+# READ PAGE 173
