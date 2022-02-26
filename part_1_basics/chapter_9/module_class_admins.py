@@ -32,9 +32,9 @@ class User:
 class Privileges:
     """Stores privileges of a user"""
 
-    def __init__(self):
+    def __init__(self, privileges=[]):
         """Initialize attributes privileges."""
-        self.privileges = []
+        self.privileges = privileges
 
     def modify_privileges(self, modified_privileges):
         """Modify the list of privileges"""
