@@ -1,4 +1,5 @@
-from module_class_admins import User, Privileges, Admin
+from module_class_admins import User
+from module_class_privileges import Privileges, Admin
 
 satoshi = Admin('satoshi', 'nakamoto', 14, 'prophet')
 prgs = ['can do any modification', 'can ban other users', ]
