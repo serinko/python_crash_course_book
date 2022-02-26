@@ -3,6 +3,22 @@
 from random import randrange
 
 
+class User:
+    """User's choice of sides of the dice"""
+
+    def __init__(self, number=6):
+        """Initialize the attributes of user number's choice"""
+        self.number = number
+
+    def user_choice(self):
+        prompt = "/n/nPlease enter the number of sides, your die has."
+        prompt += "Then press 'enter' to roll!"
+        self.number = input(prompt)
+        self.number = int(self.number)
+        x = self.number
+        return x
+
+
 class Dice:
     """A simple class modeling a dice"""
 
@@ -22,6 +38,8 @@ class Dice:
         print(message)
 
 
-dice = Dice()
+user = User()
+x = user.user_choice()
+dice = Dice(x)
 dice.roll_dice()
 dice.display_result()
