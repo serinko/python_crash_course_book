@@ -1,4 +1,4 @@
-"""A simple module with Class User and Admin"""
+"""A simple module with Class User, Privileges and Admin"""
 
 
 class User:
@@ -29,6 +29,26 @@ class User:
               f"\nhave a nice day with Python programing!")
 
 
+class Privileges:
+    """Stores privileges of a user"""
+
+    def __init__(self):
+        """Initialize attributes privileges."""
+        self.privileges = []
+
+    def modify_privileges(self, modified_privileges):
+        """Modify the list of privileges"""
+        self.privileges = modified_privileges
+
+    def show_privileges(self):
+        """Displays administrator sets of privileges"""
+        privileges_formatted = ", ".join(self.privileges)
+        print(
+            f"These are the privileges an Admin has: "
+            f"{privileges_formatted}."
+        )
+
+
 class Admin(User):
     """A simple attempt to make an admin program"""
 
@@ -41,17 +61,4 @@ class Admin(User):
         super().__init__(
             first_name, last_name, age, occupation, middle_name
         )
-
-        self.privileges = [
-            'can add post',
-            'can delete post',
-            'can ban user',
-        ]
-
-    def show_privileges(self):
-        """Displays administrator sets of privileges"""
-        privileges_formatted = ", ".join(self.privileges)
-        print(
-            f"These are the privileges an Admin has: "
-            f"{privileges_formatted}."
-        )
+        self.privileges = Privileges()
