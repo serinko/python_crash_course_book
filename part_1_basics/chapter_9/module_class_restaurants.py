@@ -9,7 +9,7 @@ class Restaurant:
         self.name = restaurant_name
         self.cuisine = cuisine_type
 
-    def describe_restauant(self):
+    def describe_restaurant(self):
         """Displays information about the restaurant cuisine"""
         print(f"{self.name.title()}, world number one in {self.cuisine}.")
 
@@ -20,7 +20,7 @@ class Restaurant:
 
 class IceCreamStand(Restaurant):
     """A simple attempt to model an icecream stand"""
-    
+
     def __init__(self, restaurant_name, cuisine_type):
         """Initialize the attributes of the sub class"""
 
