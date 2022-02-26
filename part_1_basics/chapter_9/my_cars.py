@@ -57,12 +57,12 @@ my_new_car.read_descriptive_name()
 
 my_new_car.odometer_reading = 23
 my_new_car.read_odometer()
-
+#
 # OR USING ALIASES
 from module_class_car import Car as C
 from module_class_electirc_car import ElectricCar as EC
 
-my_tesla = EC('tesla', 'roadster', 2019)
+my_tesla = EC('tesla', 'xxx', 2019)
 my_tesla.read_descriptive_name()
 
 my_tesla.battery.describe_battery()
