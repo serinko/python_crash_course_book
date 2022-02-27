@@ -10,7 +10,8 @@ pool = alphabet[:6] + numbers
 
 print(
     "\n\nWELCOME TO THE LOTTERY!"
-    "\nHere is a pool of 5 letters and 10 numbers : "
+    "\nHere is a pool of 5 letters and 10 numbers, "
+    "please choose 4 from this pool:  \n"
 )
 
 pool_strings_formatted = ', '.join(pool)
