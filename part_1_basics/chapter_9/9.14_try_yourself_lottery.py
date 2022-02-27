@@ -10,7 +10,7 @@ pool = alphabet[:6] + numbers
 
 print(
     "\n\nWELCOME TO THE LOTTERY!"
-    "\nHere is a pool of 10 numbers and five letters: "
+    "\nHere is a pool of 5 letters and 10 numbers : "
 )
 
 pool_strings_formatted = ', '.join(pool)
@@ -47,3 +47,18 @@ print(
     f"Here are the results of today lottery:\n\n\n"
     f"    - - - {lottery_formatted} - - - \n\n"
 )
+
+lost = []
+for x in guess:
+    if x not in lottery:
+        print(f"Your guess {x} is not a winning one.")
+        lost.append(x)
+
+if lost:
+    print(
+        "\nYou did not win the lottery, but do not worry. "
+        "There is so much richness in the life itself. "
+        "Have a good day! "
+    )
+else:
+    print("\n\n! ! ! ! !    Y O U   W O N    ! ! ! ! !\n\n\n")
