@@ -12,7 +12,7 @@ class Activator:
     def welcome_message(self):
         """ A simple function to welcome user"""
         message = \
-            "\nHello, This program will hellp you to pick a" \
+            "\nHello, This program will hellp you to pick a " \
             "'volunteer' for any given activity."
 
         print(message)
@@ -24,7 +24,7 @@ class Activator:
             "\nFirst of all enter the name of each person you want to choose " \
             "from, to carry a given activity."
         message += \
-            "\nAfter each user press 'enter', when finish, enter 'q'."
+            "\nAfter each user press 'ENTER'. \nWhen finished, enter 'Q'."
         print(message)
 
         while True:
@@ -42,7 +42,7 @@ class Activator:
             " was completed:"
         )
         for person in self.user_list:
-            print(f"\t{person.title()}")
+            print(f"\t- {person.title()}")
 
         return self.user_list
 
@@ -67,16 +67,19 @@ class Activator:
         self.winner = choice(self.user_list)
         return self.winner
 
-    def print_results(self):
+    def print_results(self, activity, winner):
         """Displays the result"""
+        self.activity = activity
+        self.winner = winner
+
         print(
             "\n============================="
             "\n============================="
         )
 
         message = \
-            f"The winner is ....... \n\n\n\t\t\t...  " \
-            f"   {self.winner.upper()}  ! ! ! "
+            f"The winner is ....... \n\n\n  " \
+            f"! ! !   {self.winner.upper()}   ! ! ! "
         message_2 = \
             f"\n{self.winner.title()} {self.activity}. Congratulation!" \
             f"\n=============================\n"
@@ -87,6 +90,6 @@ class Activator:
 activator = Activator()
 activator.welcome_message()
 activator.add_users()
-activator.add_activity()
-activator.choice()
-activator.print_results()
+activity = activator.add_activity()
+winner = activator.choice()
+activator.print_results(activity, winner)
