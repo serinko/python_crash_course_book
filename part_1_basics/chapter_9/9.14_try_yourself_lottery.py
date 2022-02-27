@@ -3,9 +3,8 @@ from string import ascii_lowercase
 from random import choice
 
 alphabet = list(ascii_lowercase)
-range = list(range(1, 11))
 numbers = []
-for i in range:
+for i in range(1, 11):
     numbers.append(str(i))
 pool = alphabet[:6] + numbers
 
@@ -22,8 +21,29 @@ print(
     "\nPlease choose a mix of 4 numbers or letters :"
 )
 prompt = "\nYOUR GUESS: "
-prompt += "(\nprees enter after each one letter or number)\t"
+prompt += "\n(prees enter after each one letter or number you enter):\t"
+
 guess = []
-for x in range(1, 5):
+
+for x in range(0, 4):
     x = input(prompt)
-    guess.append(x)
+    guess.append(str(x))
+
+guess_formatted = ', '.join(guess)
+
+print(f"\n\nYour guess is: {guess_formatted}.")
+enter = input("\n Press ENTER to see the results!")
+
+lottery = []
+
+for x in range(0, 4):
+    x = choice(pool)
+    lottery.append(x)
+
+lottery_formatted = ', '.join(lottery)
+
+print(
+    f"\n------------------------------------\n"
+    f"Here are the results of today lottery:\n\n\n"
+    f"    - - - {lottery_formatted} - - - \n\n"
+)
