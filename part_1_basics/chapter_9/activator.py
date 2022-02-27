@@ -18,6 +18,7 @@ class Activator:
         print(message)
 
     def add_users(self, users=[]):
+        """Prmpts user to add list op people, and returns it."""
         self.user_list = users
 
         message = \
@@ -47,7 +48,7 @@ class Activator:
         return self.user_list
 
     def add_activity(self):
-        """Prompts user to describe the activity"""
+        """Prompts user to describe the activity and returns it"""
 
         message = \
             "\n=============================\n\n\n\n"
@@ -63,7 +64,7 @@ class Activator:
         return self.activity
 
     def choice(self):
-        """Makes a random choice of a person"""
+        """Makes a random choice of a person and returns a winner"""
         self.winner = choice(self.user_list)
         return self.winner
 
