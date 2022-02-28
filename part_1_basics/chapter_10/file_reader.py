@@ -26,6 +26,10 @@ print(contents.rstrip())
 # Output than matches the originall file
 
 # 2) FILE PATHS:
-with open('~/text_files/pi_digits.txt') as file_object:
-    contents = file_object
+with open(
+        '/home/willow/python/python_crash_course_book/text_files/pi_digits.txt'
+) as file_object:
+    contents = file_object.read()
 print(contents)
+# My text folder path is:
+# /home/willow/python/python_crash_course_book/text_files
