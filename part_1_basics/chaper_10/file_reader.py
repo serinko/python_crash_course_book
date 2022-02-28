@@ -10,4 +10,12 @@ print(contents)
 # It looks in the directory where the program is stored
 # returns an object representing the file
 # asigns it to the file object variable
+# 'with' closes the file once the access is no longer needed
 
+# We do not use close() here. - if a bug would disturb -
+# the program - it may never close
+# That may cause data to be lost or corrupted.
+# and if you close too early, you may we working with a closed file
+# one you cannot access
+# read() method reads the content and stores it in a string (contents)
+# Python closes the file automatically when the block finishes execution.
