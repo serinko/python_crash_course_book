@@ -24,3 +24,8 @@ print(contents)
 print(contents.rstrip())
 
 # Output than matches the originall file
+
+# 2) FILE PATHS:
+with open('~/text_files/pi_digits.txt') as file_object:
+    contents = file_object
+print(contents)
