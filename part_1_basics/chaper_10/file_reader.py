@@ -19,3 +19,8 @@ print(contents)
 # one you cannot access
 # read() method reads the content and stores it in a string (contents)
 # Python closes the file automatically when the block finishes execution.
+
+# There is an extra blank line, if we want to remove it, use rstrip()
+print(contents.rstrip())
+
+# Output than matches the originall file
