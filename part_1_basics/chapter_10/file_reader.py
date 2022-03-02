@@ -74,3 +74,20 @@ for line in lines:
     print(line.rstrip())
 # the .readlines() method takes each line from the file and stores it in a list
 # The list lines - can be used anytime further
+
+
+# WORKING WITH A FILE's CONTENT
+filename = 'pi_digits.txt'
+
+with open(filename) as file:
+    lines = file.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.rstrip()
+
+print(pi_string)
+print(len(pi_string))
+# variable pi_string to hold the digits for pi
+# a loop adds each line to pi_string + removes the newline character - rstrip()
+# in the end print the string and print it's length - len()
