@@ -26,10 +26,23 @@ print(contents.rstrip())
 # Output than matches the originall file
 
 # 2) FILE PATHS:
+# In case my files adirectry is in the same directory as the program
+# I can use A RELATIVE PATH DIRECTORY text_files/pi_digits.txt
+
+with open(
+        'text_files/pi_digits.txt'
+) as file_object:
+    contents = file_object.read()
+print(contents)
+
+# Or an ABSOLUTE PATH
+# My text folder path is:
+# /home/willow/python/python_crash_course_book/text_files
+# This is not in the same folder and therefore I need to define the path
+# This is called an absolute file path
+
 with open(
         '/home/willow/python/python_crash_course_book/text_files/pi_digits.txt'
 ) as file_object:
     contents = file_object.read()
 print(contents)
-# My text folder path is:
-# /home/willow/python/python_crash_course_book/text_files
