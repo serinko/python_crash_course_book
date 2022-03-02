@@ -72,5 +72,5 @@ with open(filename) as file:
 
 for line in lines:
     print(line.rstrip())
-# the readlines() method takes each line from the file and stores it in a list
+# the .readlines() method takes each line from the file and stores it in a list
 # The list lines - can be used anytime further
