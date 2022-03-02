@@ -46,3 +46,31 @@ with open(
 ) as file_object:
     contents = file_object.read()
 print(contents)
+
+# READING LINE BY LINE
+# a for loop can be used
+# we start with asigning the file as a variable
+# Then we can swap the string 'pi_digits.txt' with any other path
+# This will then project through the entire code
+filename = 'pi_digits.txt'
+with open(filename) as file_object:
+    for line in file_object:
+        print(line)
+
+# to eliminate the white lines:
+with open(filename) as file:
+    for line in file:
+        print(line.rstrip())
+
+# MAKING A LIST OF LINES FROM A FILE
+# When usinh with open() is only available within the with bloc.
+# If to retain an access to the content, we can store it a list
+filename = 'pi_digits.txt'
+
+with open(filename) as file:
+    lines = file.readlines()
+
+for line in lines:
+    print(line.rstrip())
+# the readlines() method takes each line from the file and stores it in a list
+# The list lines - can be used anytime further
