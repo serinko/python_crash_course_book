@@ -91,3 +91,20 @@ print(len(pi_string))
 # variable pi_string to hold the digits for pi
 # a loop adds each line to pi_string + removes the newline character - rstrip()
 # in the end print the string and print it's length - len()
+
+# LARGE FILES
+# Sometimes the files are lare and we can work with them,
+# We can still print only a sample of it
+filename = \
+    '/home/willow/python/python_crash_course_book/text_files/pi_long.txt'
+with open(
+        filename
+) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.strip()
+
+print(f"{pi_string[:52]}...")
+print(len(pi_string))
