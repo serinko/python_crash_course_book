@@ -113,3 +113,13 @@ print(len(pi_string))
 # The file is imported entirely. but we only print a slice (50 decimals)
 # We print len() to controll the size  the content was not changed.
 # Python has no limit on how much data to work with, it is about the CPU memory
+
+
+# Is your birthday contained in PI
+# --snip--
+
+birthday = input("Enter your birthday in the form mmddyy: ")
+if birthday in pi_string:
+    print(
+        "Your birthday appears in the first milion digits of pi!"
+    )
