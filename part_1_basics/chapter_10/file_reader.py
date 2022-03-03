@@ -96,7 +96,7 @@ print(len(pi_string))
 # Sometimes the files are lare and we can work with them,
 # We can still print only a sample of it
 filename = \
-    '/home/willow/python/python_crash_course_book/text_files/pi_long.txt'
+    '/home/willow/python/python_crash_course_book/text_files/pi_milion_decimals.txt'
 with open(
         filename
 ) as file_object:
