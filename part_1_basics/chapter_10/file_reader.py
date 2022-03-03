@@ -112,3 +112,4 @@ print(len(pi_string))
 # Same method like before to make Pi into a string from the list
 # The file is imported entirely. but we only print a slice (50 decimals)
 # We print len() to controll the size  the content was not changed.
+# Python has no limit on how much data to work with, it is about the CPU memory
