@@ -1,10 +1,12 @@
 message = \
-    "Welcome to the 'Programming poll'. \n " \
+    "Welcome to Programming poll! \n" \
     "We would like to ask programers to enter their reasons," \
     " why are they programming."
 
+print(message)
+
 prompt = "\n\nPlease enter a reason:  "
-prompt += ("(enter 'q' when finished)")
+prompt += ("\n(enter 'q' when finished)")
 file = 'programming_poll.txt'
 
 with open(file, 'a') as p_poll:
@@ -17,4 +19,3 @@ with open(file, 'a') as p_poll:
             p_poll.write(f"\n\t- {reason}")
         else:
             quit()
-            
