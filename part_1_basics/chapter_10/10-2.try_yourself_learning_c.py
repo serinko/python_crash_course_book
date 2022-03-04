@@ -17,8 +17,9 @@ for line in lines:
 
 # Or we with this syntax:
 # learning_python_string = learning_python_string.replace(...)
-# or alternatively - to keep the original text and replace() only for the print:
-# print(learning_python_string.replace(...))
+# or alternatively - to keep the original intact and use a copy
+#  of the text with replace() method only for the print:
+# print(learning_python_string.replace(...)) - in case we havent changed it yet
 print(learning_python_string)
 
 # print(learning_python_string.replace('code', 'anarchist philosophy'))
