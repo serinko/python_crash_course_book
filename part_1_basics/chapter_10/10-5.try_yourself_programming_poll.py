@@ -18,6 +18,6 @@ with open(file, 'a') as p_poll:
         if reason.lower() != 'q':
             p_poll.write(f"\n\t- {reason}")
             p_poll.flush()
-            # pushes an entry from memory to the disk
+            # pushes an entry from memory to the disk instantly
         else:
             quit()

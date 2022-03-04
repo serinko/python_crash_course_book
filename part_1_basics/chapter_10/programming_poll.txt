@@ -1,6 +1,4 @@
-user: autonomous. Reasons for programming:  user: autonomous. Reasons for programming:  
-	- empowering people
-	- open source
+Programming Poll:
 
 user: abcd. Reasons for programming:  
 	- people power
@@ -9,3 +7,7 @@ user: abcd. Reasons for programming:
 
 user: meow. Reasons for programming:  
 	- dictatorsip
+
+user: eric. 
+Reasons for programming:  
+	- code liberates
