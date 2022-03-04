@@ -1,0 +1,3 @@
+user: autonomous. Reasons for programming:  user: autonomous. Reasons for programming:  
+	- empowering people
+	- open source
