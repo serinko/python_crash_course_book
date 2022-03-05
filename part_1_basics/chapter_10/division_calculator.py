@@ -50,3 +50,6 @@ while True:
 
 # Any code depending on the try to be successful is added to else block
 # if not successful - the exception arises
+# Shall be used for innocent user mistakes and unresolvable errors
+# like diving by zero, or entering strings instead of integers etc
+# not to solve programmers shortcomings in code
