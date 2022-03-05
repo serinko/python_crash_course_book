@@ -20,7 +20,6 @@ def count_words(filename):
 # filename = "Alice in Wonderland.txt"
 # count_words(filename)
 # We use the function and define the argument for its parametter
-
 # Analyzing more texts:
 filenames = [
     "Alice in Wonderland.txt", 'siddhartha.txt', 'moby_dick.txt',
@@ -31,7 +30,7 @@ for filename in filenames:
 
 # FAILING SILENTLY
 # pass - tells Python to do nothing and pass the error silently
-# We can run the same program just exchange the except block for pass
+# We ca`n run the same program just exchange the except block for pass
 # The information about harry_potter.txt not existing is not printed
 
 # Pass statement is a placeholder - we tell Python to do nothing
