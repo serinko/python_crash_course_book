@@ -7,7 +7,9 @@ def count_words(filename):
         with open(filename, encoding='utf-8') as f:
             contents = f.read()
     except FileNotFoundError:
-        print(f"Sorry, the file  {filename} does not exist")
+        # print(f"Sorry, the file  {filename} does not exist")
+        # Commented so we pass silently
+        pass
 
     else:
         words = contents.split()
@@ -27,4 +29,10 @@ filenames = [
 for filename in filenames:
     count_words(filename)
 
+# FAILING SILENTLY
+# pass - tells Python to do nothing and pass the error silently
+# We can run the same program just exchange the except block for pass
+# The information about harry_potter.txt not existing is not printed
 
+# Pass statement is a placeholder - we tell Python to do nothing
+# We can use the information for further work, not shown to the user
