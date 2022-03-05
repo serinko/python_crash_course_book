@@ -36,3 +36,7 @@ for filename in filenames:
 
 # Pass statement is a placeholder - we tell Python to do nothing
 # We can use the information for further work, not shown to the user
+# It is up to you to decide which information to share with users
+
+# DO NOT use try-except exceptions for syntax or logical errors!
+# More for the external problems - user input, network connection, file input
