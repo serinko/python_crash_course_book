@@ -17,3 +17,4 @@ def count_words(filename):
 
 filename = "Alice in Wonderland.txt"
 count_words(filename)
+# We use the function and define the argument for its parametter
