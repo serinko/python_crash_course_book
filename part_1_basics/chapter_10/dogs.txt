@@ -1,3 +1,0 @@
-dog_1 = 'met'
-dog_2 = 'linda'
-dog_3 = 'bruno'
