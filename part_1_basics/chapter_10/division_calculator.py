@@ -47,3 +47,6 @@ while True:
         print("You can't divide by zero!")
     else:
         print(answer)
+
+# Any code depending on the try to be successful is added to else block
+# if not successful - the exception arises
