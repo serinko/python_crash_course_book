@@ -1,0 +1,3 @@
+cat_1 = 'bimbo'
+cat_2 = 'charlie'
+cat_3 = 'lu'
