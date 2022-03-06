@@ -61,13 +61,13 @@ def username_content():
     filename = 'username.json'
     try:
         with open(filename) as f:
-            json.load(f)
+            content = f.read(json.load(f))
 
-        return 1
+        return content
 
     except json.decoder.JSONDecodeError:
         return None
-
+    
 
 def greet_user():
     """Greet the user by name"""
