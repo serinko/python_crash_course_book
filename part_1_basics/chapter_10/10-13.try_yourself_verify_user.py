@@ -4,7 +4,7 @@ import json
 def get_stored_username():
     """Get stored username if available"""
 
-    filename = 'username.json'
+    filename = 'user.json'
 
     try:
         with open(filename) as f:
@@ -29,7 +29,7 @@ def get_new_username():
 
 
 # def username_content():
-#     filename = 'username.json'
+#     filename = 'user.json'
 #     try:
 #         with open(filename) as f:
 #             content = f.read(json.load(f))
@@ -40,16 +40,32 @@ def get_new_username():
 #         return None
 
 
+def check_user():
+    username = get_stored_username()
+    message = f"Hello. Are you user {username}?"
+    print(message)
+    prompt = "\nEnter 'yes' or 'no':   "
+    answer = input(prompt)
+
+    if answer == 'yes':
+        print(f"Welcome back {username}.")
+
+    elif answer == 'no':
+        username = input("Enter your actuall username:   ")
+        print(f"You are signed in as {username}.")
+        filename = 'user.json'
+        with open(filename, 'w') as f:
+            json.dump(username, f)
+
+
 def greet_user():
     """Greet the user by name"""
     username = get_stored_username()
     # username_content = username_content()
 
     if username:
-        prompt = "Enter your username:  "
-        user = input(prompt)
-        if user == username:
-            print(f"Welcome back, {username}!")
+        check_user()
+
         # try:
         #     get_stored_username()
         # except json.decoder.JSONDecodeError:
@@ -59,9 +75,7 @@ def greet_user():
         #
         # else:
         #     f"Welcome back, {username}!"
-        else:
-            message = "We are sorry but you are not the registered user."
-            print(message)
+
 
 
 
