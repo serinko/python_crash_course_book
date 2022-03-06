@@ -57,19 +57,35 @@ def get_new_username():
     # greet_user only if the stored_user_name does not exist
 
 
+def username_content():
+    filename = 'username.json'
+    try:
+        with open(filename) as f:
+            json.load(f)
+
+        return 1
+
+    except json.decoder.JSONDecodeError:
+        return None
+
+
 def greet_user():
     """Greet the user by name"""
     username = get_stored_username()
-    if username:
-        try:
-            get_stored_username()
-        except json.decoder.JSONDecodeError:
-            username = get_new_username()
-            message = f"We'll remember you when you come back, {username}!"
-            print(message)
+    username_content = username_content()
 
-        else:
-            f"Welcome back, {username}!"
+    if username and username_content:
+
+        print(f"Welcome back, {username}!")
+        # try:
+        #     get_stored_username()
+        # except json.decoder.JSONDecodeError:
+        #     username = get_new_username()
+        #     message = f"We'll remember you when you come back, {username}!"
+        #     print(message)
+        #
+        # else:
+        #     f"Welcome back, {username}!"
 
 
 
