@@ -5,9 +5,9 @@ while True:
     first = input("\nPlease give me a first name: ")
     if first == 'q':
         break
-    last = input("\nPlease give me your last name: ")
+    last = input("Please give me your last name: ")
     if last == 'q':
         break
 
-formatted_name = get_formatted_name(first, last)
-print(f"\nNeatly formatted name: {formatted_name}.")
+    formatted_name = get_formatted_name(first, last)
+    print(f"\tNeatly formatted name: {formatted_name}.")
