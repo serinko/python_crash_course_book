@@ -28,6 +28,6 @@ class NamesTestCase(unittest.TestCase):
         #  with the given value
         # as we anticipate formatted_name and Janis Joplin ==
 
-    # if block
-    if __name__ == '__main__':
-        unittest.main()
+
+if __name__ == '__main__':
+    unittest.main()
