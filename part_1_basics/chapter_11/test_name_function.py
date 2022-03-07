@@ -26,7 +26,18 @@ class NamesTestCase(unittest.TestCase):
         # assert method
         # compares the result of the variable using the function
         #  with the given value
-        # as we anticipate formatted_name and Janis Joplin ==
+        # as we anticipate formatted_name == Janis Joplin
+
+    # We can add a test for people with middle name
+    def test_first_last_middle_name(self):
+        """Do names like 'Wolfgang Amadeus Mozart' work?"""
+        formatted_name = get_formatted_name(
+            'wolfganf',
+            'mozzart',
+            'amadeus'
+        )
+        self.assertEqual(formatted_name,
+                         'Wolfganf Amadeus Mozzart')
 
 
 if __name__ == '__main__':
