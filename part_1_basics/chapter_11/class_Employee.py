@@ -8,5 +8,5 @@ class Employee:
         self.salary = salary
 
     def give_raise(self, amount=5000):
-        self.ammount = amount
+        self.amount = amount
         self.salary_raised = self.salary + self.amount
