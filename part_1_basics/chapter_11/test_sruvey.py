@@ -32,6 +32,7 @@ class TestAnonymousSurvey(unittest.TestCase):
         for response in responses:
             my_survey.store_responses(response)
 
+        # Writing another loop ensuring that each response is in responses
         for response in responses:
             self.assertIn(response, my_survey.responses)
 
