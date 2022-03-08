@@ -1,3 +1,6 @@
+# THE setUp() Method
+
+# Will modify the test survey.py into more eficient code
 import unittest
 from survey import AnonymousSurvey
 
@@ -8,33 +11,31 @@ from survey import AnonymousSurvey
 class TestAnonymousSurvey(unittest.TestCase):
     """Test for the class Anonymous Survey"""
 
+    def setUp(self):
+        """
+        Create a survey and set of responses for use in all test methods
+        """
+        question = "What language did you first learn to speak?"
+        self.my_survey = AnonymousSurvey(question)
+        self.responses = ['English', 'Spanish', 'Mandarin']
+
     # method testing is responses are storing
     def test_store_single_response(self):
         """Test that a single response is stored properly"""
-        question = "What language did you first learn to speak?"
-        my_survey = AnonymousSurvey(question)
-        # First we define the attribute  - to create an instance of a class
-
-        # Then call the method and check if the value input
-        # is in the list in the same method
-        my_survey.store_responses('English')
-        self.assertIn('English', my_survey.responses)
+        self.my_survey.store_responses(self.responses[0])
+        self.assertIn(self.responses[0], self.my_survey.responses)
 
     # We want to make sure that more responses will work - let. verify that
     def test_store_three_responses(self):
         """Test that three individual responses are stored properly"""
-        question = "What language did you first learn to speak?"
-        my_survey = AnonymousSurvey(question)
-        responses = ['English', 'Spanish', 'Mandarin']
-        # Created a survey object = list of three responses
 
         # Call method to store each of the objects
-        for response in responses:
-            my_survey.store_responses(response)
+        for response in self.responses:
+            self.my_survey.store_responses(response)
 
         # Writing another loop ensuring that each response is in responses
-        for response in responses:
-            self.assertIn(response, my_survey.responses)
+        for response in self.responses:
+            self.assertIn(response, self.my_survey.responses)
 
 
 if __name__ == '__main__':
