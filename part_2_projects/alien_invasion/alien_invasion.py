@@ -10,11 +10,11 @@ class AlienInvasion:
         """Initialize the game and create game resources."""
         pygame.init()
 
-        self.screen = pygame.display.set_mode((1200, 800))
+        self.screen = pygame.display.set_mode((2400, 1600))
         pygame.display.set_caption("Alien Invasion")
 
         # Set the background color
-        self.bg_color = (230, 230, 230)
+        self.bg_color = (0, 17, 26)
 
     def run_game(self):
         """Start the maiun loop for the game"""
