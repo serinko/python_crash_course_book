@@ -23,7 +23,7 @@ class AlienInvasion:
         self.bg_color = (0, 17, 26)
 
     def run_game(self):
-        """Start the maiun loop for the game"""
+        """Start the maiu loop for the game"""
         while True:
             # Watch for keyboard and mouse events.
             for event in pygame.event.get():
@@ -32,7 +32,7 @@ class AlienInvasion:
 
             # Redraw the screen during each pass through the loop.
             self.screen.fill(self.settings.bg_color)
-            self.ship.blitme()
+            self.ship.blitme()  # Ship on top of the background
 
             # Make the most recently drawn screen visible.
             pygame.display.flip()
