@@ -11,4 +11,3 @@ screen, the player loses a ship. If player looses three ships, the game ends.
 ## Dependencies
 
 - pygame
-- 
