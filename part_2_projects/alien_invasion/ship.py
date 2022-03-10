@@ -1,4 +1,5 @@
 import pygame
+from random import choice
 
 
 class Ship:
@@ -10,7 +11,13 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         # Load the ship image and get its rect.
-        self.image = pygame.image.load('images/spaceship_1.bmp')
+        ships = []
+        ship_1 = 'images/spaceship_1.bmp'
+        ship_2 = 'images/spaceship_2.bmp'
+        ships.append(ship_1)
+        ships.append(ship_2)
+        ship = choice(ships)
+        self.image = pygame.image.load(ship)
         self.rect = self.image.get_rect()
 
         # Start each new ship at the bottom center of the screen
