@@ -10,18 +10,21 @@ screen, the player loses a ship. If player looses three ships, the game ends.
 
 ## Dependencies
 
-- pygame
+- pygame module
 
-| NEW SYNTAX - PYGAME        | EXPLANATION                            |
-|----------------------------|----------------------------------------|
-| .display.set_mode()        | setting screen size                    |
-| .display.set_caption()     | setting caption on top                 |                 
-| .event.get()               | respond to keypresses and mouse events |
-| .event.type == pygame.QUIT | clicking on quit or pressing quit keys|
-| .display.fill(x)           | redraws the screen with x  |
-|
+## NEW SYNTAXES INTRODUCED
 
-| NEW SYNTAX | EXPLANATION      |
-|------------|------------------|
-| sys.exit() | kill the program |
-| 
+| PYGAME MODULE              | EXPLANATION                                |
+|----------------------------|--------------------------------------------|
+| .display.set_mode()        | setting screen size                        |
+| .display.set_caption()     | setting caption on top                     |                 
+| .event.get()               | respond to keypresses and mouse events     |
+| .event.type == pygame.QUIT | clicking on quit or pressing quit keys     |
+| .display.fill(x)           | redraws the screen with x                  |
+| .display.get_rect()        | load rectangular                           |
+| .load()                    | import a file                              |
+| .display.blint(x)          | draw x at a current location on the screen | 
+
+| OTHER SYNTAX | EXPLANATION      |
+|--------------|------------------|
+| sys.exit()   | kill the program |
