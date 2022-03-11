@@ -43,6 +43,7 @@ class Ship:
             self.x -= self.settings.ship_speed
 
         # update rect object from self.x.
+        # That actually controls the position of the ship
         self.rect.x = self.x
 
     def blitme(self):

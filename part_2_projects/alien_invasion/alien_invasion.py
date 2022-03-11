@@ -31,13 +31,14 @@ class AlienInvasion:
             self._update_screen()
 
     def _check_events(self):
+        # _method() is known as a helper method
         """Respond to keypresses and mouse events"""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
 
             # event.type are pygame methods
-            # . ship refferss to our ship class
+            # .ship refers to our ship class
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
                     self.ship.moving_right = True
