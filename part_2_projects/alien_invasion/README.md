@@ -12,13 +12,14 @@ screen, the player loses a ship. If player looses three ships, the game ends.
 
 - pygame
 
-| NEW SYNTAX - PYGAME    | EXPLANATION |
-|------------------------|----------|
-| .display.set_mode()    |          |
-| .display.set_caption() |          |                 
-| .event.get()           |          |            
+| NEW SYNTAX - PYGAME    | EXPLANATION                            |
+|------------------------|----------------------------------------|
+| .display.set_mode()    | setting screen size                    |
+| .display.set_caption() | setting caption on top                 |                 
+| .event.get()           | respond to keypresses and mouse events |
+|.event.type == pygame.QUIT | clicking on quit or pressing quit keys|
 
-| NEW SYNTAX | EXPLANATION |
-|------------|-------------|
-| sys.exit() | ...         |
+| NEW SYNTAX | EXPLANATION      |
+|------------|------------------|
+| sys.exit() | kill the program |
 | 
