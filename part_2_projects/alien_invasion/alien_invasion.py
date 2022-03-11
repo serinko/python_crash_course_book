@@ -36,6 +36,8 @@ class AlienInvasion:
             if event.type == pygame.QUIT:
                 sys.exit()
 
+            # event.type are pygame methods
+            # . ship refferss to our ship class
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
                     self.ship.moving_right = True

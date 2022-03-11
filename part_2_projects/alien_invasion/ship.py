@@ -23,9 +23,12 @@ class Ship:
         self.rect.midbottom = self.screen_rect.midbottom
 
         # Store a decimal value for the ship's horizontal position.
+        # If we kept the rect as the object - it would only be able to store
+        # an integer. Variable (x) can store decimals
         self.x = float(self.rect.x)
 
         # Movement flags
+        # defined in the main program. If no key is pressed, the ship is stable
         self.moving_right = False
         self.moving_left = False
 
