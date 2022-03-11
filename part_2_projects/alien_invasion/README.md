@@ -3,7 +3,7 @@
 In alien invasion, the player controls a rocket ship that appears at the bottom
 center of the screen. The player can move the ship right and left using the
 arrow keys and shoot bullets using the spacebar. When the game begins, a fleet
-of aliens fills the sky and moves accros and down on the screen. If the player
+of aliens fills the sky and moves accross and down on the screen. If the player
 shoots all the aliens, a new fleet appears that moves faster than the previous
 fleet. If any alien hits the player's ship, or reaches the bottom of the
 screen, the player loses a ship. If player looses three ships, the game ends.
@@ -14,17 +14,17 @@ screen, the player loses a ship. If player looses three ships, the game ends.
 
 ## New Syntaxes Introduced
 
-| PYGAME MODULE                  | EXPLANATION                                |
-|--------------------------------|--------------------------------------------|
-| .display.set_mode()            | setting screen size                        |
-| .display.set_caption()         | setting caption on top                     |                 
-| .event.get()                   | respond to keypresses and mouse events     |
-| .event.type == pygame.QUIT     | clicking on quit or pressing quit keys     |
-| .display.fill(x)               | redraws the screen with x                  |
-| .display.get_rect()            | load rectangular                           |
-| .load()                        | import a file                              |
-| .display.blint(x)              | draw x at a current location on the screen | 
-| event.type == pygame.KEYDOWN   | register keypress                          |
+| PYGAME MODULE               | EXPLANATION                                |
+|-----------------------------|--------------------------------------------|
+| .display.set_mode()         | setting screen size                        |
+| .display.set_caption()      | setting caption on top                     |                 
+| .event.get()                | respond to keypresses and mouse events     |
+| .event.type == pygame.QUIT  | clicking on quit or pressing quit keys     |
+| .display.fill(x)            | redraws the screen with x                  |
+| .display.get_rect()         | load rectangular                           |
+| .load()                     | import a file                              |
+| .display.blint(x)           | draw x at a current location on the screen | 
+| event.key == pygame.KEYDOWN | register keypress                          |
 
 | OTHER SYNTAX | EXPLANATION      |
 |--------------|------------------|
