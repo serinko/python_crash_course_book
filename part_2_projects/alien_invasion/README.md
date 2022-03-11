@@ -27,6 +27,7 @@ screen, the player loses a ship. If player looses three ships, the game ends.
 | event.key == pygame.KEYDOWN | register keypress                          |
 | event.type == pygame.KEYUP  | register key release                       |
 
-| OTHER SYNTAX | EXPLANATION      |
-|--------------|------------------|
-| sys.exit()   | kill the program |
+| OTHER SYNTAX | EXPLANATION                 |
+|--------------|-----------------------------|
+| sys.exit()   | kill the program            |
+| float()      | covert x value to a decimal |
