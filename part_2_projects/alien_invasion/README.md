@@ -12,7 +12,7 @@ screen, the player loses a ship. If player looses three ships, the game ends.
 
 - pygame module
 
-## NEW SYNTAXES INTRODUCED
+## New Syntaxes Introduced
 
 | PYGAME MODULE              | EXPLANATION                                |
 |----------------------------|--------------------------------------------|
