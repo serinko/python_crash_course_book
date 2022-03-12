@@ -26,6 +26,7 @@ screen, the player loses a ship. If player looses three ships, the game ends.
 | .display.blint(x)           | draw x at a current location on top of the screen | 
 | event.key == pygame.KEYDOWN | register keypress                                 |
 | event.type == pygame.KEYUP  | register key release                              |
+| .display.set_mode()         | firure out the indow size to fill the screen | 
 
 | OTHER SYNTAX | EXPLANATION                  |
 |--------------|------------------------------|
