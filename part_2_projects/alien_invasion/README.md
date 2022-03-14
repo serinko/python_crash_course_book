@@ -27,7 +27,7 @@ screen, the player loses a ship. If player looses three ships, the game ends.
 | event.key == pygame.KEYDOWN               | register keypress                                 |
 | event.type == pygame.KEYUP                | register key release                              |
 | .display.set_mode((0,0),pygame.FULSCREEN) | firure out the window size to fill the screen     |
-| super()                                   | help inherit properly from Sprite                 |
+| `super()__init__()`                       | help inherit properly from Sprite                 |
 | add()                                     | append() for pygame groups                        |
 
 | OTHER SYNTAX | EXPLANATION                  |
