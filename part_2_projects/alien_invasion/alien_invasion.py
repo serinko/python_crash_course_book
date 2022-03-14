@@ -25,7 +25,8 @@ class AlienInvasion:
         # ))
         pygame.display.set_caption("Alien Invasion")
         self.ship = Ship(self)
-
+        self.bullets = pygame.sprite.Group()
+        
         # Set the background color
         self.bg_color = (0, 17, 26)
 
