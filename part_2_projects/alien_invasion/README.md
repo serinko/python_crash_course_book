@@ -34,3 +34,4 @@ screen, the player loses a ship. If player looses three ships, the game ends.
 |--------------|------------------------------|
 | sys.exit()   | kill the program             |
 | float()      | convert x value to a decimal |
+| copy()       | copy a list or a group       |
