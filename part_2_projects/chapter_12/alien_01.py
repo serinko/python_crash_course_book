@@ -95,4 +95,14 @@ class AlienInvasion:
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
-        
+
+    def _update_screen(self):
+        """Update images on the screen and flip to the new screen."""
+        # Redraw the screen during each pass through the loop.
+        self.screen.fill(self.settings.bg_color)
+        self.ship.blitme()  # Ship on top of the background
+        for bullet in self.bullets.sprites():
+            bullet.draw_bullet()
+
+        # Make the most recently drawn screen visible.
+        pygame.display.flip()
