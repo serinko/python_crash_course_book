@@ -32,3 +32,22 @@ class Ship:
         # defined in the main program. If no key is pressed, the ship is stable
         self.moving_right = False
         self.moving_left = False
+
+    def update(self):
+        """Update's the ship's position based on the movement flags."""
+        # Update the ships value, not the rect
+        # Make sure the ship stays within the screen
+        if self.moving_right and self.rect.right < self.screen_rect.right:
+            # Move ship to the right
+            self.x += self.settings.ship_speed
+
+        if self.moving_left and self.rect.left > 0:
+            self.x -= self.settings.ship_speed
+
+        # update rect object from self.x.
+        # That actually controls the position of the ship
+        self.rect.x = self.x
+
+    def blitme(self):
+        """Draw the ship at its current location"""
+        self.screen.blit(self.image, self.rect)
