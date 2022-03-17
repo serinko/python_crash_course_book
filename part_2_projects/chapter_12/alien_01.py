@@ -37,3 +37,11 @@ class AlienInvasion:
 
         # Set the background color
         self.bg_color = (0, 17, 26)
+
+     def run_game(self):
+            """Start the maiu loop for the game"""
+            while True:
+                self._check_events()
+                self.ship.update()
+                self._update_bullets()
+                self._update_screen()
