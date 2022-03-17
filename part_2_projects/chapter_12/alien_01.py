@@ -79,3 +79,20 @@ class AlienInvasion:
                 self.ship.moving_right = False
             elif event.key == pygame.K_LEFT:
                 self.ship.moving_left = False
+
+    def _fire_bullet(self):
+        """Create a new bullet and add it to the bullets group."""
+        # Limitting th enumber of bullets
+        if len(self.bullets) < self.settings.bullets_allowed:
+            new_bullet = Bullet(self)
+            self.bullets.add(new_bullet)
+
+    def _update_bullets(self):
+        """Update position of bullets and get rid off old bullets."""
+        self.bullets.update()
+
+        # Get rid off the dissappeared bullets
+        for bullet in self.bullets.copy():
+            if bullet.rect.bottom <= 0:
+                self.bullets.remove(bullet)
+        
