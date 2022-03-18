@@ -9,9 +9,9 @@ import sys
 
 import pygame
 
-from settings import Settings
-from ship import Ship
-from bullet import Bullet
+from settings_1 import Settings
+from ship_1 import Ship
+from bullet_1 import Bullet
 
 
 class AlienInvasion:
@@ -112,4 +112,3 @@ if __name__ == '__main__':
     # Make a game instance, and run the game
     ai = AlienInvasion()
     ai.run_game()
-
