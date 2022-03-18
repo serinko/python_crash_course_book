@@ -21,7 +21,7 @@ class Ship:
         self.rect = self.image.get_rect()
 
         # Start each new ship at the bottom center of the screen
-        self.rect.midbottom = self.screen_rect.midbottom
+        self.rect.midleft = self.screen_rect.midleft
 
         # Store a decimal value for the ship's horizontal position.
         # If we kept the rect as the object - it would only be able to store
@@ -30,18 +30,18 @@ class Ship:
 
         # Movement flags
         # defined in the main program. If no key is pressed, the ship is stable
-        self.moving_right = False
-        self.moving_left = False
+        self.moving_down = False
+        self.moving_up = False
 
     def update(self):
         """Update's the ship's position based on the movement flags."""
         # Update the ships value, not the rect
         # Make sure the ship stays within the screen
-        if self.moving_right and self.rect.right < self.screen_rect.right:
+        if self.moving_down and self.rect.down < self.screen_rect.down:
             # Move ship to the right
             self.x += self.settings.ship_speed
 
-        if self.moving_left and self.rect.left > 0:
+        if self.moving_up and self.rect.moving_up > 0:
             self.x -= self.settings.ship_speed
 
         # update rect object from self.x.
