@@ -41,7 +41,7 @@ class Ship:
             # Move ship to the right
             self.y += self.settings.ship_speed
 
-        if self.moving_up and self.rect.moving_up > 0:
+        if self.moving_up and self.rect.top > 0:
             self.y -= self.settings.ship_speed
 
         # update rect object from self.x.
