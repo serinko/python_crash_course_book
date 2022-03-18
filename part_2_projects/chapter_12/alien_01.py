@@ -22,7 +22,7 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
 
-        # Run he game in fulscreen
+        # Run the game in fulscreen
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
@@ -31,7 +31,7 @@ class AlienInvasion:
         # self.screen = pygame.display.set_mode((
         #     self.settings.screen_width, self.settings.screen_height
         # ))
-        pygame.display.set_caption("Alien Invasion")
+        pygame.display.set_caption("Alien-01")
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
 
@@ -65,8 +65,8 @@ class AlienInvasion:
 
         if event.key == pygame.K_DOWN:
             self.ship.moving_down = True
-        elif event.key == pygame.K_RIGHT:
-            self.ship.moving_right = True
+        elif event.key == pygame.K_UP:
+            self.ship.moving_up = True
         elif event.key == pygame.K_q:
             sys.exit()
         elif event.key == pygame.K_SPACE:
@@ -77,8 +77,8 @@ class AlienInvasion:
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_DOWN:
                 self.ship.moving_down = False
-            elif event.key == pygame.K_RIGHT:
-                self.ship.moving_right = False
+            elif event.key == pygame.K_UP:
+                self.ship.moving_up = False
 
     def _fire_bullet(self):
         """Create a new bullet and add it to the bullets group."""
