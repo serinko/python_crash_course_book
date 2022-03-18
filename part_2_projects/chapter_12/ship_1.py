@@ -26,7 +26,7 @@ class Ship:
         # Store a decimal value for the ship's horizontal position.
         # If we kept the rect as the object - it would only be able to store
         # an integer. Variable (x) can store decimals
-        self.x = float(self.rect.x)
+        self.y = float(self.rect.y)
 
         # Movement flags
         # defined in the main program. If no key is pressed, the ship is stable
@@ -37,16 +37,16 @@ class Ship:
         """Update's the ship's position based on the movement flags."""
         # Update the ships value, not the rect
         # Make sure the ship stays within the screen
-        if self.moving_down and self.rect.down < self.screen_rect.down:
+        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
             # Move ship to the right
-            self.x += self.settings.ship_speed
+            self.y += self.settings.ship_speed
 
         if self.moving_up and self.rect.moving_up > 0:
-            self.x -= self.settings.ship_speed
+            self.y -= self.settings.ship_speed
 
         # update rect object from self.x.
         # That actually controls the position of the ship
-        self.rect.x = self.x
+        self.rect.y = self.y
 
     def blitme(self):
         """Draw the ship at its current location"""
