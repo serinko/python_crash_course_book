@@ -37,3 +37,24 @@ class AlienInvasion:
 
         # Set the background color
         self.bg_color = (0, 17, 26)
+
+
+  def run_game(self):
+        """Start the maiu loop for the game"""
+        while True:
+            self._check_events()
+            self.ship.update()
+            self._update_bullets()
+            self._update_screen()
+
+    def _check_events(self):
+        # _method() is known as a helper method
+        """Respond to keypresses and mouse events"""
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+
+            elif event.type == pygame.KEYDOWN:
+                self._check_keydown_events(event)
+            elif event.type == pygame.KEYUP:
+                self._check_keyup_events(event)
