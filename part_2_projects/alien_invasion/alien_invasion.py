@@ -54,6 +54,9 @@ class AlienInvasion:
         alien_width = alien.rect.width
         # counts # fitting aliens per row
         available_space_x = self.settings.screen_width - (2 * alien_width)
+        number_aliens_x = available_space_x // (2 * alien_width)
+        # // sgn is a floor division, drops off all the reminder.
+        # Always returns an integer
 
     def _check_events(self):
         # _method() is known as a helper method
