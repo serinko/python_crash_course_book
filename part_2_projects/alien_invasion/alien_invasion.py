@@ -45,10 +45,13 @@ class AlienInvasion:
 
     def _create_fleet(self):
         """Create the fleet of aliens"""
+
+        # Create an alien and find a nunmer of aliens fitting a row
+        # Spacing between each equals width of one alien
         # Make an alien
         alien = Alien(self)
-        self.aliens.add(alien)
-
+        # self.aliens.add(alien)
+        
     def _check_events(self):
         # _method() is known as a helper method
         """Respond to keypresses and mouse events"""
