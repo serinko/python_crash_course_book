@@ -51,7 +51,10 @@ class AlienInvasion:
         # Make an alien
         alien = Alien(self)
         # self.aliens.add(alien)
-        
+        alien_width = alien.rect.width
+        # counts # fitting aliens per row
+        available_space_x = self.settings.screen_width - (2 * alien_width)
+
     def _check_events(self):
         # _method() is known as a helper method
         """Respond to keypresses and mouse events"""
