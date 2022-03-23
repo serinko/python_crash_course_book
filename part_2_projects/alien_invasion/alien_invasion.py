@@ -16,7 +16,7 @@ class AlienInvasion:
         pygame.init()
         self.settings = Settings()
 
-        # Run he game in fulscreen
+        # Run he game in full screen
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
@@ -46,8 +46,8 @@ class AlienInvasion:
     def _create_fleet(self):
         """Create the fleet of aliens"""
 
-        # Create an alien and find a nunmer of aliens fitting a row
-        # Spacing between each equals width of one alien
+        # Create an alien and find a number of aliens fitting a row
+        # Spacing between each = width of one alien
         # Make an alien
         alien = Alien(self)
         # self.aliens.add(alien)
@@ -69,7 +69,7 @@ class AlienInvasion:
 
     def _check_events(self):
         # _method() is known as a helper method
-        """Respond to keypresses and mouse events"""
+        """Respond to key-presses and mouse events"""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
@@ -80,7 +80,7 @@ class AlienInvasion:
                 self._check_keyup_events(event)
 
     def _check_keydown_events(self, event):
-        """Respond to keypresses"""
+        """Respond to key-press"""
         # event.type are pygame methods
         # .ship refers to our ship class
 
@@ -103,7 +103,7 @@ class AlienInvasion:
 
     def _fire_bullet(self):
         """Create a new bullet and add it to the bullets group."""
-        # Limitting th enumber of bullets
+        # Limiting the number of bullets
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
@@ -112,7 +112,7 @@ class AlienInvasion:
         """Update position of bullets and get rid off old bullets."""
         self.bullets.update()
 
-        # Get rid off the dissappeared bullets
+        # Get rid off the disappeared bullets
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
