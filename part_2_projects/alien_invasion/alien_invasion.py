@@ -58,6 +58,12 @@ class AlienInvasion:
         # // sgn is a floor division, drops off all the reminder.
         # Always returns an integer
 
+        # Create the first row of aliens
+        for alien_number in range(number_aliens_x):
+            # Create an alien and place it in the row.
+
+
+
     def _check_events(self):
         # _method() is known as a helper method
         """Respond to keypresses and mouse events"""
