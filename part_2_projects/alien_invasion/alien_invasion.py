@@ -67,6 +67,9 @@ class AlienInvasion:
             self.aliens.add(alien)
             # Adds to the group aliens in Sprite (in __init__)
 
+    def _create_alien(self, alien_number):
+
+
     def _check_events(self):
         # _method() is known as a helper method
         """Respond to key-presses and mouse events"""
