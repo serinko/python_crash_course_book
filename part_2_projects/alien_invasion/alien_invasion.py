@@ -61,12 +61,8 @@ class AlienInvasion:
         # Create the first row of aliens
         for alien_number in range(number_aliens_x):
             # Create an alien and place it in the row.
-            alien = Alien(self)
-            alien.x = alien_width + 2 * alien_width * alien_number
-            alien.rect.x = alien.x
-            self.aliens.add(alien)
-            # Adds to the group aliens in Sprite (in __init__)
-
+            self._create_alien(self, alien_number)
+            
     def _create_alien(self, alien_number):
         """Create alien and place it in the row"""
         alien = Alien(self)
@@ -74,6 +70,7 @@ class AlienInvasion:
         alien.x = alien_width + 2 * alien_width * alien_number
         alien.rect.x = alien.x
         self.aliens.add(alien)
+        # Adds to the group aliens in Sprite (in __init__)
 
     def _check_events(self):
         # _method() is known as a helper method
