@@ -68,7 +68,12 @@ class AlienInvasion:
             # Adds to the group aliens in Sprite (in __init__)
 
     def _create_alien(self, alien_number):
-
+        """Create alien and place it in the row"""
+        alien = Alien(self)
+        alien_width = alien.rect.width
+        alien.x = alien_width + 2 * alien_width * alien_number
+        alien.rect.x = alien.x
+        self.aliens.add(alien)
 
     def _check_events(self):
         # _method() is known as a helper method
