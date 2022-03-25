@@ -19,8 +19,8 @@ class Star(Sprite):
 
 class Settings():
     def __init__(self):
-        self.screen_width = 1920
-        self.screen_height = 1060
+        # self.screen_width = 1920
+        # self.screen_height = 1060
 
         self.bg_color = (0, 17, 26,)
         # Ship settings
@@ -61,9 +61,9 @@ class StarSky:
         star = Star(self)
         star_width, star_height = star.rect.size
         available_space_x = self.settings.screen_width
-        number_stars_x = available_space_x // (1 * star_width)
+        number_stars_x = available_space_x // star_width
         available_space_y = self.settings.screen_height
-        number_rows = available_space_y // (1 * star_height)
+        number_rows = available_space_y // star_height
 
         # Create the full fleet of stars
         for row_number in range(number_rows):
