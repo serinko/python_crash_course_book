@@ -79,3 +79,13 @@ class StarSky:
                 # Two nested loops when one make a row from an alien
                 # Another makes a plot of rows from one row
 
+    def _create_star(self, star_number, row_number):
+        """Create alien and place it in the row"""
+        star = Star(self)
+        star_width, star_height = star.rect.size
+        star.x = star_width + 2 * star_width * star_number
+        star.rect.x = star.x
+        star.rect.y = star_height + 2 * star.rect.height * row_number
+        self.star.add(star)
+        # Adds to the group aliens in Sprite (in __init__)
+
