@@ -20,12 +20,24 @@ class Star:
         # Store alien exact horizontal position
         self.x = float(self.rect.x)
 
+
+class Settings():
+    def __init__(self):
+        self.screen_width = 1920
+        self.screen_height = 1060
+
+        self.bg_color = (0, 17, 26,)
+        # Ship settings
+        # Setting the speed like this will make much easier to change it later
+
+
 class StarSky:
     """Overall class to manage game assets and behaviour"""
 
     def __init__(self):
         """Initialize the game and create game resources."""
         pygame.init()
+        self.settings = Settings()
 
         # Run he game in full screen
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
@@ -41,18 +53,8 @@ class StarSky:
         # Set the background color
         self.bg_color = (0, 17, 26)
 
-    def run:
+    def run(self):
         self._update_screen()
-
-    def settings:
-        screen_width = 1920
-        screen_height = 1060
-
-        bg_color = (0, 17, 26,)
-        # Ship settings
-        # Setting the speed like this will make much easier to change it later
-
-
 
     def _create_sky(self):
         """Create the fleet of stars"""
@@ -91,7 +93,6 @@ class StarSky:
         star.rect.y = star_height + 2 * star.rect.height * row_number
         self.star.add(star)
         # Adds to the group aliens in Sprite (in __init__)
-
 
     def _update_screen(self):
         """Update images on the screen and flip to the new screen."""
