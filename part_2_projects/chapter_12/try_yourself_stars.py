@@ -3,6 +3,23 @@ import sys
 import pygame
 
 
+class Star:
+    def __init__(self, StarSky):
+        """Initialize the alien and set it's starting position"""
+        super().__init__()
+        self.screen = StarSky.screen
+
+        # Load the alien image and set its rect attribute
+        self.image = pygame.image.load("images/alien.bmp")
+        self.rect = self.image.get_rect()
+
+        # Start each new line near to the top left of the screen
+        self.rect.x = self.rect.width
+        self.rect.y = self.rect.height
+
+        # Store alien exact horizontal position
+        self.x = float(self.rect.x)
+
 class StarSky:
     """Overall class to manage game assets and behaviour"""
 
@@ -32,59 +49,33 @@ class StarSky:
         # Ship settings
         # Setting the speed like this will make much easier to change it later
 
-    def star
 
 
     def _create_sky(self):
-        """Create the fleet of aliens"""
+        """Create the fleet of stars"""
 
-        # Create an alien and find a number of aliens fitting a row
-        # Spacing between each = width of one alien
-        # Make an alien
-        alien = Alien(self)
+        star = Star(self)
         # self.aliens.add(alien)
-        alien_width, alien_height = alien.rect.size
+        star_width, star_height = star.rect.size
         # counts # fitting aliens per row
-        available_space_x = self.settings.screen_width - (2 * alien_width)
-        number_aliens_x = available_space_x // (2 * alien_width)
+        available_space_x = self.settings.screen_width - (2 * star_width)
+        number_star_x = available_space_x // (2 * star_width)
         # // sgn is a floor division, drops off all the reminder.
         # Always returns an integer
 
         # Determine the number of aliens
-        ship_height = self.ship.rect.height
-        available_space_y = \
-            (self.settings.screen_height - (3 * alien_height) - ship_height)
 
-        number_rows = available_space_y // (2 * alien_height)
+        available_space_y = \
+            (self.settings.screen_height - (3 * star_height))
+
+        number_rows = available_space_y // (2 * star_height)
 
         # Create the full fleet of aliens
         for row_number in range(number_rows):
             # Create the first row of aliens
-            for alien_number in range(number_aliens_x):
-                self._create_alien(alien_number, row_number)
+            for star_number in range(number_star_x):
+                self._create_star(star_number, row_number)
 
                 # Two nested loops when one make a row from an alien
                 # Another makes a plot of rows from one row
 
-    def _create_star(self, star_number, row_number):
-        """Create alien and place it in the row"""
-        alien = Alien(self)
-        alien_width, alien_height = alien.rect.size
-        alien.x = alien_width + 2 * alien_width * alien_number
-        alien.rect.x = alien.x
-        alien.rect.y = alien_height + 2 * alien.rect.height * row_number
-        self.aliens.add(alien)
-        # Adds to the group aliens in Sprite (in __init__)
-
-
-    def _check_events(self):
-        # _method() is known as a helper method
-        """Respond to key-presses and mouse events"""
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-
-            elif event.type == pygame.KEYDOWN:
-                self._check_keydown_events(event)
-            elif event.type == pygame.KEYUP:
-                self._check_keyup_events(event)
