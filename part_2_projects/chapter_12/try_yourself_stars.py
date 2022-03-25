@@ -11,7 +11,7 @@ class Star(Sprite):
         self.screen = StarSky.screen
 
         # Load the alien image and set its rect attribute
-        self.image = pygame.image.load("images/star.bmp")
+        self.image = pygame.image.load("images/a_star.bmp")
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
@@ -61,11 +61,11 @@ class StarSky:
         """Create the fleet of stars"""
         star = Star(self)
         star_width, star_height = star.rect.size
-        available_space_x = self.settings.screen_width - (2 * star_width)
-        number_stars_x = available_space_x // (2 * star_width)
+        available_space_x = self.settings.screen_width - (1 * star_width)
+        number_stars_x = available_space_x // (1 * star_width)
         available_space_y = \
-            (self.settings.screen_height - (3 * star_height))
-        number_rows = available_space_y // (2 * star_height)
+            (self.settings.screen_height - (1 * star_height))
+        number_rows = available_space_y // (1 * star_height)
 
         # Create the full fleet of stars
         for row_number in range(number_rows):
@@ -77,9 +77,9 @@ class StarSky:
         """Create alien and place it in the row"""
         star = Star(self)
         star_width, star_height = star.rect.size
-        star.x = star_width + 2 * star_width * star_number
+        star.x = star_width + 1.2 * star_width * star_number
         star.rect.x = star.x
-        star.rect.y = star_height + 2 * star.rect.height * row_number
+        star.rect.y = star_height + 1.2 * star.rect.height * row_number
         self.stars.add(star)
         # Adds to the group aliens in Sprite (in __init__)
 
