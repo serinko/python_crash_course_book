@@ -71,11 +71,9 @@ class AlienInvasion:
             for alien_number in range(number_aliens_x):
                 self._create_alien(alien_number, row_number)
 
-        # # Create the first row of aliens
-        # for alien_number in range(number_aliens_x):
-        #     # Create an alien and place it in the row.
-        #     self._create_alien(alien_number)
-
+                # Two nested loops when one make a row from an alien
+                # Another makes a plot of rows from one row
+            
     def _create_alien(self, alien_number, row_number):
         """Create alien and place it in the row"""
         alien = Alien(self)
