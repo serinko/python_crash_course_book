@@ -15,7 +15,6 @@ class Star(Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
-        self.x = float(self.rect.x)
 
 
 class Settings():
@@ -61,10 +60,9 @@ class StarSky:
         """Create the fleet of stars"""
         star = Star(self)
         star_width, star_height = star.rect.size
-        available_space_x = self.settings.screen_width - (1 * star_width)
+        available_space_x = self.settings.screen_width
         number_stars_x = available_space_x // (1 * star_width)
-        available_space_y = \
-            (self.settings.screen_height - (1 * star_height))
+        available_space_y = self.settings.screen_height
         number_rows = available_space_y // (1 * star_height)
 
         # Create the full fleet of stars
