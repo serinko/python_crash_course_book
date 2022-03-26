@@ -51,6 +51,11 @@ class StarSky:
                 if event.key == pygame.K_q:
                     sys.exit()
 
+    def run(self):
+        while True:
+            self._check_events()
+            self._update_screen()
+
     def _create_sky(self):
         """Create the fleet of stars"""
         star = Star(self)
