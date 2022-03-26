@@ -1,6 +1,7 @@
 import sys
 import pygame
 from pygame.sprite import Sprite
+import random
 
 
 class Star(Sprite):
@@ -61,9 +62,9 @@ class StarSky:
         star = Star(self)
         star_width, star_height = star.rect.size
         available_space_x = self.settings.screen_width - star_width
-        number_stars_x = available_space_x // star_width
+        number_stars_x = random.randrange(available_space_x // star_width)
         available_space_y = self.settings.screen_height - star_height
-        number_rows = available_space_y // star_height
+        number_rows = random.randrange(available_space_y // star_height)
 
         # Create the full fleet of stars
         for row_number in range(number_rows):
