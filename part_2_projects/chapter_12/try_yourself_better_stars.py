@@ -1,7 +1,7 @@
 import sys
 import pygame
 from pygame.sprite import Sprite
-import random
+import random as r
 
 
 class Star(Sprite):
@@ -61,24 +61,27 @@ class StarSky:
         """Create the fleet of stars"""
         star = Star(self)
         star_width, star_height = star.rect.size
-        available_space_x = self.settings.screen_width - star_width
-        number_stars_x = random.randrange(available_space_x // star_width)
-        available_space_y = self.settings.screen_height - star_height
-        number_rows = random.randrange(available_space_y // star_height)
+        available_space_x = self.settings.screen_width
+        number_stars_x = available_space_x // star_width
+        available_space_y = self.settings.screen_height
+        number_rows = available_space_y // star_height
+
+
+        for i in r.randrange(8,25):
+            
 
         # Create the full fleet of stars
-        for row_number in range(number_rows):
-            # Create the first row of stars
-            for star_number in range(number_stars_x):
+        for row_number in self.screen.get_rect():
+            for star_number in self.screen.get_rect():
                 self._create_star(star_number, row_number)
 
     def _create_star(self, star_number, row_number):
         """Create alien and place it in the row"""
         star = Star(self)
         star_width, star_height = star.rect.size
-        star.x = 1.18 * star_width * star_number
+        star.x = 1.18 * star_width * random.randrange(star_number)
         star.rect.x = star.x
-        star.rect.y = 1.18 * star.rect.height * row_number
+        star.rect.y = 1.18 * star.rect.height * random.randrange(row_number)
         self.stars.add(star)
         # Adds to the group aliens in Sprite (in __init__)
 
