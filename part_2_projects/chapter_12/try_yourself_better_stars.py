@@ -60,9 +60,9 @@ class StarSky:
         """Create the fleet of stars"""
         star = Star(self)
         star_width, star_height = star.rect.size
-        available_space_x = self.settings.screen_width
+        available_space_x = self.settings.screen_width - star_width
         number_stars_x = available_space_x // star_width
-        available_space_y = self.settings.screen_height
+        available_space_y = self.settings.screen_height - star_height
         number_rows = available_space_y // star_height
 
         # Create the full fleet of stars
@@ -75,9 +75,9 @@ class StarSky:
         """Create alien and place it in the row"""
         star = Star(self)
         star_width, star_height = star.rect.size
-        star.x = 1.2 * star_width * star_number
+        star.x = 1.18 * star_width * star_number
         star.rect.x = star.x
-        star.rect.y = 1.2 * star.rect.height * row_number
+        star.rect.y = 1.18 * star.rect.height * row_number
         self.stars.add(star)
         # Adds to the group aliens in Sprite (in __init__)
 
