@@ -11,7 +11,7 @@ class Star(Sprite):
         self.screen = StarSky.screen
 
         # Load the alien image and set its rect attribute
-        self.image = pygame.image.load("images/a_star.bmp")
+        self.image = pygame.image.load("images/small_star.bmp")
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
@@ -66,22 +66,25 @@ class StarSky:
         available_space_y = self.settings.screen_height
         number_rows = available_space_y // star_height
 
+        number = r.randrange(120, 350)
 
-        for i in r.randrange(8,25):
-            
+        for i in range(number):
+            x = r.randrange(self.settings.screen_width - star_width)
+            y = r.randrange(self.settings.screen_height - star_height)
+            self._create_star(x, y)
+        # # Create the full fleet of stars
+        # for row_number in self.screen.get_rect():
+        #     for star_number in self.screen.get_rect():
+        #         self._create_star(star_number, row_number)
 
-        # Create the full fleet of stars
-        for row_number in self.screen.get_rect():
-            for star_number in self.screen.get_rect():
-                self._create_star(star_number, row_number)
-
-    def _create_star(self, star_number, row_number):
+    def _create_star(self, x, y):
         """Create alien and place it in the row"""
         star = Star(self)
         star_width, star_height = star.rect.size
-        star.x = 1.18 * star_width * random.randrange(star_number)
+        star.x = x
         star.rect.x = star.x
-        star.rect.y = 1.18 * star.rect.height * random.randrange(row_number)
+        star.y = y
+        star.rect.y = star.y
         self.stars.add(star)
         # Adds to the group aliens in Sprite (in __init__)
 
