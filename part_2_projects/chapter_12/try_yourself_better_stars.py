@@ -54,3 +54,13 @@ class StarSky:
             # Create the first row of stars
             for star_number in range(number_stars_x):
                 self._create_star(star_number, row_number)
+
+    def _create_star(self, star_number, row_number):
+        """Create alien and place it in the row"""
+        star = Star(self)
+        star_width, star_height = star.rect.size
+        star.x = 1.2 * star_width * star_number
+        star.rect.x = star.x
+        star.rect.y = 1.2 * star.rect.height * row_number
+        self.stars.add(star)
+        # Adds to the group aliens in Sprite (in __init__)
