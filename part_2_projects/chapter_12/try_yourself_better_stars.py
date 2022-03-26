@@ -16,6 +16,17 @@ class Star(Sprite):
         self.rect.y = self.rect.height
 
 
+class Settings():
+    def __init__(self):
+        # self.screen_width = 1920
+        # self.screen_height = 1060
+        self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+
+        self.bg_color = (0, 17, 26,)
+        # Ship settings
+        # Setting the speed like this will make much easier to change it later
+
+
 class StarSky:
     """Overall class to manage game assets and behaviour"""
 
