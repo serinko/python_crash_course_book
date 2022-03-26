@@ -39,3 +39,18 @@ class StarSky:
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_q:
                     sys.exit()
+
+    def _create_sky(self):
+        """Create the fleet of stars"""
+        star = Star(self)
+        star_width, star_height = star.rect.size
+        available_space_x = self.settings.screen_width
+        number_stars_x = available_space_x // star_width
+        available_space_y = self.settings.screen_height
+        number_rows = available_space_y // star_height
+
+        # Create the full fleet of stars
+        for row_number in range(number_rows):
+            # Create the first row of stars
+            for star_number in range(number_stars_x):
+                self._create_star(star_number, row_number)
