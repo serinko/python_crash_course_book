@@ -81,7 +81,7 @@ class StarSky:
         self.stars.add(star)
         # Adds to the group aliens in Sprite (in __init__)
 
-  def _update_screen(self):
+    def _update_screen(self):
         """Update images on the screen and flip to the new screen."""
         # Redraw the screen during each pass through the loop.
         self.screen.fill(self.settings.bg_color)
@@ -90,3 +90,9 @@ class StarSky:
 
         # Make the most recently drawn screen visible.
         pygame.display.flip()
+
+
+if __name__ == '__main__':
+    # Make a game instance, and run the game
+    sky = StarSky()
+    sky.run()
