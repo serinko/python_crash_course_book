@@ -66,7 +66,7 @@ class StarSky:
         available_space_y = self.settings.screen_height
         number_rows = available_space_y // star_height
 
-        number = r.randrange(120, 350)
+        number = r.randrange(10, 70)
 
         for i in range(number):
             x = r.randrange(self.settings.screen_width - star_width)
