@@ -41,6 +41,7 @@ class AlienInvasion:
             self._check_events()
             self.ship.update()
             self._update_bullets()
+            self._update_aliens()
             self._update_screen()
 
     def _create_fleet(self):
@@ -73,7 +74,7 @@ class AlienInvasion:
 
                 # Two nested loops when one make a row from an alien
                 # Another makes a plot of rows from one row
-            
+
     def _create_alien(self, alien_number, row_number):
         """Create alien and place it in the row"""
         alien = Alien(self)
@@ -83,6 +84,10 @@ class AlienInvasion:
         alien.rect.y = alien_height + 2 * alien.rect.height * row_number
         self.aliens.add(alien)
         # Adds to the group aliens in Sprite (in __init__)
+
+    def _update_aliens(self):
+        """Update position of all aliens in the fleet."""
+        self.aliens.update()
 
     def _check_events(self):
         # _method() is known as a helper method
