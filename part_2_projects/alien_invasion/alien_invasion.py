@@ -99,7 +99,10 @@ class AlienInvasion:
         self.settings.fleet_direction += -1
 
     def _update_aliens(self):
-        """Update position of all aliens in the fleet."""
+        """
+        Check if the fleet is at an edge,
+        then update position of all aliens in the fleet."""
+        self._check_fleet_edges()
         self.aliens.update()
 
     def _check_events(self):
