@@ -96,7 +96,7 @@ class AlienInvasion:
         """Drop the entire fleet and change fleet direction."""
         for alien in self.aliens.sprites():
             alien.rect.y += self.settings.fleet_drop_speed
-        self.settings.fleet_direction += -1
+        self.settings.fleet_direction *= -1
 
     def _update_aliens(self):
         """
