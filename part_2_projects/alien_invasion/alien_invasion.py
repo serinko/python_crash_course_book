@@ -85,6 +85,13 @@ class AlienInvasion:
         self.aliens.add(alien)
         # Adds to the group aliens in Sprite (in __init__)
 
+    def _check_fleet_edges(self):
+        """Respond appropriatelly if any aliens have reached the edge"""
+        for alien in self.aliens.sprites():
+            if alien.check_edges():
+                self._change_fleet_direction()
+                break
+
     def _update_aliens(self):
         """Update position of all aliens in the fleet."""
         self.aliens.update()
