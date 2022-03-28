@@ -10,7 +10,7 @@ class RainDrop(Sprite):
         self.screen = StarSky.screen
 
         # Load the alien image and set its rect attribute
-        self.image = pygame.image.load("images/a_star.bmp")
+        self.image = pygame.image.load("images/raindrop.bmp")
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
