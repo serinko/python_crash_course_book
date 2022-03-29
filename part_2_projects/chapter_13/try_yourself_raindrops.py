@@ -1,6 +1,7 @@
 import sys
 import pygame
 from pygame.sprite import Sprite
+import random as r
 
 
 class RainDrop(Sprite):
@@ -41,8 +42,7 @@ class Settings():
         self.bg_color = (0, 17, 26,)
 
         # Raindrop settings
-        self.raindrop_speed = 1.0
-        self.rain_drop_speed = 10
+        self.raindrop_speed = 20.0
         # Fleet direction of 1 represents right; -1 represents left
         self.rain_direction = 1
 
@@ -101,6 +101,8 @@ class Rain:
         number_raindrop_x = available_space_x // raindrop_width
         available_space_y = self.settings.screen_height
         number_rows = available_space_y // raindrop_height
+
+        number = r.randrange(30, 120)
 
         # Create the full fleet of stars
         for row_number in range(number_rows):
