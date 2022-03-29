@@ -104,19 +104,19 @@ class Rain:
 
         number = r.randrange(30, 120)
 
-        # Create the full fleet of stars
-        for row_number in range(number_rows):
-            # Create the first row of stars
-            for raindrop_number in range(number_raindrop_x):
-                self._create_raindrop(raindrop_number, row_number)
+        for i in range(number):
+            x = r.randrange(self.settings.screen_width - raindrop_width)
+            y = r.randrange(self.settings.screen_height - raindrop_height)
+            self._create_raindrop(x, y)
 
-    def _create_raindrop(self, raindrop_number, row_number):
+    def _create_raindrop(self, x, y):
         """Create alien and place it in the row"""
         raindrop = RainDrop(self)
         raindrop_width, raindrop_height = raindrop.rect.size
-        raindrop.x = 1.18 * raindrop_width * raindrop_number
+        raindrop.x = x
         raindrop.rect.x = raindrop.x
-        raindrop.rect.y = 1.18 * raindrop.rect.height * row_number
+        raindrop.y = y
+        raindrop.rect.y = raindrop.y
         self.raindrops.add(raindrop)
         # Adds to the group aliens in Sprite (in __init__)
 
