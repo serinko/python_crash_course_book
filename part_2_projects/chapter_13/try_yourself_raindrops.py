@@ -82,7 +82,7 @@ class Rain:
         """
         for raindrop in self.raindrops.sprites():
             if raindrop._check_edges():
-                self.raindrop.empty()
+                self.raindrops.remove(raindrop)
                 break
 
     def _update_rain(self):
