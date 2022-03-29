@@ -23,7 +23,7 @@ class RainDrop(Sprite):
 
         self.rect.y = self.y
 
-    def check_edges(self):
+    def _check_edges(self):
         """Return True if alien is at the dge of the screen"""
         screen_rect = self.screen.get_rect()
 
@@ -76,6 +76,13 @@ class Rain:
             self._update_sky()
             self._update_screen()
 
+    def _update_sky(self):
+        """
+        Check if the fleet is at an edge,
+        then update position of all aliens in the fleet."""
+        self._check_edges()
+        self.raindrops.update()
+
     def _create_rain(self):
         """Create the fleet of stars"""
         raindrop = RainDrop(self)
@@ -88,7 +95,7 @@ class Rain:
         # Create the full fleet of stars
         for row_number in range(number_rows):
             # Create the first row of stars
-            for star_number in range(number_raindrop_x):
+            for raindrop_number in range(number_raindrop_x):
                 self._create_raindrop(raindrop_number, row_number)
 
     def _create_raindrop(self, raindrop_number, row_number):
@@ -114,5 +121,5 @@ class Rain:
 
 if __name__ == '__main__':
     # Make a game instance, and run the game
-    sky = StarSky()
+    sky = Rain()
     sky.run()
