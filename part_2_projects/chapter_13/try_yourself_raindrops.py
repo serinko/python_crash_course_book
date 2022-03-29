@@ -42,7 +42,7 @@ class Settings():
         self.bg_color = (0, 17, 26,)
 
         # Raindrop settings
-        self.raindrop_speed = 20.0
+        self.raindrop_speed = 5
         # Fleet direction of 1 represents right; -1 represents left
         self.rain_direction = 1
 
@@ -81,8 +81,10 @@ class Rain:
         """
         Check if the fleet is at an edge,
         then update position of all aliens in the fleet."""
-        self._check_rain_edges()
+        # self._check_edges_and_remove()
         self.raindrops.update()
+        if self._check_edges_and_remove():
+            self._random_raindrop_top()
 
     def _create_rain(self):
         """Create the fleet of stars"""
@@ -97,7 +99,10 @@ class Rain:
 
         for i in range(number):
             self.x = r.randrange(self.settings.screen_width - raindrop_width)
-            self.y = r.randrange(self.settings.screen_width - raindrop_width)
+            self.y = r.randrange(
+                self.settings.screen_height - raindrop_height) - \
+                     self.settings.screen_height
+
             self._create_raindrop(self.x, self.y)
 
     def _create_raindrop(self, x, y):
@@ -110,7 +115,7 @@ class Rain:
         raindrop.rect.y = raindrop.y
         self.raindrops.add(raindrop)
 
-    def _check_rain_edges(self):
+    def _check_edges_and_remove(self):
         """
         respond if any drop hit an edge
         """
@@ -119,11 +124,16 @@ class Rain:
         for raindrop in self.raindrops.sprites():
             if raindrop._check_edges():
                 self.raindrops.remove(raindrop)
-                self.x = r.randrange(
-                    self.settings.screen_width - raindrop_width)
-                self.y = (0 - raindrop_height)
-                self._create_raindrop(self.x, self.y)
-                break
+                return True
+
+    def _random_raindrop_top(self):
+        """Creates new raindrop on top of the screen"""
+        raindrop = RainDrop(self)
+        raindrop_width, raindrop_height = raindrop.rect.size
+        self.x = r.randrange(
+            self.settings.screen_width - raindrop_width)
+        self.y = (0 - raindrop_height)
+        self._create_raindrop(self.x, self.y)
 
     def _update_screen(self):
         """Update images on the screen and flip to the new screen."""
