@@ -8,12 +8,28 @@ class RainDrop(Sprite):
         """Initialize the alien and set it's starting position"""
         super().__init__()
         self.screen = StarSky.screen
+        self.settings = Settings()
+
+
 
         # Load the alien image and set its rect attribute
         self.image = pygame.image.load("images/raindrop.bmp")
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
+
+    def update(self):
+        """Move the alien to the right and left"""
+        self.x += (self.settings.alien_speed * \
+                   self.settings.fleet_direction)
+
+        self.rect.x = self.x
+
+    def check_edges(self):
+        """Return True if alien is at the dge of the screen"""
+        screen_rect = self.screen.get_rect()
+
+        if self.rect.right >= screen_rect.right
 
 
 class Settings():
@@ -23,8 +39,13 @@ class Settings():
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 
         self.bg_color = (0, 17, 26,)
-        # Ship settings
-        # Setting the speed like this will make much easier to change it later
+
+
+        # Raindrop settings
+        self.raindrop_speed = 1.0
+        self.rain_drop_speed = 10
+        # Fleet direction of 1 represents right; -1 represents left
+        self.rain_direction = 1
 
 
 class Rain:
