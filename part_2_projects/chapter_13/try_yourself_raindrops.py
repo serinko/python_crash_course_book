@@ -15,6 +15,7 @@ class RainDrop(Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
+        self.y = float(self.rect.y)
 
     def update(self):
         """Move the alien to the right and left"""
