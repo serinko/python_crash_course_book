@@ -77,15 +77,6 @@ class Rain:
             self._update_rain()
             self._update_screen()
 
-    def _check_rain_edges(self):
-        """
-        respond if any drop hit an edge
-        """
-        for raindrop in self.raindrops.sprites():
-            if raindrop._check_edges():
-                self.raindrops.remove(raindrop)
-                break
-
     def _update_rain(self):
         """
         Check if the fleet is at an edge,
@@ -105,9 +96,9 @@ class Rain:
         number = r.randrange(30, 120)
 
         for i in range(number):
-            x = r.randrange(self.settings.screen_width - raindrop_width)
-            y = r.randrange(self.settings.screen_height - raindrop_height)
-            self._create_raindrop(x, y)
+            self.x = r.randrange(self.settings.screen_width - raindrop_width)
+            self.y = (0 - raindrop_height)
+            self._create_raindrop(self.x, self.y)
 
     def _create_raindrop(self, x, y):
         """Create alien and place it in the row"""
@@ -118,8 +109,17 @@ class Rain:
         raindrop.y = y
         raindrop.rect.y = raindrop.y
         self.raindrops.add(raindrop)
-        # Adds to the group aliens in Sprite (in __init__)
 
+    def _check_rain_edges(self):
+        """
+        respond if any drop hit an edge
+        """
+        for raindrop in self.raindrops.sprites():
+            if raindrop._check_edges():
+                self.raindrops.remove(raindrop)
+                self._create_raindrop(self.x, self.y)
+                break
+                
     def _update_screen(self):
         """Update images on the screen and flip to the new screen."""
         # Redraw the screen during each pass through the loop.
