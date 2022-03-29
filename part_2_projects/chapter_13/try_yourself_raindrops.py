@@ -93,11 +93,11 @@ class Rain:
         available_space_y = self.settings.screen_height
         number_rows = available_space_y // raindrop_height
 
-        number = r.randrange(30, 120)
+        number = r.randrange(200, 400)
 
         for i in range(number):
             self.x = r.randrange(self.settings.screen_width - raindrop_width)
-            self.y = (0 - raindrop_height)
+            self.y = r.randrange(self.settings.screen_width - raindrop_width)
             self._create_raindrop(self.x, self.y)
 
     def _create_raindrop(self, x, y):
@@ -114,12 +114,17 @@ class Rain:
         """
         respond if any drop hit an edge
         """
+        raindrop = RainDrop(self)
+        raindrop_width, raindrop_height = raindrop.rect.size
         for raindrop in self.raindrops.sprites():
             if raindrop._check_edges():
                 self.raindrops.remove(raindrop)
+                self.x = r.randrange(
+                    self.settings.screen_width - raindrop_width)
+                self.y = (0 - raindrop_height)
                 self._create_raindrop(self.x, self.y)
                 break
-                
+
     def _update_screen(self):
         """Update images on the screen and flip to the new screen."""
         # Redraw the screen during each pass through the loop.
