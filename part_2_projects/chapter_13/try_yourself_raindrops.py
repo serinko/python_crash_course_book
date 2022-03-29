@@ -73,14 +73,23 @@ class Rain:
     def run(self):
         while True:
             self._check_events()
-            self._update_sky()
+            self._update_rain()
             self._update_screen()
 
-    def _update_sky(self):
+    def _check_rain_edges(self):
+        """
+        respond if any drop hit an edge
+        """
+        for raindrop in self.raindrops.sprites():
+            if raindrop._check_edges():
+                self.raindrop.empty()
+                break
+
+    def _update_rain(self):
         """
         Check if the fleet is at an edge,
         then update position of all aliens in the fleet."""
-        self._check_edges()
+        self._check_rain_edges()
         self.raindrops.update()
 
     def _create_rain(self):
