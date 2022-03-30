@@ -19,8 +19,8 @@ class Settings:
 
         # Bullet settings
         self.bullet_speed = 5
-        self.bullet_width = r.randrange(3, 100)
-        self.bullet_height = r.randrange(3, 100)
+        self.bullet_width = 3
+        self.bullet_height = r.randrange(15, 40)
         self.bullet_color = (255, 255, 255,)
         self.bullets_allowed = 20
 
