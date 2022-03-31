@@ -47,8 +47,11 @@ class AlienInvasion:
                 self.ship.update()
                 self._update_bullets()
                 self._update_aliens()
+                # Those are needed only when the game runs
 
             self._update_screen()
+
+        # Check events and upd scrn is needed at all times in the program
 
     def _create_fleet(self):
         """Create the fleet of aliens"""
