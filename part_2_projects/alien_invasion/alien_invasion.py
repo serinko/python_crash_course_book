@@ -167,6 +167,7 @@ class AlienInvasion:
             # Destroy existing bullets and create new fleet
             self.bullets.empty()
             self._create_fleet()
+            # method empty() removes all remaining sprites
 
     def _update_screen(self):
         """Update images on the screen and flip to the new screen."""
