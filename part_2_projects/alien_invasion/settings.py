@@ -1,5 +1,6 @@
 # import pygame
 import random as r
+import pygame
 
 
 class Settings:
