@@ -112,7 +112,7 @@ class AlienInvasion:
         if pygame.sprite.spritecollideany(
                 self.ship, self.aliens
         ):
-            print("Ship hit!!!")
+            self._ship_hit()
 
     def _check_events(self):
         # _method() is known as a helper method
