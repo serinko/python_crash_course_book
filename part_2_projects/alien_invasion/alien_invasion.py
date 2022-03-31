@@ -182,6 +182,23 @@ class AlienInvasion:
             self._create_fleet()
             # method empty() removes all remaining sprites
 
+    def _ship_hit(self):
+        """Respond to the ship being hit by an alien."""
+        # Decrement shiips_left
+        self.stats.ships_left -= 1
+
+        # Get rid of any remaining aliens and bullets
+        self.aliens.empty()
+        self.bullets.empty()
+        # empty () method re,pves a;; s[rites from a group
+
+        # Create a new fleet and center the ship
+        self._create_fleet()
+        self.ship.center_ship()
+
+        # Pause
+        sleep(0.5)
+
     def _update_screen(self):
         """Update images on the screen and flip to the new screen."""
         # Redraw the screen during each pass through the loop.
