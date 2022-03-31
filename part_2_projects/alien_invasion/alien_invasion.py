@@ -43,7 +43,7 @@ class AlienInvasion:
         while True:
             self._check_events()
 
-            if self.stats.game_active():
+            if self.stats.game_active:
                 self.ship.update()
                 self._update_bullets()
                 self._update_aliens()
@@ -218,7 +218,7 @@ class AlienInvasion:
             sleep(0.5)
 
         else:
-            self.stats.game_active() = False
+            self.stats.game_active = False
 
     def _update_screen(self):
         """Update images on the screen and flip to the new screen."""
