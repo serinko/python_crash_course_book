@@ -109,7 +109,9 @@ class AlienInvasion:
                 # Threat this the same as if the ship got hit.
                 self._ship_hit()
                 break
-
+                # once any alien hits the ship no need to check for others
+                # so - break the loop
+                
     def _update_aliens(self):
         """
         Check if the fleet is at an edge,
