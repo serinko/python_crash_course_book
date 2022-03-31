@@ -3,7 +3,7 @@ class GameStats:
 
     def __init__(self, ai_game):
         """Initialize statistics."""
-        self.setting = ai_game.settings
+        self.settings = ai_game.settings
         self._reset_stats()
 
     def _reset_stats(self):
