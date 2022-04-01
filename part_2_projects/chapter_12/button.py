@@ -18,4 +18,7 @@ class Buton:
         self.rect = pygame.Rect(0, 0, self.width, self.center)
         self.rect.center = self.screen_rect.center
 
+        # The button message needs to be prepped only ones
+        self._prep_message(msg)
+
         
