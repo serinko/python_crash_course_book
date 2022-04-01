@@ -12,4 +12,5 @@ class Buton:
         self.width, self.height = 200, 50
         self.button_color = (255, 178, 36)
         self.text_color = (224, 176, 255)
-        self.font = pygame.font.
+        self.font = pygame.font.SysFont('Helvetica', 48)
+       
