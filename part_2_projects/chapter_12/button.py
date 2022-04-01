@@ -21,4 +21,14 @@ class Buton:
         # The button message needs to be prepped only ones
         self._prep_message(msg)
 
-        
+    def _prep_message(self, msg):
+        """Turn mag into a rendered image and center text on the button."""
+
+        self.msg_image = self.font.render(
+            msg, True,
+            self.text_color,
+            self.button_color
+        )
+        self.msg_image_rect = self.msg_image.get_rect()
+        self.msg_image_rect.center = self.rect.center
+       
