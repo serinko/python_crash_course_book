@@ -31,4 +31,6 @@ class Buton:
         )
         self.msg_image_rect = self.msg_image.get_rect()
         self.msg_image_rect.center = self.rect.center
-       
+
+    def draw_button(self):
+        # Draw blank button and then draw a message.
