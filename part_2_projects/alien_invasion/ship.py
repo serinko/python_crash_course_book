@@ -57,3 +57,22 @@ class Ship(Sprite):
         """Center the ship on the screen."""
         self.rect.midbottom = self.screen_rect.midbottom
         self.x = float(self.rect.x)
+
+
+class ShipSB(Sprite):
+    """A class to manage the ship"""
+
+    def __init__(self, ai_game):
+        """Initialize the ship and set its starting position."""
+        super().__init__()
+        self.screen = ai_game.screen
+        self.settings = ai_game.settings
+        self.screen_rect = ai_game.screen.get_rect()
+
+        # Load the ship image and get its rect.
+        ship = 'images/spaceship_1.bmp'
+        self.image = pygame.image.load(ship)
+        self.image = pygame.transform.rotozoom(self.image, 0, 0.75)
+        # rotozoom = rotate angle, zoom by * multiplication
+        # rotozoom(src, angle, zoom)
+        self.rect = self.image.get_rect()
