@@ -42,20 +42,24 @@ class AlienInvasion:
         # Make the Play button
         self.play_button = Button(self, "Play")
 
-    def run_game(self):
-        """Start the main loop to run the game"""
-        while True:
-            self._check_events()
+    def _start_game(self):
+        """Starts the game"""
 
-            if self.stats.game_active:
-                self.ship.update()
-                self._update_bullets()
-                self._update_aliens()
-                # Those are needed only when the game runs
+        # Reset the game statistics.
+        self.stats.reset_stats()
+        self.stats.game_active = True
 
-            self._update_screen()
+        # Get rid off any remaining aliens or bullets
+        self.aliens.empty()
+        self.bullets.empty()
 
-        # Check events and upd scrn is needed at all times in the program
+        # Create a new fleet and center the ship
+        self._create_fleet()
+        self.ship.center_ship()
+
+        # Hide the mouse cursor
+        pygame.mouse.set_visible(False)
+
 
     def _create_fleet(self):
         """Create the fleet of aliens"""
@@ -156,22 +160,10 @@ class AlienInvasion:
     def _check_play_button(self, mouse_pos):
         """Start a new game when the playes clicks play."""
         button_clicked = self.play_button.rect.collidepoint(mouse_pos)
+
         # Ensure button can be clicked only when game not active
         if button_clicked and not self.stats.game_active:
-            # Reset the game statistics.
-            self.stats.reset_stats()
-            self.stats.game_active = True
-
-            # Get rid off any remaining aliens or bullets
-            self.aliens.empty()
-            self.bullets.empty()
-
-            # Create a new fleet and center the ship
-            self._create_fleet()
-            self.ship.center_ship()
-
-            # Hide the mouse cursor
-            pygame.mouse.set_visible(False)
+            self._start_game()
 
     def _check_keydown_events(self, event):
         """Respond to key-press"""
@@ -186,6 +178,8 @@ class AlienInvasion:
             sys.exit()
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
+        elif event.key == pygame.K_p
+            self._start_game()
 
     def _check_keyup_events(self, event):
         """Respond to key releases"""
@@ -270,6 +264,22 @@ class AlienInvasion:
 
         # Make the most recently drawn screen visible.
         pygame.display.flip()
+
+
+    def run_game(self):
+        """Start the main loop to run the game"""
+        while True:
+            self._check_events()
+
+            if self.stats.game_active:
+                self.ship.update()
+                self._update_bullets()
+                self._update_aliens()
+                # Those are needed only when the game runs
+
+            self._update_screen()
+
+        # Check events and upd scrn is needed at all times in the program
 
 
 if __name__ == '__main__':
