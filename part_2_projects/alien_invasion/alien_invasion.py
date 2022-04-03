@@ -231,8 +231,13 @@ class AlienInvasion:
         # True arguments tell Python to delete the given attributes
 
         if collisions:
-            self.stats.score += self.settings.alien_points
-            self.sb.prep_score()
+            for aliens in collisions.values():
+                self.stats.score += self.settings.alien_points * len(aliens)
+                self.sb.prep_score()
+        # Colissions is a dictionary
+        # If the disctionary is called we loop through all the values
+        # Each value is a list of aliens hit by a single bullet
+        # We multiply the value of each alien with the len of the list
 
         if not self.aliens:
             # Destroy existing bullets and create new fleet
