@@ -45,6 +45,9 @@ class AlienInvasion:
     def _start_game(self):
         """Starts the game"""
 
+        # Game starts with clicking the Play button or pressing P on inactive
+        # Or restarts on pressing R at any point
+
         # Reset the game statistics.
         self.stats.reset_stats()
         self.stats.game_active = True
@@ -59,7 +62,6 @@ class AlienInvasion:
 
         # Hide the mouse cursor
         pygame.mouse.set_visible(False)
-
 
     def _create_fleet(self):
         """Create the fleet of aliens"""
@@ -178,7 +180,9 @@ class AlienInvasion:
             sys.exit()
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
-        elif event.key == pygame.K_p
+        elif event.key == pygame.K_p and not self.stats.game_active:
+            self._start_game()
+        elif event.key == pygame.K_r:
             self._start_game()
 
     def _check_keyup_events(self, event):
@@ -264,7 +268,6 @@ class AlienInvasion:
 
         # Make the most recently drawn screen visible.
         pygame.display.flip()
-
 
     def run_game(self):
         """Start the main loop to run the game"""
