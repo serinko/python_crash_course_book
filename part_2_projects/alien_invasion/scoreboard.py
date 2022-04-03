@@ -28,9 +28,11 @@ class Scoreboard:
         # rounds up to the nearest 10, 100, 1000 etc
         score_str = "{:,}".format(rounded_score)
         # Adds a comma to the string number format
+        label = "Score: "
+        scr_str = f"{label}{score_str}"
 
         self.score_image = self.font.render(
-            score_str,
+            scr_str,
             True,
             self.text_color,
             self.settings.bg_color
@@ -51,8 +53,10 @@ class Scoreboard:
         """Turn the high score into a rendered image"""
         high_score = round(self.stats.high_score, -1)
         high_score_str = "{:,}".format(high_score)
+        label = "High Score: "
+        h_s_str = f"{label}{high_score_str}"
         self.high_score_image = self.font.render(
-            high_score_str,
+            h_s_str,
             True,
             self.text_color,
             self.settings.bg_color
@@ -73,8 +77,10 @@ class Scoreboard:
     def prep_level(self):
         """Turn the level into a rendered image."""
         level_str = str(self.stats.level)
+        label = "Level: "
+        lvl_str = f"{label}{level_str}"
         self.level_image = self.font.render(
-            level_str,
+            lvl_str,
             True,
             self.text_color,
             self.settings.bg_color
