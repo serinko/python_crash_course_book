@@ -48,6 +48,9 @@ class AlienInvasion:
         # Game starts with clicking the Play button or pressing P on inactive
         # Or restarts on pressing R at any point
 
+        # Reset the game settings.
+        self.settings.initialize_dynamic_settings()
+
         # Reset the game statistics.
         self.stats.reset_stats()
         self.stats.game_active = True
