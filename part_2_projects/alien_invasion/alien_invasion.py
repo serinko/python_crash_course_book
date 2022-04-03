@@ -227,6 +227,9 @@ class AlienInvasion:
             self._create_fleet()
             # method empty() removes all remaining sprites
 
+            # scale up the speed with a new fleet
+            self.settings.increase_speed()
+
     def _ship_hit(self):
         """Respond to the ship being hit by an alien."""
         if self.stats.ships_left > 0:
