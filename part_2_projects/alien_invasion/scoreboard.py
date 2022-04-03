@@ -17,6 +17,7 @@ class Scoreboard:
 
         # Prepare the initial score for the game
         self.prep_score()
+        self.prep_high_score()
 
     def prep_score(self):
         """Turn the score into a rendered image."""
@@ -42,3 +43,17 @@ class Scoreboard:
     def show_score(self):
         """Draw score to the screen"""
         self.screen.blit(self.score_image, self.score_rect)
+
+    def prep_high_score(self):
+        """Turn the high score into a rendered image"""
+        high_score = round(self.stats.high_score, -1)
+        high_score_str = "{:,}".format(high_score)
+        self.high_score_image = self.font.render(
+            high_score_str,
+            True,
+            self.text_color,
+            self.settings.bg_color
+        )
+
+        # Center the high score at the top of the screen.
+        
