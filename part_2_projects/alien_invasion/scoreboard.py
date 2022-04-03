@@ -21,8 +21,10 @@ class Scoreboard:
     def prep_score(self):
         """Turn the score into a rendered image."""
 
-        # Turn the score into a string
-        score_str = str(self.stats.score)
+        rounded_score = round(self.stats.score, -1)
+        # If you round the value to negative, round() function
+        # rounds up to the nearest 10, 100, 1000 etc
+        score_str = "{:,}".format(rounded_score)
 
         self.score_image = self.font.render(
             score_str,
