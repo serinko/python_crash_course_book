@@ -36,5 +36,5 @@ class Button:
         # Draw blank button and then draw a message.
         self.screen.fill(self.button_color, self.rect)
         self.screen.blit(self.msg_image, self.msg_image_rect)
-        # fill() is called to draw recctangular portion of the button
+        # fill() is called to draw rectangular portion of the button
         # blit() to draw text image oin the screen
