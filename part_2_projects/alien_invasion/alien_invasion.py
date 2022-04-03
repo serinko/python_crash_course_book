@@ -252,7 +252,7 @@ class AlienInvasion:
 
             # Increase level
             self.stats.level += 1
-            self.sb.prep_level = ()
+            self.sb.prep_level()
 
     def _ship_hit(self):
         """Respond to the ship being hit by an alien."""
