@@ -22,7 +22,7 @@ class Scoreboard:
         """Turn the score into a rendered image."""
 
         # Turn the score into a string
-        score_str = str(self.status.score)
+        score_str = str(self.stats.score)
 
         self.score_image = self.font.render(
             score_str,
@@ -35,3 +35,7 @@ class Scoreboard:
         self.score_rect = self.score_image.get_rect()
         self.score_rect.right = self.screen_rect.right - 20
         self.score_rect.top = 20
+
+    def show_score(self):
+        """Draw score to the screen"""
+        self.screen.blit(self.score, self.score_rect)
