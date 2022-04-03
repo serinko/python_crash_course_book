@@ -25,6 +25,7 @@ class Scoreboard:
         # If you round the value to negative, round() function
         # rounds up to the nearest 10, 100, 1000 etc
         score_str = "{:,}".format(rounded_score)
+        # Adds a comma to the string number format
 
         self.score_image = self.font.render(
             score_str,
