@@ -8,7 +8,7 @@ class GameStats:
         """Initialize statistics."""
 
         # High score should never be reset
-        self.high_score = self.saved_high_score()
+        self.high_score = self._get_saved_high_score()
 
         self.settings = ai_game.settings
         self.reset_stats()
@@ -29,26 +29,16 @@ class GameStats:
             with open(filename) as f:
                 saved_score = f.read(json.load(f))
 
-        except json.decoder.JSONDecodeError:
-            return 0
+        except FileNotFoundError:
+            with open(filename, 'w') as f:
+                # Initiating a block to work with file as f ('w' for write)
+                saved_score = 0
+                json.dump(saved_score, f)
+            return saved_score
         else:
             return saved_score
 
-    def _get_saved_highscore():
-        """Get stored username if available"""
-
-        filename = 'username.json'
-
-        try:
-            with open(filename) as f:
-                username = json.load(f)
-        except FileNotFoundError:
-            return None
-        else:
-
-            return username
-
-    def _get_new_username():
+    def _check_saved_high_score(self, ):
         """Prompt for a new username"""
         prompt = "Hello, please enter your username:  "
         username = input(prompt)
