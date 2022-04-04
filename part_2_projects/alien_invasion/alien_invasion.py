@@ -160,7 +160,10 @@ class AlienInvasion:
         """Respond to key-presses and mouse events"""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                sys.exit()
+                high_score = round(self.stats.high_score, -1)
+                self._exit_game(high_score)
+
+
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_pos = pygame.mouse.get_pos()
                 self._check_play_button(mouse_pos)
@@ -188,7 +191,8 @@ class AlienInvasion:
         elif event.key == pygame.K_LEFT:
             self.ship.moving_left = True
         elif event.key == pygame.K_q:
-            sys.exit()
+            high_score = round(self.stats.high_score, -1)
+            self._exit_game(high_score)
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
         elif event.key == pygame.K_p and not self.stats.game_active:
@@ -300,6 +304,11 @@ class AlienInvasion:
 
         # Make the most recently drawn screen visible.
         pygame.display.flip()
+
+    def _exit_game(self, high_score):
+        """Function storing high score and quiting the game"""
+
+        sys.exit()
 
     def run_game(self):
         """Start the main loop to run the game"""
