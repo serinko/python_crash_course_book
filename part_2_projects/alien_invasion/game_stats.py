@@ -41,14 +41,12 @@ class GameStats:
 
         else:
             if saved_score:
-
-                print(f"else-if {saved_score}")
                 return saved_score
             else:
                 with open(filename, 'w') as f:
                     saved_score = 0
                     json.dump(saved_score, f)
-                print(f"else-else {saved_score}")
+
                 return saved_score
 
     def store_high_score(self, saved_score):
