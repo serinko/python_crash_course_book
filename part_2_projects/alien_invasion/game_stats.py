@@ -27,7 +27,7 @@ class GameStats:
         filename = 'high_score.json'
         try:
             with open(filename) as f:
-                saved_score = f.read(json.load(f))
+                saved_score = json.load(f)
 
 
         except FileNotFoundError:
@@ -41,9 +41,9 @@ class GameStats:
 
         else:
             if saved_score:
-                if saved_score > 0:
-                    print(f"else-if {saved_score}")
-                    return saved_score
+
+                print(f"else-if {saved_score}")
+                return saved_score
             else:
                 with open(filename, 'w') as f:
                     saved_score = 0
