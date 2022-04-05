@@ -306,7 +306,7 @@ class AlienInvasion:
     def _exit_game(self):
         """Function storing high score and quiting the game"""
         saved_score = self.stats.get_high_score()
-        self.stats.store_new_high_score(saved_score)
+        self.stats.store_high_score(saved_score)
         sys.exit()
 
     def run_game(self):
