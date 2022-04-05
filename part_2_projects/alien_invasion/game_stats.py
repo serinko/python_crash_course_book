@@ -25,23 +25,24 @@ class GameStats:
     def get_high_score(self):
         """json file with storing top score as and integer"""
         filename = 'high_score.json'
-        with open(filename, 'r+') as f:
-            saved_score = f.read(json.load(f))
-            if saved_score:
-                return saved_score
-            else:
+        try:
+            with open(filename, 'r+') as f:
+                saved_score = f.read(json.load(f))
+                if saved_score:
+                    return saved_score
+                else:
+                    saved_score = 0
+                    json.dump(saved_score, f)
+                    return saved_score
+
+        except FileNotFoundError:
+            with open(filename, 'w') as f:
+                # Initiating a block to work with file as f ('w' for write)
                 saved_score = 0
                 json.dump(saved_score, f)
-                return saved_score
 
-        # except FileNotFoundError:
-        #     with open(filename, 'w') as f:
-        #         # Initiating a block to work with file as f ('w' for write)
-        #         saved_score = 0
-        #         json.dump(saved_score, f)
-        #
-        #         print(saved_score)
-        #         return saved_score
+                print(saved_score)
+                return saved_score
 
     def store_high_score(self, saved_score):
         """Overwrite new highscore"""
@@ -52,9 +53,11 @@ class GameStats:
                 new_h_c = round(self.high_score, -1)
                 with open(filename, 'r+') as f:
                     json.dump(new_h_c, f)
+                print(new_h_c)
                 return new_h_c
         else:
             new_h_c = round(self.high_score, -1)
             with open(filename, 'r+') as f:
                 json.dump(new_h_c, f)
+            print(new_h_c)
             return new_h_c
