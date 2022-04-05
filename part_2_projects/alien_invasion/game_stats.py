@@ -50,8 +50,15 @@ class GameStats:
         """Overwrite new highscore"""
 
         filename = 'high_score.json'
-        if self.high_score > saved_score:
+        if saved_score:
+            if self.high_score > saved_score:
+                new_h_c = round(self.high_score, -1)
+                with open(filename, 'r+') as f:
+                    json.dump(new_h_c, f)
+                return new_h_c
+        else:
             new_h_c = round(self.high_score, -1)
             with open(filename, 'r+') as f:
                 json.dump(new_h_c, f)
             return new_h_c
+
