@@ -60,10 +60,10 @@ class Scoreboard:
         # high_score = round(self.stats.high_score, -1)
         # high_score_str = "{:,}".format(high_score)
 
-        high_score = round(self.high_score, -1)
+        high_score = round(self.stats.high_score, -1)
 
         label = "High Score: "
-        h_s_str = f"{label}{high_score_str}"
+        h_s_str = f"{label}{high_score}"
         self.high_score_image = self.font.render(
             h_s_str,
             True,
