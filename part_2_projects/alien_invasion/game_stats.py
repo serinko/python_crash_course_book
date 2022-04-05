@@ -60,3 +60,6 @@ class GameStats:
         with open(filename, 'w') as f:
             json.dump(new_h_c, f)
         print(f"savedscore {new_h_c}")
+    #
+    # def save_name(self):
+    #     """
