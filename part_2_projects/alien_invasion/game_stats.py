@@ -26,14 +26,9 @@ class GameStats:
         """json file with storing top score as and integer"""
         filename = 'high_score.json'
         try:
-            with open(filename, 'r+') as f:
+            with open(filename) as f:
                 saved_score = f.read(json.load(f))
-                if saved_score:
-                    return saved_score
-                else:
-                    saved_score = 0
-                    json.dump(saved_score, f)
-                    return saved_score
+
 
         except FileNotFoundError:
             with open(filename, 'w') as f:
@@ -41,25 +36,43 @@ class GameStats:
                 saved_score = 0
                 json.dump(saved_score, f)
 
-                print(saved_score)
+                print(f"xcept {saved_score}")
+                return saved_score
+
+        else:
+            if saved_score:
+                if saved_score > 0:
+                    print(f"else-if {saved_score}")
+                    return saved_score
+            else:
+                with open(filename, 'w') as f:
+                    saved_score = 0
+                    json.dump(saved_score, f)
+                print(f"else-else {saved_score}")
                 return saved_score
 
     def store_high_score(self, saved_score):
         """Overwrite new highscore"""
 
         filename = 'high_score.json'
-        if saved_score:
-            if self.high_score > saved_score:
-                new_h_c = round(self.high_score, -1)
-                new_h_c = int(new_h_c)
-                with open(filename, 'r+') as f:
-                    json.dump(new_h_c, f)
-                print(new_h_c)
-                return new_h_c
-        else:
-            new_h_c = round(self.high_score, -1)
-            new_h_c = int(new_h_c)
-            with open(filename, 'r+') as f:
-                json.dump(new_h_c, f)
-            print(new_h_c)
-            return new_h_c
+        new_h_c = round(self.high_score, -1)
+        new_h_c = int(new_h_c)
+        with open(filename, 'w') as f:
+            json.dump(new_h_c, f)
+        print(f"savedscore {new_h_c}")
+
+        # if saved_score:
+        #     if self.high_score > saved_score:
+        #         new_h_c = round(self.high_score, -1)
+        #         new_h_c = int(new_h_c)
+        #         with open(filename, 'r+') as f:
+        #             json.dump(new_h_c, f)
+        #         print(new_h_c)
+        #         return new_h_c
+        # else:
+        #     new_h_c = round(self.high_score, -1)
+        #     new_h_c = int(new_h_c)
+        #     with open(filename, 'w') as f:
+        #         json.dump(new_h_c, f)
+        #     print(new_h_c)
+        #     return new_h_c
