@@ -51,12 +51,14 @@ class GameStats:
         if saved_score:
             if self.high_score > saved_score:
                 new_h_c = round(self.high_score, -1)
+                new_h_c = int(new_h_c)
                 with open(filename, 'r+') as f:
                     json.dump(new_h_c, f)
                 print(new_h_c)
                 return new_h_c
         else:
             new_h_c = round(self.high_score, -1)
+            new_h_c = int(new_h_c)
             with open(filename, 'r+') as f:
                 json.dump(new_h_c, f)
             print(new_h_c)
