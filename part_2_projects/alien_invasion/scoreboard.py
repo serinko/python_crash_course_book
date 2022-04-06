@@ -83,7 +83,7 @@ class Scoreboard:
         """Renders image of the top player next to the high score"""
         top_pl = self.stats.top_pl
         label = "player: "
-        tp_str = f" ~{top_pl.upper()}~"
+        tp_str = f"[{top_pl.upper()}]"
         self.top_pl_image = self.font.render(
             tp_str,
             True,
