@@ -80,9 +80,10 @@ class Scoreboard:
         # Matching the top alignment of the score
 
     def prep_top_player(self):
-        self.top_pl = self.stats.get_top_player()
+        """Renders image of the top player next to the high score"""
+        top_pl = self.stats.top_pl
         label = "player: "
-        tp_str = f"[{self.top_pl}]"
+        tp_str = f"[{top_pl}]"
         self.top_pl_image = self.font.render(
             tp_str,
             True,
@@ -100,7 +101,7 @@ class Scoreboard:
         if self.stats.score > self.stats.high_score:
             self.stats.high_score = self.stats.score
             self.prep_high_score()
-            self.top_pl = self.stats.user
+            self.stats.top_pl = self.stats.user
             self.prep_top_player()
 
     def prep_level(self):
