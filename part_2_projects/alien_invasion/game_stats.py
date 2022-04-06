@@ -77,11 +77,12 @@ class GameStats:
         """Overwrite new highscore"""
 
         filename = 'high_score.json'
-        new_h_c = round(self.high_score, -1)
-        new_h_c = int(new_h_c)
+        new_hc = round(self.high_score, -1)
+        new_hc = int(new_hc)
+        usr_hc = {self.user: new_hc}
         with open(filename, 'w') as f:
-            json.dump(new_h_c, f)
-        print(f"savedscore {new_h_c}")
+            json.dump(usr_hc, f)
+        print(f"savedscore {usr_hc}")
     #
     # def save_name(self):
     #     """
