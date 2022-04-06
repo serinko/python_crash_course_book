@@ -77,11 +77,28 @@ class Scoreboard:
         self.high_score_rect.top = self.score_rect.top
         # Matching the top alignment of the score
 
+    def prep_top_player(self):
+        top_pl = self.stats.get_top_player()
+        label = "player: "
+        tp_str = f"[{label}{top_pl}]"
+        self.top_pl_image = self.font.render(
+            tp_str,
+            True,
+            self.text_color,
+            self.settings.bg_color
+        )
+
+        self.tp_rect = self.top_pl_image.get_rect()
+        self.tp_rect.left = self.high_score_rect.right + 20
+        self.tp_rect.top = self.score_rect.top
+        # Matching the top alignment of the score
+
     def check_high_score(self):
         """Check to see if there is a new high score."""
         if self.stats.score > self.stats.high_score:
             self.stats.high_score = self.stats.score
             self.prep_high_score()
+            self.new_top_user = self.stats.user
 
     def prep_level(self):
         """Turn the level into a rendered image."""

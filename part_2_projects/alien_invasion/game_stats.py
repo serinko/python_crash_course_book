@@ -45,12 +45,16 @@ class GameStats:
             # if value:
             return value
 
-            # else:
-            #     with open(filename, 'w') as f:
-            #         saved_hc = {self.user: 0}
-            #         json.dump(saved_hc, f)
-            #
-            #     return saved_hc[self.user]
+    def get_top_player(self):
+        """Get the the high score saved player."""
+        filename = 'high_score.json'
+
+        with open(filename) as f:
+            saved_hc = json.load(f)
+
+        for user, value in saved_hc.items():
+            # if value:
+            return user
 
     def store_high_score(self, saved_score):
         """Overwrite new highscore"""
