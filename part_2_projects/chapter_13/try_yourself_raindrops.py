@@ -90,10 +90,6 @@ class Rain:
         """Create the fleet of stars"""
         raindrop = RainDrop(self)
         raindrop_width, raindrop_height = raindrop.rect.size
-        available_space_x = self.settings.screen_width
-        number_raindrop_x = available_space_x // raindrop_width
-        available_space_y = self.settings.screen_height
-        number_rows = available_space_y // raindrop_height
 
         number = r.randrange(200, 400)
 
