@@ -12,6 +12,7 @@ class GameStats:
 
         self.settings = ai_game.settings
         self.reset_stats()
+        self.user = ai_game.user
 
         # Start alien invasion in an inactive state
         self.game_active = False
@@ -25,29 +26,41 @@ class GameStats:
     def get_high_score(self):
         """json file with storing top score as and integer"""
         filename = 'high_score.json'
-        try:
-            with open(filename) as f:
-                saved_score = json.load(f)
 
+        with open(filename) as f:
+            saved_hc = json.load(f)
 
-        except FileNotFoundError:
-            with open(filename, 'w') as f:
-                # Initiating a block to work with file as f ('w' for write)
-                saved_score = 0
-                json.dump(saved_score, f)
+        for user, value in saved_hc.items():
+            if value:
 
-                print(f"xcept {saved_score}")
-                return saved_score
-
-        else:
-            if saved_score:
-                return saved_score
+                return value
             else:
                 with open(filename, 'w') as f:
-                    saved_score = 0
-                    json.dump(saved_score, f)
+                    saved_hc = {self.user: 0}
+                    json.dump(saved_hc, f)
 
-                return saved_score
+                return saved_hc[self.user]
+
+        # except FileNotFoundError:
+        #     with open(filename, 'w') as f:
+        #         # Initiating a block to work with file as f ('w' for write)
+        #         saved_hc = {self.user:0}
+        #         json.dump(saved_hc, f)
+        #
+        #         print(f"xcept {saved_hc}")
+        #         for i in saved_hc:
+        #         return self.user[i]
+        #
+        # else:
+        #     if self.user[i]:
+        #   #  if saved_score:
+        #         return self.user[i]
+        #     else:
+        #         with open(filename, 'w') as f:
+        #             saved_score = 0
+        #             json.dump(saved_score, f)
+        #
+        #         return saved_score
 
     def store_high_score(self, saved_score):
         """Overwrite new highscore"""
