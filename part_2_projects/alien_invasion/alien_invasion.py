@@ -19,7 +19,7 @@ class AlienInvasion:
         """Initialize the game and create game resources."""
         pygame.init()
         self.settings = Settings()
-        self.user = self.get_username()
+        self.stats = GameStats(self)
 
         # Run he game in full screen
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
@@ -34,7 +34,7 @@ class AlienInvasion:
 
         # Create an instance to safe game statistics and
         # create a scoreboards
-        self.stats = GameStats(self)
+
         self.sb = Scoreboard(self)
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
@@ -74,17 +74,6 @@ class AlienInvasion:
 
         # Hide the mouse cursor
         pygame.mouse.set_visible(False)
-
-    def get_username(self):
-        msg = \
-            '\n\nHello, welcome to Alien Invasion. A study simple game project.' \
-            ' Before you start please enter your name. To quit the game press ' \
-            '"Q", to restart press "R".' \
-            ' \n\n   ---------------------------------------   '
-        prompt = '\n\nUSERNAME: '
-        print(msg)
-        username = input(prompt)
-        return username
 
     def _create_fleet(self):
         """Create the fleet of aliens"""

@@ -9,13 +9,24 @@ class GameStats:
 
         # High score should never be reset
         self.high_score = self.get_high_score()
+        self.user = self.get_username()
 
         self.settings = ai_game.settings
         self.reset_stats()
-        self.user = ai_game.user
 
         # Start alien invasion in an inactive state
         self.game_active = False
+
+    def get_username(self):
+        msg = \
+            '\n\nHello, welcome to Alien Invasion. A study simple game project.' \
+            ' Before you start please enter your name. To quit the game press ' \
+            '"Q", to restart press "R".' \
+            ' \n\n   ---------------------------------------   '
+        prompt = '\n\nUSERNAME: '
+        print(msg)
+        self.username = input(prompt)
+        return self.user
 
     def reset_stats(self):
         """Initialize statistics that can change during the game."""
