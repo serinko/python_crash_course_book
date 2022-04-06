@@ -56,13 +56,13 @@ class GameStats:
             # if value:
             return user
 
-    def store_high_score(self, saved_score):
+    def store_high_score(self, top_player):
         """Overwrite new highscore"""
 
         filename = 'high_score.json'
-        new_hc = round(self.high_score, -1)
-        new_hc = int(new_hc)
-        self.usr_hc = {self.user: new_hc}
+        high_score = round(self.high_score, -1)
+        # new_hc = int(new_hc)
+        self.usr_hc = {top_player: high_score}
         with open(filename, 'w') as f:
             json.dump(self.usr_hc, f)
 
