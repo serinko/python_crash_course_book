@@ -22,8 +22,8 @@ class GameStats:
             '\n\nHello, welcome to Alien Invasion. A study simple game project.' \
             ' Before you start please enter your name. To quit the game press ' \
             '"Q", to restart press "R".' \
-            ' \n\n   ---------------------------------------   '
-        prompt = '\n\nUSERNAME: '
+            ' \n\n\n---------------------------------------   '
+        prompt = '\nUSERNAME: '
         print(msg)
         user = input(prompt)
         return user
@@ -42,36 +42,15 @@ class GameStats:
             saved_hc = json.load(f)
 
         for user, value in saved_hc.items():
-            if value:
+            # if value:
+            return value
 
-                return value
-            else:
-                with open(filename, 'w') as f:
-                    saved_hc = {self.user: 0}
-                    json.dump(saved_hc, f)
-
-                return saved_hc[self.user]
-
-        # except FileNotFoundError:
-        #     with open(filename, 'w') as f:
-        #         # Initiating a block to work with file as f ('w' for write)
-        #         saved_hc = {self.user:0}
-        #         json.dump(saved_hc, f)
-        #
-        #         print(f"xcept {saved_hc}")
-        #         for i in saved_hc:
-        #         return self.user[i]
-        #
-        # else:
-        #     if self.user[i]:
-        #   #  if saved_score:
-        #         return self.user[i]
-        #     else:
-        #         with open(filename, 'w') as f:
-        #             saved_score = 0
-        #             json.dump(saved_score, f)
-        #
-        #         return saved_score
+            # else:
+            #     with open(filename, 'w') as f:
+            #         saved_hc = {self.user: 0}
+            #         json.dump(saved_hc, f)
+            #
+            #     return saved_hc[self.user]
 
     def store_high_score(self, saved_score):
         """Overwrite new highscore"""
@@ -84,11 +63,12 @@ class GameStats:
             json.dump(self.usr_hc, f)
 
     def exit_message(self):
-        print(f"Saved High Score: ")
-        for key, value in self.usr_hc:
+        print("\n\n\n---------------------------------------   ")
+        print(f"\nSaved High Score: ")
+        for key, value in self.usr_hc.items():
             print(f"{key} - {value}! ")
 
-        print("Have a nice day<3")
+        print("\nHave a nice day<3")
     #
     # def save_name(self):
     #     """
