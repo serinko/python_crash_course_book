@@ -79,10 +79,16 @@ class GameStats:
         filename = 'high_score.json'
         new_hc = round(self.high_score, -1)
         new_hc = int(new_hc)
-        usr_hc = {self.user: new_hc}
+        self.usr_hc = {self.user: new_hc}
         with open(filename, 'w') as f:
-            json.dump(usr_hc, f)
-        print(f"savedscore {usr_hc}")
+            json.dump(self.usr_hc, f)
+
+    def exit_message(self):
+        print(f"Saved High Score: ")
+        for key, value in self.usr_hc:
+            print(f"{key} - {value}! ")
+
+        print("Have a nice day<3")
     #
     # def save_name(self):
     #     """
