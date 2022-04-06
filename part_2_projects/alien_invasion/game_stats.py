@@ -8,8 +8,8 @@ class GameStats:
         """Initialize statistics."""
 
         # High score should never be reset
-        self.high_score = self.get_high_score()
         self.user = self.get_username()
+        self.high_score = self.get_high_score()
 
         self.settings = ai_game.settings
         self.reset_stats()
@@ -25,8 +25,8 @@ class GameStats:
             ' \n\n   ---------------------------------------   '
         prompt = '\n\nUSERNAME: '
         print(msg)
-        self.username = input(prompt)
-        return self.user
+        user = input(prompt)
+        return user
 
     def reset_stats(self):
         """Initialize statistics that can change during the game."""
