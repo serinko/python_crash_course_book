@@ -66,23 +66,23 @@ class GameStats:
         with open(filename, 'w') as f:
             json.dump(self.usr_hc, f)
 
-    def _compare_top_player(self):
+    def _compare_top_player(self, top_player):
         """Function checking if the current player is the best player."""
-        if self.top_pl == self.user:
-            True
+        if top_player == self.user:
+            return True
 
     def exit_message(self):
         """Prints exit message"""
         print("\n\n\n---------------------------------------   ")
         msg_1 = f"\nTOP SCORE: "
-        msg_2 = "\nCONGRATULATIONS ! ! !\nYou made a new TOP SCORE:
-        if self._compare_top_player():
+        msg_2 = "\nCONGRATULATIONS ! ! !\nYou made a new TOP SCORE: "
+        top_player = self.top_pl
+        if self._compare_top_player(top_player):
             print(msg_2)
         else:
             print(msg_1)
 
         for key, value in self.usr_hc.items():
-            print(f"{key} - {value}! ")
+            print(f"{key.upper()} - {value}! ")
 
         print("\nHave a nice day <3")
-   
