@@ -22,6 +22,7 @@ class Scoreboard:
         # Prepare the initial score for the game
         self.prep_score()
         self.prep_high_score()
+        self.prep_top_player()
         self.prep_level()
         self.prep_ships()
 
@@ -52,6 +53,7 @@ class Scoreboard:
         """Draw scores. level and ships to the screen"""
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
+        self.screen.blit(self.top_pl_image, self.tp_rect)
         self.screen.blit(self.level_image, self.level_rect)
         self.ships.draw(self.screen)
 
@@ -80,7 +82,7 @@ class Scoreboard:
     def prep_top_player(self):
         top_pl = self.stats.get_top_player()
         label = "player: "
-        tp_str = f"[{label}{top_pl}]"
+        tp_str = f"[{top_pl}]"
         self.top_pl_image = self.font.render(
             tp_str,
             True,
