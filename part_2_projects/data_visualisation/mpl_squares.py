@@ -5,7 +5,7 @@ squares = [1, 4, 9, 16, 25]
 fig, ax = plt.subplots()
 
 # set chart title and label axes
-ax.st_title("Square Numbers", fontsize=24)
+ax.set_title("Square Numbers", fontsize=24)
 ax.set_xlabel("Value", fontsize=24)
 ax.set_ylabel("Square of Value", fontsize=24)
 ax.plot(squares)
