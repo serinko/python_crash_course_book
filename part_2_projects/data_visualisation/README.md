@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 - Python
 - Matplotlib 
 
-`$ python -m pip install --user matplotlib`
+`$ python -m pip install --user matplotlib` or 
 
-`or $ python3 -m pip install --user matplotlib`
+`$ python3 -m pip install --user matplotlib`
 
 # Ploting graphs
 
