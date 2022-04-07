@@ -11,6 +11,6 @@ ax.set_ylabel("Square of Value", fontsize=24)
 ax.plot(squares)
 
 # set size of thick labels
-ax.tick_prams(axis='both', labelsize=14)
+ax.tick_params(axis='both', labelsize=14)
 
 plt.show()
