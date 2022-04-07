@@ -4,8 +4,10 @@ import matplotlib.pyplot as plt
 # Dependencies
 - Python
 - Matplotlib 
-  `$ python -m pip install --user matplotlib`
-  `or $ python3 -m pip install --user matplotlib`
+
+`$ python -m pip install --user matplotlib`
+
+`or $ python3 -m pip install --user matplotlib`
 
 # Ploting graphs
 
