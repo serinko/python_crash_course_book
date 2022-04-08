@@ -79,3 +79,14 @@ Check them out and choose the one you like:
 - seaborn-white
 - seaborn-whitegrid
 - tableau-colorblind10
+
+# Calculating Data Automatically
+
+Writing lists by hand may be inefficient in time and risk to human error. 
+
+**Squares** of x_values = [1,2,3,4,5,6,7,8,9,10] instead of being written manually as y_values = [1,4,9..] can be calculated in Python. Then the code look like this:
+
+```python
+x_values = range(1,11) # mind the range ends one before its cap
+y_values = [x**2 for x in x_values] # a list comprehension generates the y_values by looping through the x_values
+```

@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt
 
-input_values = [1, 2, 3, 4, 5]
-squares = [1, 4, 9, 16, 25]
+x_values = range(1, 1001)
+y_values = [x ** 2 for x in x_values]
 
 plt.style.use('classic')
 fig, ax = plt.subplots()
-ax.scatter(input_values, squares, s=20)
+ax.scatter(x_values, y_values, s=100)
 
 # set chart title and label axes
 ax.set_title("Square Numbers", fontsize=24)
