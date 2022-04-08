@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 | **syntax**					 	                      | **action**							                     |
 |----------------------------------------|---------------------------------------|
 | import matplotlib.pyplot			            | contains functions for charts & plots |
-| subplots()					                        | generate plot(s) in one figure        |
+| fig, ag = plt.subplots()                | generate plot(s) in one figure        |
 | fig (*variable*)                       | entire figure/ collection of plots    |
 | ax (*variable*)                        | single plot in a figure               |
 | plot(x_value, y_value)                 | plot the data                         |
@@ -29,6 +29,13 @@ import matplotlib.pyplot as plt
 | ax.tick_params(axis='both', labelsize) | style 'both' tick marks         |
 
 ## Built-in Styles
+ax.plot(*plot, linewidth*) is a clasic plot with a line, scatter() is way to create plots, using dots.
+
+| **syntax**					 	      | **action**	 |
+| ------------------------ | ------------- |
+| ax.scatter(*x,y*) | plot a single plot with given values |
+| ax.scatter(*x,y, s=20*) | size of the dots used draw the graph | 
+| ax.tick_params(*axis='both', ehich='major', labelsize=*) | style 'both' tick marks      |
 
 Run Python and check for styles:
 ```
