@@ -1,5 +1,6 @@
 # Notes: Data visualisation in Python
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 # Dependencies
 - Python
@@ -27,8 +28,17 @@ import matplotlib.pyplot as plt
 | ax.set_ylabel("title", fontsize)       | set caption of y axel                 |
 | ax.tick_params(axis='both', labelsize) | style 'both' tick marks         |
 
-## Connecting the Plot
+## Built-in Styles
 
-| **syntax**					 	                | **action**							                     |
-|----------------------------------|---------------------------------------|
-| 
+Run Python and check for styles:
+```
+>>> import matplotlib.pyplot as plt
+>>> plt.style.available
+['seaborn-dark', 'seaborn-darkgrid'
+--snip--
+```
+Check them out and choose the one you like:
+
+| **syntax**					 	          | **action**	          |
+|----------------------------|----------------------|
+| plt.style.use(*'style'*) | generate plot in the given 'style' |
