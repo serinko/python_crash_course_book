@@ -116,7 +116,6 @@ class Rain:
         respond if any drop hit an edge
         """
         raindrop = RainDrop(self)
-        raindrop_width, raindrop_height = raindrop.rect.size
         for raindrop in self.raindrops.sprites():
             if raindrop._check_edges():
                 self.raindrops.remove(raindrop)
