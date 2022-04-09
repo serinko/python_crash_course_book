@@ -14,19 +14,19 @@ import matplotlib.pyplot as plt
 
 ## Simple Graphs
 
-| **syntax**					 	                      | **action**							                     |
-|----------------------------------------|---------------------------------------|
-| import matplotlib.pyplot			            | contains functions for charts & plots |
-| fig, ag = plt.subplots()                | generate plot(s) in one figure        |
-| fig (*variable*)                       | entire figure/ collection of plots    |
-| ax (*variable*)                        | single plot in a figure               |
-| plot(x_value, y_value)                 | plot the data                         |
-| plt.show() (*pyplot as plt*)           | display plot in Matplotlib's viewer   |
-| ax.plot(plot, linewidth)               | control the thickness of plotted line |
-| ax.set_title("title", fontsize)        | set caption of the plot               |
-| ax.set_xlabel("title", fontsize)       | set caption of x axel                 |
-| ax.set_ylabel("title", fontsize)       | set caption of y axel                 |
-| ax.tick_params(axis='both', labelsize) | style 'both' tick marks         |
+| **syntax**					 	             | **action** |
+|-------------------------------|-----------|
+| import matplotlib.pyplot			   | contains functions for charts & plots |
+| fig, ag = plt.subplots()       | generate plot(s) in one figure |
+| fig (*variable*)              | entire figure/ collection of plots |
+| ax (*variable*)               | single plot in a figure |
+| plot(x_value, y_value)        | plot the data |
+| plt.show() (*pyplot as plt*)  | display plot in Matplotlib's viewer |
+| ax.plot(plot, linewidth)      | control the thickness of plotted line |
+| ax.set_title("title", fontsize) | set caption of the plot |
+| ax.set_xlabel("title", fontsize) | set caption of x axel |
+| ax.set_ylabel("title", fontsize) | set caption of y axel |
+| ax.tick_params(axis='both', labelsize) | style 'both' tick marks |
 
 ## Built-in Styles
 ax.plot(*plot, linewidth*) is a clasic plot with a line, scatter() is way to create plots, using dots.
@@ -49,6 +49,7 @@ Check them out and choose the one you like:
 | **syntax**					 	          | **action**	          |
 |----------------------------|----------------------|
 | plt.style.use(*'style'*) | generate plot in the given 'style' |
+| ax.axis([*xrange, yrange*]) | specify the rage of each axis (4 values) |
 
 **List of build-In Styles:**
 - Solarize_Light2
@@ -80,7 +81,7 @@ Check them out and choose the one you like:
 - seaborn-whitegrid
 - tableau-colorblind10
 
-# Calculating Data Automatically
+## Calculating Data Automatically
 
 Writing lists by hand may be inefficient in time and risk to human error. 
 

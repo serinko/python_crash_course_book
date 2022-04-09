@@ -15,4 +15,7 @@ ax.set_ylabel("Square of Value", fontsize=24)
 # set size of thick labels
 ax.tick_params(axis='both', which='major', labelsize=14)
 
+# set the range for each axis
+ax.axis([0, 1100, 0, 1100000])
+
 plt.show()
