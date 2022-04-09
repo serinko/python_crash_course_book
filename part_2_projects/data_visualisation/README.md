@@ -91,3 +91,10 @@ Writing lists by hand may be inefficient in time and risk to human error.
 x_values = range(1,11) # mind the range ends one before its cap
 y_values = [x**2 for x in x_values] # a list comprehension generates the y_values by looping through the x_values
 ```
+## Defining Custom Colors
+- To change the color pass 'c' to scatter() with the name of the color or RGB.
+
+| **syntax**					 	 | **action**	         |
+|---------------|---------------------|
+| ax.scatter(*x_values, y_values, c='color',s=10*) | change the color of graph |
+| *c='red';c=(0,0.8,0)* | name or RGB for color |
