@@ -124,8 +124,6 @@ Random walks have practical applications in nature, physics, bilogy, chemistry a
 
 ## Creating Random Walk Class
 
-See an example in *random_walk.py*.
-
 - **Needs three attributes:**
   - A variable to store the number of points in the walk
   - Two lists to store x- and y- coordinate values of each point in the walk
@@ -138,3 +136,4 @@ See an example in *random_walk.py*.
 ```python
 from random import choice
 ```
+See an example in *random_walk.py*.
