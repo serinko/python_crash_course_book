@@ -136,5 +136,5 @@ See an example in *random_walk.py*.
 
 - **choice()** method is called from the random module:
 ```python
-from random import choice as ch
+from random import choice
 ```
