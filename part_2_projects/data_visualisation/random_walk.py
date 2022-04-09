@@ -34,12 +34,13 @@ class RandomWalk:
             # Calculate the new position
             x = self.x_values[-1] + x_step
             y = self.y_values[-1] + y_step
+            # [-1] = indexing the last value in the list
 
             self.x_values.append(x)
             self.y_values.append(y)
-#
+            #
 #             print(f"[{x}, {y}]")
 #
 #
-# walk = RandomWalk(666)
+# walk = RandomWalk(10)
 # walk.fill_walk()
