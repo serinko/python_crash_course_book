@@ -98,3 +98,13 @@ y_values = [x**2 for x in x_values] # a list comprehension generates the y_value
 |---------------|---------------------|
 | ax.scatter(*x_values, y_values, c='color',s=10*) | change the color of graph |
 | *c='red';c=(0,0.8,0)* | name or RGB for color |
+
+## Using a Colormap
+- A series of colors - gradient that moves from a starting point to an ending color.
+- Emphasizes a patter in the visualisation
+
+| **syntax**					 	 | **action**	 |
+|---------------|--|
+| ax.scatter(*x_values, y_values, c=y_values,cmap=plt.cm.Blues,s=10*) | pass list Y_values and asign a colormap |
+
+- Pyplot available colormaps are at *https://matplotlib.org/*; go to ***Examples***, down to ***Color*** and ***Colormap reference***.
