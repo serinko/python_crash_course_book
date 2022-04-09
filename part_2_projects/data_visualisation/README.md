@@ -27,6 +27,7 @@ import matplotlib.pyplot as plt
 | ax.set_xlabel("title", fontsize) | set caption of x axel |
 | ax.set_ylabel("title", fontsize) | set caption of y axel |
 | ax.tick_params(axis='both', labelsize) | style 'both' tick marks |
+| plt.savefig('squares_plot.png',bbox_inches='tight') | save plot, trims white space |
 
 ## Built-in Styles
 ax.plot(*plot, linewidth*) is a clasic plot with a line, scatter() is way to create plots, using dots.
@@ -99,7 +100,7 @@ y_values = [x**2 for x in x_values] # a list comprehension generates the y_value
 | ax.scatter(*x_values, y_values, c='color',s=10*) | change the color of graph |
 | *c='red';c=(0,0.8,0)* | name or RGB for color |
 
-## Using a Colormap
+### Using a Colormap
 - A series of colors - gradient that moves from a starting point to an ending color.
 - Emphasizes a patter in the visualisation
 
@@ -108,3 +109,10 @@ y_values = [x**2 for x in x_values] # a list comprehension generates the y_value
 | ax.scatter(*x_values, y_values, c=y_values,cmap=plt.cm.Blues,s=10*) | pass list Y_values and asign a colormap |
 
 - Pyplot available colormaps are at *https://matplotlib.org/*; go to ***Examples***, down to ***Color*** and ***Colormap reference***.
+
+## Saving Plots automatically
+
+- plt.show() runs our visualisation
+- plt.savefig('file_name.png',bbox_inches='tight')
+  - save plot into the given file_name
+  - bbox_inches='tight' - trims white space; this argument can be omitted.
