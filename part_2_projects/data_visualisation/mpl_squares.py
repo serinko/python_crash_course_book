@@ -5,7 +5,8 @@ y_values = [x ** 2 for x in x_values]
 
 plt.style.use('classic')
 fig, ax = plt.subplots()
-ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, s=100)
+ax.scatter(x_values, y_values, c=y_values,
+           cmap=plt.cm.Blues, s=100)
 
 # set chart title and label axes
 ax.set_title("Square Numbers", fontsize=24)
