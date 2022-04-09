@@ -116,3 +116,18 @@ y_values = [x**2 for x in x_values] # a list comprehension generates the y_value
 - plt.savefig('file_name.png',bbox_inches='tight')
   - save plot into the given file_name
   - bbox_inches='tight' - trims white space; this argument can be omitted.
+
+# Random Walks
+
+A random walk is a path that as no clear direction - is determined by a series of random decisions, each of which is left entirely to chance.
+Random walks have practical applications in nature, physics, bilogy, chemistry and economics.
+
+## Creating Random Walk Class
+
+- **Needs three attributes:**
+  - A variable to store the number of points in the walk
+  - Two lists to store x- and y- coordinate values of each point in the walk
+
+- **Two methods:**
+  -  __init__() method
+  - fill_walk() - calculate the points
