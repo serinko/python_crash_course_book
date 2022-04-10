@@ -28,6 +28,7 @@ import matplotlib.pyplot as plt
 | ax.set_ylabel("title", fontsize) | set caption of y axel |
 | ax.tick_params(axis='both', labelsize) | style 'both' tick marks |
 | plt.savefig('squares_plot.png',bbox_inches='tight') | save plot, trims white space |
+| feg, ax = plt.subplots(figsize=*(15,9)*,dpi=*?*) | tuple parameter to fit the screen |
 
 ## Built-in Styles
 ax.plot(*plot, linewidth*) is a clasic plot with a line, scatter() is way to create plots, using dots.
@@ -160,13 +161,13 @@ plt.show()
 - After the main plot line of code (ax. scatter()) add:
 
 ```python
-# Emphasize the starting point
+# Emphasize the starting point - blue and larger size
 ax.scatter(
     0, 0, c='blue',
     edgecolors='none',
     s=100
 )
-# Emphasize the ending point
+# Emphasize the ending point - red and larger size
 ax.scatter(
     rw.x_values[-1],
     rw.y_values[-1],
@@ -174,4 +175,11 @@ ax.scatter(
     edgecolor='none',
     s=100
 )
+```
+
+## Remove the Axes
+To remove x and y axes, run:
+```python
+ax.get_xaxis().set_visible(False)
+ax.get_yaxis().set_visible(False)
 ```

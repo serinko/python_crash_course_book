@@ -5,15 +5,15 @@ from random_walk import RandomWalk
 # Keep making new walks, as the program is active.
 while True:
     # make a random walk
-    rw = RandomWalk()
+    rw = RandomWalk(5000)
     rw.fill_walk()
-    plt.style.use('classic')
+    plt.style.use('dark_background')
     fig, ax = plt.subplots()
     point_numbers = range(rw.num_points)
-    ax.scatter(
+    ax.plot(
         rw.x_values, rw.y_values,
-        c=point_numbers, cmap=plt.cm.Greens,
-        edgecolors='none', s=30
+        c='green',
+        linewidth=1
     )
     # Emphasize the first and the last points
     ax.scatter(
@@ -28,6 +28,10 @@ while True:
         edgecolor='none',
         s=100
     )
+
+    # Remove the Axes
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
 
     plt.show()
 
