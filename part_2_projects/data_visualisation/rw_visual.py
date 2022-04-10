@@ -10,10 +10,11 @@ while True:
     plt.style.use('dark_background')
     fig, ax = plt.subplots()
     point_numbers = range(rw.num_points)
-    ax.plot(
+    ax.scatter(
         rw.x_values, rw.y_values,
-        c='green',
-        linewidth=1
+        c=point_numbers,
+        cmap=plt.cm.Greens,
+        s=50
     )
     # Emphasize the first and the last points
     ax.scatter(
