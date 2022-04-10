@@ -137,3 +137,5 @@ Random walks have practical applications in nature, physics, bilogy, chemistry a
 from random import choice
 ```
 See an example in *random_walk.py*.
+
+## Plotting the Random Walk
