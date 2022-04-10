@@ -155,3 +155,23 @@ fig, ax = plt.subplots()
 ax.scatter(rw.x_values, rw.y_values, s=15)
 plt.show()
 ```
+### Emphasize the Starting and Ending Points
+
+- After the main plot line of code (ax. scatter()) add:
+
+```python
+# Emphasize the starting point
+ax.scatter(
+    0, 0, c='blue',
+    edgecolors='none',
+    s=100
+)
+# Emphasize the ending point
+ax.scatter(
+    rw.x_values[-1],
+    rw.y_values[-1],
+    c='red',
+    edgecolor='none',
+    s=100
+)
+```
