@@ -13,8 +13,22 @@ while True:
     ax.scatter(
         rw.x_values, rw.y_values,
         c=point_numbers, cmap=plt.cm.Greens,
-        edgecolors='none', s=15
+        edgecolors='none', s=30
     )
+    # Emphasize the first and the last points
+    ax.scatter(
+        0, 0, c='blue',
+        edgecolors='none',
+        s=100
+    )
+    ax.scatter(
+        rw.x_values[-1],
+        rw.y_values[-1],
+        c='red',
+        edgecolor='none',
+        s=100
+    )
+
     plt.show()
 
     prompt = 'Make another walk? (y/n): '
