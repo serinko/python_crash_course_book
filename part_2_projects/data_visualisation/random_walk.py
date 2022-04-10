@@ -38,9 +38,3 @@ class RandomWalk:
 
             self.x_values.append(x)
             self.y_values.append(y)
-            #
-#             print(f"[{x}, {y}]")
-#
-#
-# walk = RandomWalk(10)
-# walk.fill_walk()
