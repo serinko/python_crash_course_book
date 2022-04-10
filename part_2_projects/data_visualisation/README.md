@@ -107,7 +107,7 @@ y_values = [x**2 for x in x_values] # a list comprehension generates the y_value
 | **syntax**					 	 | **action**	 |
 |---------------|--|
 | ax.scatter(*x_values, y_values, c=y_values,cmap=plt.cm.Blues,s=10*) | pass list Y_values and asign a colormap |
-
+| ...(..edgecolors='none', s=...) | take off the edge color from the dots |
 - Pyplot available colormaps are at *https://matplotlib.org/*; go to ***Examples***, down to ***Color*** and ***Colormap reference***.
 
 ## Saving Plots automatically
