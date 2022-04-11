@@ -18,11 +18,16 @@ roll_num = range(50000)
 results = [(die_1.roll() + die_2.roll() + die_3.roll()) for i in roll_num]
 
 # Analyze the results.
-frequencies = []
+# frequencies = []
 max_result = die_1.num_sides + die_2.num_sides + die_3.num_sides
-for value in range(3, max_result + 1):
-    frequency = results.count(value)
-    frequencies.append(frequency)
+# for value in range(3, max_result + 1):
+#     frequency = results.count(value)
+#     frequencies.append(frequency)
+
+frequencies = [
+    results.count(value) \
+    for value in range(3, max_result + 1)
+]
 
 # print(frequencies)
 #
