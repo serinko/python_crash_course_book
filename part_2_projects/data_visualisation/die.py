@@ -12,12 +12,12 @@ class Die:
     def roll(self):
         """Return a rendom value between 1 and number of sides."""
         return randrange(1, self.num_sides + 1)
-
-    def print(self):
-        for i in range(10):
-            i = self.roll()
-            print(i)
-
-
-die = Die()
-die.print()
+#
+#     def print(self):
+#         for i in range(10):
+#             i = self.roll()
+#             print(i)
+#
+#
+# die = Die()
+# die.print()
