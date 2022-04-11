@@ -217,7 +217,6 @@ my_layout = Layout(
 )
 # Configuration of axis stored as dictionay
 # data and lay out objects
-# accepts name of the file where to store the graph
 
 
 offline.plot(
@@ -227,4 +226,6 @@ offline.plot(
     },
     filename='d6.html'
 )
+# plot() - generate the plot 
+# accepts name of the file where to store the graph
 ```
