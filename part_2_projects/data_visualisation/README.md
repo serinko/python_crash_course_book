@@ -193,3 +193,10 @@ ax.get_yaxis().set_visible(False)
 
 `$ python3 -m pip install --user plotly`
 
+# Making a Histogram
+
+```python
+from plotly.graph_objs import Bar, Layout
+from plotly import offline
+```
+
