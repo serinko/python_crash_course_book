@@ -9,10 +9,13 @@ die_2 = Die()
 die_3 = Die()
 
 # Make some rolls and store results in a list.
-results = []
-for roll_num in range(50_000):
-    result = die_1.roll() + die_2.roll() + die_3.roll()
-    results.append(result)
+# results = []
+# for roll_num in range(50_000):
+#     result = die_1.roll() + die_2.roll() + die_3.roll()
+#     results.append(result)
+
+roll_num = range(50000)
+results = [(die_1.roll() + die_2.roll() + die_3.roll()) for i in roll_num]
 
 # Analyze the results.
 frequencies = []
