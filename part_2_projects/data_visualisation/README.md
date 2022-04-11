@@ -199,4 +199,32 @@ ax.get_yaxis().set_visible(False)
 from plotly.graph_objs import Bar, Layout
 from plotly import offline
 ```
+**Visualisation of die.py in die_visual.py**
+```python
+x_values = list(range(1, die.num_sides + 1))
+# Plotly does not accept range - create a list
+data = [Bar(x=x_values, y=frequencies)]
+# Plotly class Bar represent data set - formatted as a bar chart
+# need list of x-values and y-values
+# Wrapped in [] bcs data set can have multiple elements
 
+x_axis_config = {'title': 'Result'}
+y_axis_config = {'title': 'Frequecy of Result'}
+my_layout = Layout(
+    title='Results of rolling one D6 1000 times',
+    xaxis=x_axis_config,
+    yaxis=y_axis_config
+)
+# Configuration of axis stored as dictionay
+# data and lay out objects
+# accepts name of the file where to store the graph
+
+
+offline.plot(
+    {
+        'data': data,
+        'layout': my_layout,
+    },
+    filename='d6.html'
+)
+```
