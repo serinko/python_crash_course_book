@@ -229,3 +229,13 @@ offline.plot(
 # plot() - generate the plot 
 # accepts name of the file where to store the graph
 ```
+
+| **syntax**					 	 | **action**	         |
+| --------------- | -------------------- |
+| data = [Bar(x=x_values, y=frequencies)] | Bar representing dataset |
+| Layout() | config xaxis, yaxis, title as dict |
+|xaxis/yaxis = {'title':*'title'*, 'dtick':*'#'*} | spacing between tick marks on axis |
+| offline.plot() | plot graph as html in the browser |
+| {'data':*'dataset stored'*, 'layout': *'layout stored in Layout()'* | plot() renders all the stored variables |
+| filename=*'file_name.html'* | plot() takes in the filename as well |
+
