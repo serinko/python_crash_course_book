@@ -183,3 +183,13 @@ To remove x and y axes, run:
 ax.get_xaxis().set_visible(False)
 ax.get_yaxis().set_visible(False)
 ```
+
+# Plotly
+
+[*https://plot.ly/python*](https://plot.ly/python)
+
+`$ python -m pip install --user plotly` or
+
+
+`$ python3 -m pip install --user plotly`
+
