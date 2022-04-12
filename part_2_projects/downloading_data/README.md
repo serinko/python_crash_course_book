@@ -27,3 +27,5 @@ resources: *[nostarch.com/pythoncrashcourse2e/](https://nostarch.com/pythoncrash
 | reader = csv.reader(*file.csv*) | pass the file to the object |
 | next(reader) | pass the next line (in our case the header) |
 
+### Parsing the CSV File Headers & Their Positions
+
