@@ -1,12 +1,10 @@
-from plotly.graph_objs import Bar, Layout
-from plotly import offline
+import matplotlib.pyplot as plt
 
-from data_visualisation/die import Die
+from die import Die
 
 # Create D6 and D10
 die_1 = Die()
 die_2 = Die()
-die_3 = Die()
 
 # Make some rolls and store results in a list.
 # results = []
@@ -14,20 +12,23 @@ die_3 = Die()
 #     result = die_1.roll() + die_2.roll() + die_3.roll()
 #     results.append(result)
 
-roll_num = range(50000)
-results = [(die_1.roll() + die_2.roll() + die_3.roll()) for i in roll_num]
+roll_num = range(50_000)
+results = [ \
+    (die_1.roll() + die_2.roll()) \
+    for i in roll_num \
+    ]
 
 # Analyze the results.
 # frequencies = []
-max_result = die_1.num_sides + die_2.num_sides + die_3.num_sides
+max_result = die_1.num_sides + die_2.num_sides
 # for value in range(3, max_result + 1):
 #     frequency = results.count(value)
 #     frequencies.append(frequency)
 
-frequencies = [
+frequencies = [ \
     results.count(value) \
-    for value in range(3, max_result + 1)
-]
+    for value in range(2, max_result + 1) \
+    ]
 
 # print(frequencies)
 #
@@ -35,20 +36,22 @@ frequencies = [
 # print(len(results))
 
 # Visualise the results
-x_values = list(range(3, max_result + 1))
-data = [Bar(x=x_values, y=frequencies)]
+x_values = list(range(2, max_result + 1))
+y_values = frequencies
 
-x_axis_config = {'title': 'Result', 'dtick': 1}
-y_axis_config = {'title': 'Frequecy of Result'}
-my_layout = Layout(
-    title='Results of rolling three D6 50000 times',
-    xaxis=x_axis_config,
-    yaxis=y_axis_config
-)
-offline.plot(
-    {
-        'data': data,
-        'layout': my_layout,
-    },
-    filename='d6_d6_d6.html'
-)
+plt.style.use('dark_background')
+fig, ax = plt.subplots()
+ax.plot(x_values, y_values, c='purple', linewidth=20)
+
+# set chart title and label axes
+ax.set_title("Two D6 - 50k times thrown", c='green', fontsize=35)
+ax.set_xlabel("Sumary", c='green', fontsize=24)
+ax.set_ylabel("Frequency", c='green', fontsize=24)
+
+# set size of thick labels
+ax.tick_params(axis='both', which='major', labelsize=14)
+
+# # set the range for each axis
+# ax.axis([2, 12, 0, 50])
+
+plt.show()
