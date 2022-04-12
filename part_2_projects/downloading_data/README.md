@@ -16,3 +16,7 @@
 resources: *[nostarch.com/pythoncrashcourse2e/](https://nostarch.com/pythoncrashcourse2e/)*
 
 - make a folder called *data* in the same directory of this chapter
+
+### Parsing the CSV File Headers
+
+- Python's csv parses the lines in CSV file 
