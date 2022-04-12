@@ -19,4 +19,11 @@ resources: *[nostarch.com/pythoncrashcourse2e/](https://nostarch.com/pythoncrash
 
 ### Parsing the CSV File Headers
 
-- Python's csv parses the lines in CSV file 
+- Python's csv parses the lines in CSV file
+- refference *sitka_highs.py* 
+
+| **syntax** | **action** |
+| --- | --- |
+| reader = csv.reader(*file.csv*) | pass the file to the object |
+| next(reader) | pass the next line (in our case the header) |
+
