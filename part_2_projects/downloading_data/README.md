@@ -29,3 +29,9 @@ resources: *[nostarch.com/pythoncrashcourse2e/](https://nostarch.com/pythoncrash
 
 ### Parsing the CSV File Headers & Their Positions
 
+```python
+for index, column_header in enumerate(header_row):
+    print(index, column_header)
+
+# returns both index and value of each in the list (loop)
+```
