@@ -13,4 +13,11 @@ with open(filename) as f:
     #     print(index, column_header)
     # # Outcome is list of index and value of items in the header
 
-    
+    # Get High temperatures from this file
+    highs = []
+    for row in reader:
+        high = int(row[5])
+        highs.append(high)
+    # The loop started on line 2 as we moved before to the next() once
+
+print(highs)
