@@ -5,8 +5,12 @@ with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
     # This passes the next line (1st = header)
+
     # print(header_row)
     # # Outcome is comma-separated line
 
-    for index, column_header in enumerate(header_row):
-        print(index, column_header)
+    # for index, column_header in enumerate(header_row):
+    #     print(index, column_header)
+    # # Outcome is list of index and value of items in the header
+
+    
