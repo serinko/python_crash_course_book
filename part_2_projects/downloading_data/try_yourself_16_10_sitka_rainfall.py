@@ -20,7 +20,12 @@ with open(filename) as f:
     dates, rainfall = [], []
     for row in reader:
         current_date = datetime.strptime(row[2], '%Y-%m-%d')
-        rain = int(row[3])
+        # try:
+        rain = float(row[3])
+        # except ValueError:
+        #     rain = 0
+        #     rainfall.append(rain)
+        # else:
         dates.append(current_date)
         rainfall.append(rain)
     # The loop started on line 2 as we moved before to the next() once
@@ -28,7 +33,7 @@ with open(filename) as f:
 # Plot the high and low temperatures.
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
-ax.plot(dates, rain, c='purple', alpha=0.8)
+ax.plot(dates, rainfall, c='purple', alpha=0.8)
 # ax.plot(dates, lows, c='blue', alpha=0.5)
 # ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
