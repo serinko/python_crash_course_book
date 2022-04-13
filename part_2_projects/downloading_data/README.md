@@ -151,3 +151,23 @@ ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 ## Error Checking
 
+Sometimes the field is empty and this would return a ValueError.
+We can use testing to print us missing value and continue examining the data:
+
+The code:
+```python
+# --snip--
+dates, highs, lows = [], [], []
+    for row in reader:
+        current_date = datetime.strptime(row[2], '%Y-%m-%d')
+        try:                
+            high = int(row[4])
+            low = int(row[5])
+        except ValueError:
+            print(f"Missing data for {current_date}")
+        else:  
+            dates.append(current_date)
+            highs.append(high)
+            lows.append(low)
+# --snip--
+```
