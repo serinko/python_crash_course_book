@@ -152,7 +152,7 @@ ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 ## Error Checking
 
 Sometimes the field is empty and this would return a ValueError.
-We can use testing to print us missing value and continue examining the data:
+We can use try-except-else block to print the missing value and continue examining the data:
 
 The code:
 ```python
@@ -171,3 +171,6 @@ dates, highs, lows = [], [], []
             lows.append(low)
 # --snip--
 ```
+Other time *continu* or *remove()* or *del* can be used.
+
+- Find an approach that works and the result is an accurate visualisation
