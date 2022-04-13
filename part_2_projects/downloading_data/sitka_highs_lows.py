@@ -16,8 +16,6 @@ with open(filename) as f:
     #     print(index, column_header)
     # # Outcome is list of index and value of items in the header
 
-    # Get High temperatures from this file
-
     # Get dates and high and low temperatures from this file.
     dates, highs, lows = [], [], []
     for row in reader:
@@ -28,8 +26,6 @@ with open(filename) as f:
         highs.append(high)
         lows.append(low)
     # The loop started on line 2 as we moved before to the next() once
-
-print(highs)
 
 # Plot the high and low temperatures.
 plt.style.use('seaborn')

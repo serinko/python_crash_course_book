@@ -149,3 +149,5 @@ ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 - aplha=0.5; the lines appear lighter
 - *fill_betwwen(x-values, y-values_1, y-values_2, facecolor, aplha)*
 
+## Error Checking
+
