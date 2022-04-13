@@ -104,3 +104,27 @@ from datetime import datetime
 - Covert the data information using loop like with the highs and datetime module
 - Pass dates and highs (lists) values to `plot()`
 - Call `fig.autofmt_xdate()` - draws the date labels diagonally to prevent them from overlapping
+
+### Plotting Lows
+We will add to our program low temp's
+- Same logic, just adding dates to both plots - highs and lows:
+- 
+```python
+## --snip--
+    dates, highs, lows = [], [], []
+    for row in reader:
+        current_date = datetime.strptime(row[2], '%Y-%m-%d')
+        high = int(row[5])
+        low = int(row[6])
+        dates.append(current_date)
+        highs.append(high)
+        lows.append(low)
+    # The loop started on line 2 as we moved before to the next() once
+
+# Plot the high and low temperatures.
+plt.style.use('seaborn')
+fig, ax = plt.subplots()
+ax.plot(dates, highs, c='red')
+ax.plot(dates,lows, c='blue')
+## --snip--
+```
