@@ -173,4 +173,9 @@ dates, highs, lows = [], [], []
 ```
 Other time *continu* or *remove()* or *del* can be used.
 
-- Find an approach that works and the result is an accurate visualisation
+- Find an approach that works and the result is an accurate visualisation.
+
+## Donwloading Your Own (weather) Data
+
+**Steps to download the data (weather):**
+- *Check the book on the page 245/346 for a detailed guide
