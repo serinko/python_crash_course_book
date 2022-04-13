@@ -20,12 +20,9 @@ with open(filename) as f:
     dates, rainfall = [], []
     for row in reader:
         current_date = datetime.strptime(row[2], '%Y-%m-%d')
-        # try:
+    
         rain = float(row[3])
-        # except ValueError:
-        #     rain = 0
-        #     rainfall.append(rain)
-        # else:
+
         dates.append(current_date)
         rainfall.append(rain)
     # The loop started on line 2 as we moved before to the next() once
