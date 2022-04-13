@@ -20,7 +20,7 @@ with open(filename) as f:
     dates, rainfall = [], []
     for row in reader:
         current_date = datetime.strptime(row[2], '%Y-%m-%d')
-    
+
         rain = float(row[3])
 
         dates.append(current_date)
@@ -32,7 +32,7 @@ plt.style.use('seaborn')
 fig, ax = plt.subplots()
 ax.plot(dates, rainfall, c='purple', alpha=0.8)
 # ax.plot(dates, lows, c='blue', alpha=0.5)
-# ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
+ax.fill_between(dates, rainfall, facecolor='blue', alpha=0.6)
 
 # Format plot.
 ax.set_title("Daily rainfall - 2018, Sitka", fontsize=24)
