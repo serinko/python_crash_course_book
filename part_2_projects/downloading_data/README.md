@@ -178,4 +178,4 @@ Other time *continu* or *remove()* or *del* can be used.
 ## Donwloading Your Own (weather) Data
 
 **Steps to download the data (weather):**
-- *Check the book on the page 245/346 for a detailed guide
+- *Check the book on the page 345/346 for a detailed guide*
