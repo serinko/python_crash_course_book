@@ -171,7 +171,10 @@ dates, highs, lows = [], [], []
             lows.append(low)
 # --snip--
 ```
-Other time *continu* or *remove()* or *del* can be used.
+
+- Make sure the fields were empty as ValueError can appear when numbers aren't base-10
+- then the solution is not an exception but using ***float()***
+- Other time *continue* or *remove()* or *del* can be used.
 
 - Find an approach that works and the result is an accurate visualisation.
 
