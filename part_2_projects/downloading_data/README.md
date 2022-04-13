@@ -105,10 +105,10 @@ from datetime import datetime
 - Pass dates and highs (lists) values to `plot()`
 - Call `fig.autofmt_xdate()` - draws the date labels diagonally to prevent them from overlapping
 
-### Plotting Lows
+## Plotting Lows
 We will add to our program low temp's
 - Same logic, just adding dates to both plots - highs and lows:
-- 
+
 ```python
 ## --snip--
     dates, highs, lows = [], [], []
@@ -128,3 +128,8 @@ ax.plot(dates, highs, c='red')
 ax.plot(dates,lows, c='blue')
 ## --snip--
 ```
+
+## Shading an Area in the Chart
+
+`fill_between()`
+
