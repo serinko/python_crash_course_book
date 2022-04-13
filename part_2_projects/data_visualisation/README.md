@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 | **syntax**					 	             | **action** |
 |-------------------------------|-----------|
 | import matplotlib.pyplot			   | contains functions for charts & plots |
-| fig, ag = plt.subplots()       | generate plot(s) in one figure |
+| fig, ax = plt.subplots()       | generate plot(s) in one figure |
 | fig (*variable*)              | entire figure/ collection of plots |
 | ax (*variable*)               | single plot in a figure |
 | plot(x_value, y_value)        | plot the data |

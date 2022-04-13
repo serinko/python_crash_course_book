@@ -35,7 +35,7 @@ fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red')
 
 # Format plot.
-ax.set_title("Daily high temperatures, July 2018", fontsize=24)
+ax.set_title("Daily high temperatures - 2018", fontsize=24)
 ax.set_xlabel("", fontsize=16)
 fig.autofmt_xdate()
 # draws the date labels diagonally to prevent them from overlapping
