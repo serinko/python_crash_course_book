@@ -98,3 +98,9 @@ from datetime import datetime
 ```
 
 ### Plotting Dates
+*See sitka_highs.py*
+
+- Create two empty lists: dates, highs
+- Covert the data information using loop like with the highs and datetime module
+- Pass dates and highs (lists) values to `plot()`
+- Call `fig.autofmt_xdate()` - draws the date labels diagonally to prevent them from overlapping

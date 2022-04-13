@@ -38,6 +38,7 @@ ax.plot(*plot, linewidth*) is a clasic plot with a line, scatter() is way to cre
 | ax.scatter(*x,y*) | plot a single plot with given values |
 | ax.scatter(*x,y, s=20*) | size of the dots used draw the graph | 
 | ax.tick_params(*axis='both', ehich='major', labelsize=*) | style 'both' tick marks      |
+| fig.autofmt_xdate() | draw the date labels diagonally - no overlapping |
 
 Run Python and check for styles:
 ```
