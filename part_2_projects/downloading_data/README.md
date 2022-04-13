@@ -131,5 +131,21 @@ ax.plot(dates,lows, c='blue')
 
 ## Shading an Area in the Chart
 
-`fill_between()`
+Using:
+
+- `fill_between()` method 
+- new argument *alpha=* - controls color transparency.
+  - 0 = completely transparent, 1 (default) completely opaque
+
+
+```python
+## --snip--
+ax.plot(dates, highs, c='red', alpha=0.5)
+ax.plot(dates, lows, c='blue', alpha=0.5)
+ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
+## --snip--
+```
+
+- aplha=0.5; the lines appear lighter
+- *fill_betwwen(x-values, y-values_1, y-values_2, facecolor, aplha)*
 
