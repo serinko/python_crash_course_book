@@ -1,5 +1,7 @@
 import csv
 
+import matplotlib.pyplot as plt
+
 filename = 'data/the_csv_file_format/data/sitka_weather_2018_simple.csv'
 with open(filename) as f:
     reader = csv.reader(f)
@@ -21,3 +23,16 @@ with open(filename) as f:
     # The loop started on line 2 as we moved before to the next() once
 
 print(highs)
+
+# Plot the high temperatures.
+plt.style.use('seaborn')
+fig, ax = plt.subplots()
+ax.plot(highs, c='red')
+
+# Format plot.
+ax.set_title("Daily high temperatures, July 2018", fontsize=24)
+ax.set_xlabel("", fontsize=16)
+ax.set_ylabel("Temperature (F)", fontsize=16)
+ax.tick_params(axis='both', which='major', labelsize=16)
+
+plt.show()

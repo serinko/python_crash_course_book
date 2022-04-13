@@ -49,3 +49,52 @@ highs = []
 ```
 - Iw we used next() the loop will start bellow that
 
+## Ploting the Data In a Temperature Chart
+
+Same like in the data_visualisation chapter:
+```python
+import matplotlib.pyplot as plt
+
+# Plot the high temperatures.
+plt.style.use('seaborn')
+fig, ax = plt.subplots()
+ax.plot(highs, c='red')
+
+# Format plot.
+ax.set_title("Daily high temperatures, July 2018", fontsize=24)
+ax.set_xlabel("", fontsize=16)
+ax.set_ylabel("Temperature (F)", fontsize=16)
+ax.tick_params(axis='both', which='major', labelsize=16)
+
+plt.show()
+```
+## The datetime Module
+- method `strptime()`
+```python
+from datetime import datetime
+```
+
+| **Argument** | **Meaning** |
+| --- | --- |
+| %A | Weekday name, such as Monday |
+| %B | Month name, such as January |
+| %m | Month, as a numner (01 to 12) |
+| %d | Day of the month as a number (01-31) |
+| %Y | Four digit year, such as 2022 |
+| %y | Two difgit year, such as 22 |
+| %H | Hour, in 24-hour format (00 to 23) |
+| %I | Hour, in 12-hour format (01 to 12) |
+| %p | Am or PM |
+| %M | Minutes (00 to 59) |
+| %S | Seconds (00 to 61) |
+
+**Example:**
+
+```
+>>> from datetime import datetime
+>>> first_date = datetime.strptime('2018-07-01','%Y-%m-%d')
+>>> print(first_date)
+2018-07-01 00:00:00
+```
+
+### Plotting Dates
