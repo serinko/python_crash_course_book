@@ -1,4 +1,5 @@
 import csv
+from datetime import datetime
 
 import matplotlib.pyplot as plt
 
@@ -16,9 +17,13 @@ with open(filename) as f:
     # # Outcome is list of index and value of items in the header
 
     # Get High temperatures from this file
-    highs = []
+
+    # Get dates and high temperatures from this file.
+    dates, highs = [], []
     for row in reader:
+        current_date = datetime.strptime(row[2], '%Y-%m-%d')
         high = int(row[5])
+        dates.append(current_date)
         highs.append(high)
     # The loop started on line 2 as we moved before to the next() once
 

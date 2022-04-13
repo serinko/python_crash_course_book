@@ -96,3 +96,5 @@ from datetime import datetime
 >>> print(first_date)
 2018-07-01 00:00:00
 ```
+
+### Plotting Dates
