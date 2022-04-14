@@ -182,3 +182,25 @@ dates, highs, lows = [], [], []
 
 **Steps to download the data (weather):**
 - *Check the book on the page 345/346 for a detailed guide*
+
+## Automatic Indexes
+
+- Instead of hard-coded rwo index, we can make a call for an index representing the value and save it in a variable.
+- code: `index = mylist.index(element)`
+- In the program *try_yourself_16_4_automatic_indexes.py* it looked like this:
+
+```python
+# --snip--
+s_dates, s_highs, s_lows = [], [], []
+for row in reader:
+    idx_date = header_row.index('DATE')
+    idx_high = header_row.index('TMAX')
+    idx_low = header_row.index('TMIN')
+    current_date = datetime.strptime(row[idx_date], '%Y-%m-%d')
+    high = int(row[idx_high])
+    low = int(row[idx_low])
+    s_dates.append(current_date)
+    s_highs.append(high)
+    s_lows.append(low)
+# --snip--
+```

@@ -19,9 +19,12 @@ with open(filename) as f:
     # Get dates and high and low temperatures from this file.
     s_dates, s_highs, s_lows = [], [], []
     for row in reader:
-        current_date = datetime.strptime(row[2], '%Y-%m-%d')
-        high = int(row[5])
-        low = int(row[6])
+        idx_date = header_row.index('DATE')
+        idx_high = header_row.index('TMAX')
+        idx_low = header_row.index('TMIN')
+        current_date = datetime.strptime(row[idx_date], '%Y-%m-%d')
+        high = int(row[idx_high])
+        low = int(row[idx_low])
         s_dates.append(current_date)
         s_highs.append(high)
         s_lows.append(low)
@@ -33,15 +36,18 @@ with open(filename) as f:
 
     dv_dates, dv_highs, dv_lows = [], [], []
     for row in reader:
-        current_date = datetime.strptime(row[2], '%Y-%m-%d')
+        idx_date = header_row.index('DATE')
+        idx_high = header_row.index('TMAX')
+        idx_low = header_row.index('TMIN')
+        current_date = datetime.strptime(row[idx_date], '%Y-%m-%d')
         try:
-            high = int(row[4])
-            low = int(row[5])
+            high = int(row[idx_high])
+            low = int(row[idx_low])
         except ValueError:
             print(f"Missing data for D.V. {current_date}")
             dv_dates.append(current_date)
-            dv_highs.append(0)
-            dv_lows.append(0)
+            dv_highs.append(dv_highs[-1])
+            dv_lows.append(dv_lows[-1])
 
         else:
             dv_dates.append(current_date)
