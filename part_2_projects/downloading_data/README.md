@@ -240,3 +240,24 @@ with open(readable_file, 'w') as f:
   
 *The file contains much more nesting than we use when writing code, still Python can handle that complexity.*
 
+### List of All EarthQuakes
+
+in the JSON file **'count'**: 158
+
+We can make sure to capture all the features:
+```python
+# --snip--
+all_eq_dicts = all_eq_data['features']
+print(len(all_eq_dicts))
+```
+## Extracting Magnitudes
+ 
+- If the value we looking for is in a nested distionary, we can use a double key:
+
+```python
+# --snip--
+mags = []
+for eq_dict in all_eq_dicts:
+    mag = eq_dict['properties']['mag']
+    mags.append(mag)
+```
