@@ -19,6 +19,8 @@ with open(filename) as f:
     # Get dates and high and low temperatures from this file.
     s_dates, s_highs, s_lows = [], [], []
     for row in reader:
+        idx_st = header_row.index('NAME')
+        name_station_1 = row[idx_st]
         idx_date = header_row.index('DATE')
         idx_high = header_row.index('TMAX')
         idx_low = header_row.index('TMIN')
@@ -36,6 +38,8 @@ with open(filename) as f:
 
     dv_dates, dv_highs, dv_lows = [], [], []
     for row in reader:
+        idx_st = header_row.index('NAME')
+        name_station_2 = row[idx_st]
         idx_date = header_row.index('DATE')
         idx_high = header_row.index('TMAX')
         idx_low = header_row.index('TMIN')
@@ -68,7 +72,8 @@ ax.fill_between(dv_dates, dv_highs, dv_lows, facecolor="#B3BFFF",
 
 # Format plot.
 ax.set_title(
-    "Daily high and low temperatures in Sitka and Death Valley - 2018",
+    f"Daily high and low temperatures in {name_station_1.upper()} and "
+    f"{name_station_2.upper()} - 2018",
     fontsize=24)
 ax.set_xlabel("", fontsize=16)
 fig.autofmt_xdate()
