@@ -10,7 +10,7 @@
   - Plotly
   - (ensure csv and json modules work properly)
 
-## The CSV File Format
+# The CSV File Format
 *comma-separated values*
 
 resources: *[nostarch.com/pythoncrashcourse2e/](https://nostarch.com/pythoncrashcourse2e/)*
@@ -204,3 +204,11 @@ for row in reader:
     s_lows.append(low)
 # --snip--
 ```
+
+# Mapping Global Data Sets: JSON Format
+
+## Downloading Earthquake Data
+Using the excersise json file from the book, the source of earth quake data is:
+*[earthquake.usgs.gov/earthquakes/feed/](https://earthquake.usgs.gov/earthquakes/feed/)*
+
+## Examining JSON Data
