@@ -277,3 +277,28 @@ for eq_dict in all_eq_dicts:
     lons.append(lon)
     lats.append(lat)    
 ```
+
+## Building a World Map
+
+```python
+from plotly.graph_objs import Scattergeo, Layout
+from plotly import offline
+
+# --snip-- 
+
+# Map the earthquakes
+data = [Scattergeo(lon=lons, lat=lats)]
+my_layout = Layout(title='Global Earthquakes')
+
+fig = {'data': data, 'layout': my_layout}
+offline.plot(fig, filename='global_earthquakes.html')
+```
+
+- Scattergeo: a chart type, Layout: a class
+- plotly.offline: offline module to render the map
+- define a list called data - inside create a Scattergeo object with the coordinates
+  - Scattergeo allow us to overlay a scatter plot with the coordinate lists
+- Give it a title
+- Create a dictionary called fig to call for the data and the layout (title)
+- Pass fig to the plot, with a descriptive name of the output
+- 
