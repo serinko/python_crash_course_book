@@ -212,3 +212,31 @@ Using the excersise json file from the book, the source of earth quake data is:
 *[earthquake.usgs.gov/earthquakes/feed/](https://earthquake.usgs.gov/earthquakes/feed/)*
 
 ## Examining JSON Data
+- If the json file seems too hard too read, use Python to format it
+```python
+import json
+
+# Explore the structure of the data
+filename = 'data/mapping_global_data_sets/data/eq_data_1_day_m1.json'
+with open(filename) as f:
+    all_eq_data = json.load(f)
+
+readable_file = 'data/mapping_global_data_sets/data/eq_data_1_day_m1.json'
+with open(readable_file, 'w') as f:
+    json.dump(all_eq_data, f, indent=4)
+# formating the data with a proper data structure
+```
+- **Metadata**: Time and source of the data set
+- geoJSON file is location-based
+- **key "features"**: stores the main information
+- every item in the list corresponds to a single earthquake
+- as much info about each eartquake in a dictionary
+- nested disctionaries in a list
+- **key properties**: a lot of info about each earthquake
+- **key mag**: maginitude of each e.q. - values we are the most interested in
+- **key geometry**: show where e.q. occurred.
+- **key coordinates**: longitude and latitude
+  - longitude and latitude (x.Y) convention used in JSON
+  
+*The file contains much more nesting than we use when writing code, still Python can handle that complexity.*
+
