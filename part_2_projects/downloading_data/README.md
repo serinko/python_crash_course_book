@@ -252,7 +252,7 @@ print(len(all_eq_dicts))
 ```
 ## Extracting Magnitudes
  
-- If the value we looking for is in a nested distionary, we can use a double key:
+- If the value we are looking for is in a nested dictionary, we can use a double key:
 
 ```python
 # --snip--
@@ -260,4 +260,20 @@ mags = []
 for eq_dict in all_eq_dicts:
     mag = eq_dict['properties']['mag']
     mags.append(mag)
+```
+- each in the list we made is stored in the variable mag and stored in the list og mags
+
+## Extracting Data Location
+
+- Location is stored under the key "geometry", inside is "coordinates" key.
+- First two values is longitude and latitude
+
+```python
+# --snip--
+mags, lons, lats = [], [], []
+for eq_dict in all_eq_dicts:
+    lon = eq_dict['geometry']['coordinates'][0]
+    lat = eq_dict['geometry']['coordinates'][1]
+    lons.append(lon)
+    lats.append(lat)    
 ```
