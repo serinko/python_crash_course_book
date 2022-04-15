@@ -324,4 +324,21 @@ data=[{
 
 ### Customizing Maker Colors
 - using plotly colorscale
-- 
+- marker value is another dictionary where we can specify the colors
+- color - tells Plotly what values to use to determine the scale
+- mags determinewher each markes color scale
+- colorscale tells Python to use Viridis - from dark blue to bright yellow, 
+- reversescale - True - to make the bright yellow for the lowest values
+- colorbar - cotrol appeareance of the colorscale shown on the side
+  - title make clear what the scale represents
+
+```python
+'marker': {
+        'size': [5 * mag for mag in mags],
+        'color': mags,
+        'colorscale': 'Viridis',
+        'reversescale': True,
+        'colorbar': {'title': 'Magnitude'}
+    }
+```
+### Other Colorscales
