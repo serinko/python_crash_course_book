@@ -301,4 +301,23 @@ offline.plot(fig, filename='global_earthquakes.html')
 - Give it a title
 - Create a dictionary called fig to call for the data and the layout (title)
 - Pass fig to the plot, with a descriptive name of the output
-- 
+
+### A Different Way of Specifying Chart Data
+change:
+```python
+data = [Scattergeo(lon=lons, lat=lats)]
+```
+to:
+```python
+data=[{
+  'type': 'scattergeo',
+  'lon':lons,
+  'lat':lats,
+  'marker':{
+    'size':[5*mag for mag in mags],
+  }
+}]
+```
+- Plotly offers a variety of customizations which can be done on data series
+- 'marker' key specifies the size of each marker on the map
+- marker settings are in a dictionary as more settings can be done
