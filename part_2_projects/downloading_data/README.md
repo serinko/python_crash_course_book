@@ -321,3 +321,7 @@ data=[{
 - Plotly offers a variety of customizations which can be done on data series
 - 'marker' key specifies the size of each marker on the map
 - marker settings are in a dictionary as more settings can be done
+
+### Customizing Maker Colors
+- using plotly colorscale
+- 
