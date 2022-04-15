@@ -349,3 +349,12 @@ from plotly import colors
 for key in colors.PLOTLY_SCALES.keys():
   print(key)
 ```
+
+### Adding Hover Text
+
+- make a list called hover_texts
+- Adding: title = eq_dict['properties']['title']
+- appending it to the new list and using the title for each place 
+- add text to the data object
+
+Every time the mouse cursor hovers over the marker, Plotly pulls the inormation stored as a value in the given key
