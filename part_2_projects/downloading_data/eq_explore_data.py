@@ -14,6 +14,7 @@ with open(readable_file, 'w') as f:
 # formatting the data with a proper data structure
 
 all_eq_dicts = all_eq_data['features']
+name = all_eq_data['metadata']['title']
 # print(len(all_eq_dicts))
 
 # Pulling the magnitudes
@@ -45,7 +46,7 @@ data = [{
     }
 }]
 
-my_layout = Layout(title='Global Earthquakes')
+my_layout = Layout(title=name)
 
 fig = {'data': data, 'layout': my_layout}
 offline.plot(fig, filename='global_earthquakes.html')
