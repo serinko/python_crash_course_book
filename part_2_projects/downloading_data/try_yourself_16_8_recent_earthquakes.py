@@ -13,40 +13,40 @@ with open(readable_file, 'w') as f:
     json.dump(all_eq_data, f, indent=4)
 # formatting the data with a proper data structure
 #
-# all_eq_dicts = all_eq_data['features']
-# name = all_eq_data['metadata']['title']
+all_eq_dicts = all_eq_data['features']
+name = all_eq_data['metadata']['title']
 # # print(len(all_eq_dicts))
 #
-# # Pulling the magnitudes
-# mags, lons, lats, hover_texts = [], [], [], []
-# for eq_dict in all_eq_dicts:
-#     mag = eq_dict['properties']['mag']
-#     lon = eq_dict['geometry']['coordinates'][0]
-#     lat = eq_dict['geometry']['coordinates'][1]
-#     title = eq_dict['properties']['title']
-#     mags.append(mag)
-#     lons.append(lon)
-#     lats.append(lat)
-#     hover_texts.append(title)
-#
-# # Map the earthquakes
-# # data = [Scattergeo(lon=lons, lat=lats)]
-# # alternative:
-# data = [{
-#     'type': 'scattergeo',
-#     'lon': lons,
-#     'lat': lats,
-#     'text': hover_texts,
-#     'marker': {
-#         'size': [5 * mag for mag in mags],
-#         'color': mags,
-#         'colorscale': 'Viridis',
-#         'reversescale': True,
-#         'colorbar': {'title': 'Magnitude'}
-#     }
-# }]
-#
-# my_layout = Layout(title=name)
-#
-# fig = {'data': data, 'layout': my_layout}
-# offline.plot(fig, filename='global_earthquakes.html')
+# Pulling the magnitudes
+mags, lons, lats, hover_texts = [], [], [], []
+for eq_dict in all_eq_dicts:
+    mag = eq_dict['properties']['mag']
+    lon = eq_dict['geometry']['coordinates'][0]
+    lat = eq_dict['geometry']['coordinates'][1]
+    title = eq_dict['properties']['title']
+    mags.append(mag)
+    lons.append(lon)
+    lats.append(lat)
+    hover_texts.append(title)
+
+# Map the earthquakes
+# data = [Scattergeo(lon=lons, lat=lats)]
+# alternative:
+data = [{
+    'type': 'scattergeo',
+    'lon': lons,
+    'lat': lats,
+    'text': hover_texts,
+    'marker': {
+        'size': [5 * mag for mag in mags],
+        'color': mags,
+        'colorscale': 'Portland',
+        'reversescale': False,
+        'colorbar': {'title': 'Magnitude'}
+    }
+}]
+
+my_layout = Layout(title=name, )
+
+fig = {'data': data, 'layout': my_layout}
+offline.plot(fig, filename='global_earthquakes.html')
