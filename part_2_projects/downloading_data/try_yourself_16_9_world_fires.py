@@ -52,7 +52,7 @@ data = [{
     'marker': {
         'size': 20,
         'color': brigthnes,
-        'colorscale': 'Hot',
+        'colorscale': 'Reds',
         'reversescale': True,
         'colorbar': {'title': 'Brightnes'}
     }
