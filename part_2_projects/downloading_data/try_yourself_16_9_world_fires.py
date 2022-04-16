@@ -1,52 +1,58 @@
-import json
+import csv
+from datetime import datetime
 
 from plotly.graph_objs import Scattergeo, Layout
 from plotly import offline
 
-# Explore the structure of the data
-filename = 'data/mapping_global_data_sets/data/world_fires_7_day.csv.json'
-with open(filename) as f:
-    all_eq_data = json.load(f)
+import matplotlib.pyplot as plt
 
-readable_file = 'data/mapping_global_data_sets/data/world_fires_7_day.csv.json'
-with open(readable_file, 'w') as f:
-    json.dump(all_eq_data, f, indent=4)
-# formatting the data with a proper data structure
-# #
-# all_eq_dicts = all_eq_data['features']
-# name = all_eq_data['metadata']['title']
-# # # print(len(all_eq_dicts))
-# #
-# # Pulling the magnitudes
-# mags, lons, lats, hover_texts = [], [], [], []
-# for eq_dict in all_eq_dicts:
-#     mag = eq_dict['properties']['mag']
-#     lon = eq_dict['geometry']['coordinates'][0]
-#     lat = eq_dict['geometry']['coordinates'][1]
-#     title = eq_dict['properties']['title']
-#     mags.append(mag)
-#     lons.append(lon)
-#     lats.append(lat)
-#     hover_texts.append(title)
-#
-# # Map the earthquakes
-# # data = [Scattergeo(lon=lons, lat=lats)]
-# # alternative:
-# data = [{
-#     'type': 'scattergeo',
-#     'lon': lons,
-#     'lat': lats,
-#     'text': hover_texts,
-#     'marker': {
-#         'size': [5 * mag for mag in mags],
-#         'color': mags,
-#         'colorscale': 'Portland',
-#         'reversescale': False,
-#         'colorbar': {'title': 'Magnitude'}
-#     }
-# }]
-#
-# my_layout = Layout(title=name, )
-#
-# fig = {'data': data, 'layout': my_layout}
-# offline.plot(fig, filename='global_earthquakes.html')
+filename = 'data/mapping_global_data_sets/data/world_fires_7_day.csv'
+with open(filename) as f:
+    reader = csv.reader(f)
+    header_row = next(reader)
+
+    for index, column_header in enumerate(header_row):
+        print(index, column_header)
+
+    #
+
+    brigthnes, lons, lats, hover_dates = [], [], [], []
+    for row in reader:
+        bright_idx = header_row.index('bright_ti4')
+        lon_index = header_row.index('longitude')
+        lat_index = header_row.index('latitude')
+        date_index = header_row.index('acq_date')
+        try:
+            bright = float(row[bright_idx])
+            lon = float(row[lon_index])
+            lat = float(row[lat_index])
+            hover_date = row[5]
+        except ValueError:
+            print(f"Missing data")
+        else:
+            brigthnes.append(bright)
+            lons.append(lon)
+            lats.append(lat)
+            hover_dates.append(hover_date)
+
+# Map the earthquakes
+# data = [Scattergeo(lon=lons, lat=lats)]
+# alternative:
+data = [{
+    'type': 'scattergeo',
+    'lon': lons,
+    'lat': lats,
+    'text': hover_dates,
+    'marker': {
+        'size': [5 * bright for bright in brigthnes],
+        'color': mags,
+        'colorscale': 'Hot',
+        'reversescale': False,
+        'colorbar': {'title': 'Magnitude'}
+    }
+}]
+
+my_layout = Layout(title='World Fires 7 Days')
+
+fig = {'data': data, 'layout': my_layout}
+offline.plot(fig, filename='global_earthquakes.html')
