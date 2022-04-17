@@ -18,4 +18,6 @@ print(f"Status code: {r.status_code}")
 # Store API response
 response_dict = r.json()
 
+# Process results
+print(response_dict.keys())
 ```
