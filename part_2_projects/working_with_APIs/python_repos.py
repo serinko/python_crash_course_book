@@ -8,3 +8,6 @@ headers = {
 }
 r = requests.get(url, headers, headers)
 print(f"Status code: {r.status_code}")
+
+# Store API response
+response_dict = r.json()
