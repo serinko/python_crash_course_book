@@ -82,3 +82,10 @@ print("\nSelected information about each repository")
 for repo_dict in repo_dicts:
     print("\nSelected information about first repository: ")
 ```
+# API Rate Limit on GH
+Check [api.github.com/rate_limit](https://api.github.com/rate_limit)
+To see your request limit/left rate.
+
+**Note:**
+
+Many APIs require you to register and obtain an API key to make API calls.
