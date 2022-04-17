@@ -12,7 +12,7 @@ url = \
 headers = {
     'Accept': 'application/vnd.github.v3+json'
 }
-r = requests.get(url, headers, headers)
+r = requests.get(url, headers)
 print(f"Status code: {r.status_code}")
 
 # Store API response
