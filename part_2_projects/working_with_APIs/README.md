@@ -91,3 +91,12 @@ To see your request limit/left rate.
 **Note:**
 
 Many APIs require you to register and obtain an API key to make API calls.
+
+# Visualising Repositories Using Plotly
+We can visualize anything - at this example will visualize relative popularity of Python projects on GitHub.
+
+An interactive bar chart:
+- each bar represents the # stars of the project
+- also works as an interactive link
+- it is a good template for other use
+
