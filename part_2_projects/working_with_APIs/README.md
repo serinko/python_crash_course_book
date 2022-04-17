@@ -100,3 +100,15 @@ An interactive bar chart:
 - also works as an interactive link
 - it is a good template for other use
 
+**Steps:**
++check python_repos_visual.py*
+
+1. import:  import Bar from plotly.graph_objs, and from plotly import offline
+2. no need to import the Layout as we use the dict approach
+3. print the API status to see if there is no problem (200 return is good)
+4. create two lists (values later used in axis)
+5. name of each project to label the bars
+6. in the loop append each name and the number of stars
+7. define the data list, containing the dictionary, type of plot, data for x and y values, # of stars
+8. define the layout for this chart usig the dictionary approach
+9. define a title and label for each axis
