@@ -32,7 +32,8 @@ print(response_dict.keys())
 7. we store the dictionary in response_dict
 
 # Working with the Response Dictionary
-We can work with the data stored as dictionary
+There is many info coming from API - to understand it all one need to read the documentation or work through it with a code.
+We can work with the data stored as dictionary from previous step
 
 ```python 
 # --snip--
@@ -59,3 +60,16 @@ for key in sorted(repo_dict.keys()):
 4. pull first item and store in and store it in repo_dict to look closer
 5. print # keys in the dict to see how much info is there
 6. print all dict keys to see what kind of info is included
+
+We can code a template of info we are interested and then just feed it with different dict (index of dicts):
+```python
+repo_dict = repo_dicts[0]
+print("\nSelected information about first repository: ")
+print(f"Name: {repo_dict['name']}")
+print(f"Owner: {repo_dict['owner']['login']}")
+print(f"Stars: {repo_dict['stargazers_count']}")
+print(f"Repository: {repo_dict['html_url']}")
+print(f"Created: {repo_dict['created_at']}")
+print(f"Updated: {repo_dict['updated_at']}")
+print(f"Description: {repo_dict['description']}")
+```
