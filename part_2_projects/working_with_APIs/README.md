@@ -63,6 +63,7 @@ for key in sorted(repo_dict.keys()):
 
 We can code a template of info we are interested and then just feed it with different dict (index of dicts):
 ```python
+# --snip--
 repo_dict = repo_dicts[0]
 print("\nSelected information about first repository: ")
 print(f"Name: {repo_dict['name']}")
@@ -81,6 +82,7 @@ print(f"Description: {repo_dict['description']}")
 print("\nSelected information about each repository")
 for repo_dict in repo_dicts:
     print("\nSelected information about first repository: ")
+# --snip--
 ```
 # API Rate Limit on GH
 Check [api.github.com/rate_limit](https://api.github.com/rate_limit)
