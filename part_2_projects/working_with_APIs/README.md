@@ -154,3 +154,39 @@ my_layout = {
 }
 # --snip--
 ```
+## Adding Custom Tooltips
+Tooltip is the information showed when hover over a bar in plotly
+- Add annother list with the info you want to have for tooltips - 'labels'
+- define a label - in our case owner and description
+- fill the list with the defined labels
+
+```python
+# --snip--
+response_dict = r.json()
+repo_dicts = response_dict['items']
+repo_names, stars, labels = [], [], []
+
+for repo_dict in repo_dicts:
+    repo_names.append(repo_dict['name'])
+    stars.append(repo_dict['stargazers_count'])
+    
+    
+    owner = repo_dict['owner']['login']
+    decription = repo_dict['description']
+    label = f"{owner}<br />{decription}"
+    labels.append(label)
+    
+```
+- Add this list to the data seetings:
+```python
+# --snip--
+# Make visualisation
+data = [{
+    'type': 'bar',
+    'x': repo_names,
+    'y': stars,
+    'hovertext':labels,
+    'marker': {
+# --snip--
+```
+
