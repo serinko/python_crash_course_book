@@ -233,7 +233,16 @@ data = [{
 4. append this link to the list of repo links
 5. update the list name in x-values for the new one
 
+# Notes: Plotly, Github API
 
-**Steps:**
+**Links**:
 
+- [Plotly user guide](https://plot.ly/python/reference/) list all the settings
+- [GitHub API dpcumentation](https://developer.github.com/v3/) offers all kinda specific information from GitHub.
+
+# The Hacker News API
+
+- [Hacker News](https://news.ycombinator.com/) is a website where people share articles about programming, technology and discuss.
+- The API (no registration required) providdes access to all the data.
+  - Ie current top articles: *https://hacker-news.firebaseio.com/v0/item/item/19155826.json*
 
