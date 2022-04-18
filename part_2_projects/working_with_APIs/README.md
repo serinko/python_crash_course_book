@@ -263,5 +263,6 @@ readable_file = 'readable_hn_data.json'
 with open(readable_file, 'w') as f:
     json.dump(response_dict, f, indent=4)
 ```
+As previously done - this code will download a JSON file with dictionary, save it and reformat it with a correct indentation.
 
 
