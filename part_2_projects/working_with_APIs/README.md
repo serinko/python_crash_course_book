@@ -112,3 +112,45 @@ An interactive bar chart:
 7. define the data list, containing the dictionary, type of plot, data for x and y values, # of stars
 8. define the layout for this chart usig the dictionary approach
 9. define a title and label for each axis
+
+## Refining Plotly Charts
+We can add all the styling directives as key-value pairs in the data and my_layout dictionaries.
+Changes affect the bars. Ie color, clear border etc
+
+- Marker settings affect the design of the bars:
+```python
+# --snip--
+data = [{
+    'type': 'bar',
+    'x': repo_names,
+    'y': stars,
+    'marker': {
+        'color': 'rgb(60,100,150)',
+        'line': {
+            'width': 1.5,
+            'color': 'rgb(25,25,25)',
+        },
+    },
+    'opacity': 0.6,
+}]
+# --snip--
+```
+- my_layout modifies the titles and ticks settings:
+```python
+# --snip--
+my_layout = {
+    'title': 'Most-Starred Python Projects on Github',
+    'titlefont': {'size': 30},
+    'xaxis': {
+        'title': 'Repository',
+        'titlefont': {'size': 24},
+        'tickfont': {'size': 14},
+    },
+    'yaxis': {
+        'title': 'Stars',
+        'titlefont': {'size': 24},
+        'tickfont': {'size': 14},
+    }
+}
+# --snip--
+```
