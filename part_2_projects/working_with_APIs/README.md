@@ -233,7 +233,7 @@ data = [{
 4. append this link to the list of repo links
 5. update the list name in x-values for the new one
 
-# Notes: Plotly, Github API
+## Notes: Plotly, Github API
 
 **Links**:
 
@@ -246,7 +246,7 @@ data = [{
 - The API (no registration required) providdes access to all the data.
   - Ie current top articles: *https://hacker-news.firebaseio.com/v0/item/item/19155826.json*
 
-### Download, format and a dictionary from Hacker News API
+## Download, format and a dictionary from Hacker News API
 ```python
 import requests
 import json
@@ -265,4 +265,63 @@ with open(readable_file, 'w') as f:
 ```
 As previously done - this code will download a JSON file with dictionary, save it and reformat it with a correct indentation.
 
+## Work with Submissions - Hacker NEws
 
+```python
+from operator import itemgetter
+import requests
+
+# Make an API call and store the response
+url = \
+    'https://hacker-news.firebaseio.com/v0/topstories.json'
+r = requests.get(url)
+print(f"Status code: {r.status_code}")
+
+# Process information about each submission
+submission_ids = r.json()
+submission_dicts = []
+for submission_id in submission_ids[:30]:
+    # Make a separate API call for each submission
+    url = f"https://hacker-news.firebaseio.com/v0/item/{submission_id}.json"
+    r = requests.get(url)
+    print(f"id: {submission_id}\tstatus: {r.status_code}")
+    response_dict = r.json()
+
+    # Build a dictionary for each article
+    submission_dict = {
+        'title': response_dict['title'],
+        'hn_link': f"http://news.ycombinator.com/item?id={submission_id}",
+        'comments': response_dict['descendants'],
+    }
+    submission_dicts.append(submission_dict)
+
+submission_dicts = sorted(
+    submission_dicts,
+    key=itemgetter('comments'),
+    reverse=True,
+)
+
+for submission_dict in submission_dicts:
+    print(f"\nTitle: {submission_dict['title']}")
+    print(f"Discussion link: {submission_dict['hn_link']}")
+    print(f"Comments: {submission_dict['comments']}")
+```
+
+**Steps:**
+1. Make an API call, print the status of the reponse. It is a list of IDs containing the 500 most popular articles.
+2. Convert the response to a Python list stored as *submission_ids* - these IDs will be used to get information about each submission
+3. Set up an empty list called *submission_dicts*
+4. Loop through the top 30 submission IDs
+5. Make a new API call for each of them by generating a URL containing the ID#
+6. Print the status to see if each of them was successful or not
+7. Create a dict for submission currently processed: store title, discussion link, number of comments
+8. append each *submission_dict* to the list of *submission_dicts*
+9. sort the list according the amount of comments using function *itemgetter()* from the *operator module*. PAss the function the key *'comments'* - it pulls the value from each dict associatted with that key.
+10. *sorted()* function uses this value as a basis to sort the list
+11. Sort the list in reverse order to place the most commented stories onthe top.
+12. Once store - loop through the list and print out the information you want (in the example: the title, link to discussion page and the number of comments)
+
+**Note:**
+
+Similar proccess to access and analyze information with any API. To learn more about what kind of information you can access on the Hacker News, visit:
+[github.com/HackerNews/API/](https://github.com/HackerNews/API/)
