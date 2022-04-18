@@ -189,4 +189,51 @@ data = [{
     'marker': {
 # --snip--
 ```
+## Adding Clickable Links to the Graph
+Plotly allows to use HTML on text elements - we can add links to the chart.
+
+- In this case, we use x-axis labels:
+
+```python
+# --snip--
+# Process results
+response_dict = r.json()
+repo_dicts = response_dict['items']
+repo_links, stars, labels = [], [], []
+
+for repo_dict in repo_dicts:
+    repo_name = repo_dict['name']
+    repo_url = repo_dict['html_url']
+    repo_link = f"<a href='{repo_url}'>{repo_name}</a>"
+    repo_links.append(repo_link)
+
+    stars.append(repo_dict['stargazers_count'])
+
+    owner = repo_dict['owner']['login']
+    decription = repo_dict['description']
+    label = f"{owner}<br />{decription}"
+    labels.append(label)
+
+# --snip--
+
+# Make visualisation
+data = [{
+    'type': 'bar',
+    'x': repo_links,
+    'y': stars,
+    'hovertext': labels,
+    'marker': {
+# --snip--
+```
+
+**Steps:**
+1. update the name of the list to 'repo_links'
+2. pull the URL from the project and asign it to a temporary variable repo_url
+3. use HTML anchor tag *'f"<a href='{repo_url}'>{repo_name}</a>"'*
+4. append this link to the list of repo links
+5. update the list name in x-values for the new one
+
+
+**Steps:**
+
 
