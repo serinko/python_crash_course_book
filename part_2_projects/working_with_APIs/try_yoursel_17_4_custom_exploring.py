@@ -58,7 +58,7 @@ data = [{
         'cmax': stars_max,
         'cmin': 0,
         'color': stars,
-        'colorscale': 'Rainbow',
+        'colorscale': 'Viridis',
 
         'line': {
             'width': 1.5,
