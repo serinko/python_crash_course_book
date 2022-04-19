@@ -3,9 +3,20 @@ import requests
 from plotly.graph_objs import Bar
 from plotly import offline
 
+wlcm_msg = "\nPlease choose a GitHub language which will be sorted from the " \
+           "top-rated one. Here is a full list of GitHub languages " \
+           "https://github.com/github/linguist/blob/master/lib/linguist/languages.yml." \
+           "(press 'Q' to exit)"
+print(wlcm_msg)
+language = input("\nLanguage: ")
+if language.lower() == 'q':
+    quit()
+
+language_formatted = f"{language.lower()}"
+
 # Make an API call and store the response
 url = \
-    'https://api.github.com/search/repositories?q=language:ruby&sort=stars'
+    f'https://api.github.com/search/repositories?q=language:{language_formatted}&sort=stars'
 headers = {
     'Accept': 'application/vnd.github.v3+json'
 }
@@ -47,7 +58,7 @@ data = [{
 }]
 
 my_layout = {
-    'title': 'Most-Starred Python Projects on Github',
+    'title': f'Most-Starred {language.title()} Projects on Github',
     'titlefont': {'size': 30},
     'xaxis': {
         'title': 'Repository',
@@ -62,4 +73,4 @@ my_layout = {
 }
 
 fig = {'data': data, 'layout': my_layout}
-offline.plot(fig, filename='python_repos.html')
+offline.plot(fig, filename=f'{language}_repos.html')
