@@ -1,4 +1,4 @@
-COMMANDS FOR CONNECTING GIT TO GITHUB
+# COMMANDS FOR CONNECTING GIT TO GITHUB
 
 **Change Directory**
 
@@ -12,7 +12,7 @@ COMMANDS FOR CONNECTING GIT TO GITHUB
 
 ```
 git remote add origin "<link>"
-git remote -
+git remote -v
 ```
 
 **Git SSH**
@@ -31,6 +31,12 @@ git commit -m "note"
 git status
 git push origin master
 git status
+```
+
+**Setting Upstream**
+
+```
+git branch --set-upstream-to origin/master
 ```
 
 **Checking the Logs**
