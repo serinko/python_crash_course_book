@@ -18,7 +18,8 @@ git remote -v
 **Git SSH**
 
 ```
-git remote add origin git@github.com:your_user_name/your_repo_name.git
+git remote add origin git@github.com:username/repo_name.git
+git remote set-url origin git@github.com:username/repo_name.git
 git branch -M main
 git push -u origin main
 ```
